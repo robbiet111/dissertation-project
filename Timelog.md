@@ -29,3 +29,6 @@
 
 ## 28 Sep 2023
 * *2 hours* downloaded Unity and started new projects
+
+## 29 Sep 2023
+* *2 hours* Reading relevant articles and researching music exploration games
