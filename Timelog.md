@@ -32,3 +32,7 @@
 
 ## 29 Sep 2023
 * *2 hours* Reading relevant articles and researching music exploration games
+
+## 02 Oct 2023
+* *0.5 hours* Meeting with supervisor
+* *2.5 hours* Going through tutorials for unity
