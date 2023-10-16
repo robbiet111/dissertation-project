@@ -66,3 +66,12 @@
 
 ### 12 Oct 2023
 * *5 hours* Creating example using triggers to add elements to the overall sound (Trigger Music (Example)) in Unity
+
+### 15 Oct 2023
+* *3 hours* Creating example using Stylyl Plug-in, Piano example where each key is a different note and you play the note by clicking down on the desired block.
+
+## Week 4
+
+### 16 Oct 2023
+* *0.5 hours* Meeting with supervisor
+* *1.5 hours* Writing meeting minutes and watching tutorial on youtube for terrain maps
