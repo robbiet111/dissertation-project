@@ -63,3 +63,6 @@
 
 ### 11 Oct 2023
 * *2.5 hours* Researching releveant readings and projects
+
+### 12 Oct 2023
+* *5 hours* Creating example using triggers to add elements to the overall sound (Trigger Music (Example)) in Unity
