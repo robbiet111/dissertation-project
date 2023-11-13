@@ -19,13 +19,89 @@
 * *0.5 hour* Read the project guidance notes
 * *0.5 hour* Created GitLab repository and added Timelog with version control
 
-## 26 Sep 2023
+### 26 Sep 2023
 
 * *3 hours* Reading the outlined readings for the project
 
-## 27 Sep 2023
+### 27 Sep 2023
 * *0.5 hour* meeting with supervisor
 * *2 hours* Researching releveant readings and projects
 
-## 28 Sep 2023
+### 28 Sep 2023
 * *2 hours* downloaded Unity and started new projects
+
+### 29 Sep 2023
+* *2 hours* Researching releveant readings and projects
+
+### 29 Sep 2023
+* *2 hours* Reading relevant articles and researching music exploration games
+
+## Week 2
+
+### 02 Oct 2023
+* *0.5 hours* Meeting with supervisor
+* *2.5 hours* Going through tutorials for unity
+
+### 04 Oct 2023
+* *2 hours* Researching music exploration games in Unity
+
+### 05 Oct 2023
+* *2.5 hours* Researching releveant readings and projects
+* *2 hours* Researching music exploration games in Unity
+
+### 06 Oct 2023
+* *2 hours* Created base Unity project and set up environment for base game movement
+
+### 07 Oct 2023
+* *4 hours* Creating world setting and objects that will later be used for music interaction
+
+## Week 3
+
+### 09 Oct 2023
+* *0.5 hours* Meeting with supervisor
+* *5 hours* Researching music interaction in Unity
+
+### 11 Oct 2023
+* *2.5 hours* Researching releveant readings and projects
+
+### 12 Oct 2023
+* *5 hours* Creating example using triggers to add elements to the overall sound (Trigger Music (Example)) in Unity
+
+### 15 Oct 2023
+* *3 hours* Creating example using Stylyl Plug-in, Piano example where each key is a different note and you play the note by clicking down on the desired block.
+
+## Week 4
+
+### 16 Oct 2023
+* *0.5 hours* Meeting with supervisor
+* *1.5 hours* Writing meeting minutes and watching tutorial on youtube for terrain maps
+
+### 18 Oct 2023
+* *2.5 hours* Creating Terrain
+* *1.5 hours* Fixing Lighting and Sound issues
+
+### 19 Oct 2023
+* *2 hours* Adding Trees and Grass
+* *3.5 hours* Adding Trigger system for sound to main game
+
+## Week 5
+
+### 23 Oct 2023
+* No Advisor meeting due to illness
+* *2 hours* Adding Character Design in-place of the capsule that I had been using to traverse the rerrain
+* *1.5 hours* Fully developing the movement system (Jumping, moving back/forward/left/right etc.
+
+### 25 Oct 2023
+* *4 hours* Adding 3rd-Person Camera System that follows the character and re-centres to the direction the character is facing
+* *2 hours* Bug-Fixing the camera system and making the character rotate to where it is facing
+
+### 26 Oct 2023
+* *2 hours* Researching mini-games to implement in-game and trying mini-examples in-game
+* *1.5 hours* Preventing the camera view being blocked by obstacles
+
+## Week 6
+
+### 31 Oct 2023
+* No Advisor meeting due to illness
+* *1 hour* Came up with the official name of the game 'HarmonyScape' and implemented a Title Screen
+* *1 hour* Added Scene structure to go from the Title Screen to game which generated lighting issues I had to fix in Unity.
