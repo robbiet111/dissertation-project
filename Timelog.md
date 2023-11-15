@@ -88,7 +88,7 @@
 
 ### 23 Oct 2023
 * No Advisor meeting due to illness
-* *2 hours* Adding Character Design in-place of the capsule that I had been using to traverse the rerrain
+* *2 hours* Adding Character Design in-place of the capsule that I had been using to traverse the rerrain.
 * *1.5 hours* Fully developing the movement system (Jumping, moving back/forward/left/right etc.
 
 ### 25 Oct 2023
@@ -105,3 +105,37 @@
 * No Advisor meeting due to illness
 * *1 hour* Came up with the official name of the game 'HarmonyScape' and implemented a Title Screen
 * *1 hour* Added Scene structure to go from the Title Screen to game which generated lighting issues I had to fix in Unity.
+
+### 01 Nov 2023
+* *2.5 hours* Moved the player down to the terrain and added trigger zones that correspond to different instruments for the song for HarmonyScape into the over-world.
+* *2 hours* Adding collision to the camera and adding manual controls of the camera via the mouse.
+
+### 03 Nov 2023
+* *0.5 hours* Meeting with supervisor
+* *2.5 hours* Writing meeting minutes and researching think-aloud testing
+
+## Week 7
+
+### 08 Nov 2023
+* *2 hours* Creating environment for the gameplay functionality to be tested (i.e spreading the trigger zones across the map and making chanegs to the terrain to make it more dynamic and creating points of interest that will lead the player
+
+### 09 Nov 2023
+* *3.5 hours* Creating stopwatch for the player that starts when the user hits 'start' from the main menu and stops once the player has passed through the 5 'trigger zones' set up in the map
+
+### 10 Nov 2023
+* *2 hours* Crafting question sheets for user studies to be ran the following week. This included: an explination of the premise of the game and the controls, think-aloud questions and post-play questions
+* *1.5 hours* Making small changes to the game to prepare it for testing
+
+## Week 8
+
+### 13 Nov 2023
+* *0.5 hours* Meeting with supervisor
+* *0.5 hours* Writing meeting minutes
+* *1 hours* Think-aloud User Study 1
+* *0.5 hours* Think-aloud User Study 2
+* *0.5 hours* Think-aloud User Study 3
+* *1 hour* Think-aloud User Study 4
+* *3 hours* Transcribing user studies and extrapolating prevelant issues/suggestions to implement in next development cycle
+
+### 14 Nov 2023
+* *1 hour* Creating itemized list of key issues/suggestions ordered on importance and ease of implementation to be shared with advisor of studies
