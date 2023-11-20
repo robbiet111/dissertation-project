@@ -144,5 +144,7 @@
 * *1.5 hours* Implementing boundary system to the terrain so players can't jump off the terrain. This will further be developed into an ocean so the land is an island
 
 ## Week 9
+
+### 20 Nov 2023
 * *0.5 hours* Meeting with supervisor
 * *0.5 hours* Writing meeting minutes
