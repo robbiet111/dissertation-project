@@ -139,3 +139,10 @@
 
 ### 14 Nov 2023
 * *1 hour* Creating itemized list of key issues/suggestions ordered on importance and ease of implementation to be shared with advisor of studies
+
+### 15 Nov 2023
+* *1.5 hours* Implementing boundary system to the terrain so players can't jump off the terrain. This will further be developed into an ocean so the land is an island
+
+## Week 9
+* *0.5 hours* Meeting with supervisor
+* *0.5 hours* Writing meeting minutes
