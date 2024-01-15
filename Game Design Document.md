@@ -97,28 +97,22 @@ In the game's climax, Rillo ascends to a crescendo of harmony, unlocking the com
 ### Minigames
 
 #### Guitar Minigame
-##### Game Concept: Memory Strings
 
-In this guitar-themed memory game, players embark on a melodic journey where each key represents a different note. The challenge lies in remembering and reproducing the correct order of notes to progress through the game.
+##### Game Concept: Memory Strings
+In the guitar-themed memory game each key represents a different note. The challenge lies in remembering and reproducing the correct order of notes to progress through the game.
 
 ##### Game Logic:
-
-The game environment consists of five blocks, each symbolizing different strings on a guitar. The player initiates the game by walking into the designated 'Start Zone' trigger.
+The game environment consists of five blocks, each symbolising different strings on a guitar. The player initiates the game by walking into the designated 'Start Zone' trigger.
 
 ##### Play Melodic Sequence:
-
 A song comprising five unique notes is played.
 
 ##### User Interaction:
+Players wait for their cue and, upon receiving it, are prompted to input notes by walking into the corresponding note block. Each note corresponds to a specific block, and players input their choice by jumping on the corresponding block.
 
-Players wait for their cue and, upon receiving it, are prompted to input notes.
-Each note corresponds to a specific block, and players input their choice by jumping on the corresponding block.
-Validation and Progress:
+##### Validation and Progress:
+The game waits for a sequence of five notes from the player. If the player successfully reproduces the correct sequence, the game ends. Successful completion unlocks the guitar block, transforming it back into a trigger, so the player can acquire the guitar and is therefore added to the song.
 
-The game waits for a sequence of five notes from the player.
-If the player successfully reproduces the correct sequence, the game concludes.
-Successful completion unlocks the blue guitar block, transforming it back into a trigger, ready to initiate the next round.
-
-###### Objective:
-Test your memory and musical prowess as you unlock the rhythm of the game. Can you recall and reproduce the notes in the correct order to master the melody? 
+##### Objective:
+Challenge your memory and musical skills as you explore the rhythm of the game. Can you remember and play back the notes in the right sequence to master the melody?
 
