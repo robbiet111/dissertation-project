@@ -148,3 +148,96 @@
 ### 20 Nov 2023
 * *0.5 hours* Meeting with supervisor
 * *0.5 hours* Writing meeting minutes
+
+### 21 Nov 2023
+* *2 hours* Creating the game design document
+* *1 hour* Fixing camera bug
+
+### 22 Nov 2023
+* *2 hours* Creating and implementing new scene at the beginning of the game that show the controls of the character and the camera system
+
+### 24 Nov 2023
+* *3 hours* Adding manual camera system to the game, this is controlled by the mouse
+
+## Week 10
+
+### 27 Nov 2023
+* *1 hour* Researching un-copyrighted images that could be used to signify instruments that have been collected in the game as icons in the top corner of the players pov
+* *0.5 hours* Creating black and white versions of the images that show when the instrument has not yet been collected
+* *0.5 hours* Scaling the images so that they adapt to the players screen size
+* *3 hours* Connecting these images to the functionality in the game. When an instrument is collected the corresponding image switches from black and white to the coloured images
+
+### 30 Nov 2023
+* *1.5 hours* Researching how to implement a water system intoa Unity project
+
+### 1 Dec 2023
+* *2 hours* Adding water around the terrain in-game to give the player the idea that they are on an island
+* *2.5 hours* Altering the terrain so the terrain seemlessly flows into the water.
+
+## Week 11
+
+### 05 Dec 2023
+* *0.5 hours* Meeting with supervisor
+* *0.5 hours* Writing meeting minutes
+
+### 06 Dec 2023
+* *1 hour* Expanding game design document with backstory, information about the island
+
+### 07 Dec 2023
+* *1 hour* Expanding game design document with details about the controls, minigames and aims of the game
+
+### 09 Dec 2023
+* *1.5 hours* Expanding game design document with details about gameplay and the character the player controls
+
+## Week 12
+
+### 11 Dec 2023
+* *1 hour* Starting on December status report
+
+### 12 Dec 2023
+* *2 hours* Fixing issue where player would clip through the world barriers by tweaking player movement script
+
+### 14 Dec 2023
+* *1.5 hours* Altering the terrain so that the water wasn't spilling into parts it wasn't supposed to
+* *1 hour* Finishing and submitting Status Report
+
+### 15 Dec 2023
+* *1.5 hours* Make instruments dissapear when collected
+* *1.5 hours* Researching how to diversify terrain
+
+### 16 Dec 2023
+* *0.5 hours* Researching how to add pause menu
+* *1 hour* Creating UI for pause menu
+* *1 hour* Fixing bug where pause menu was being concealled by the terrain
+* *1.5 hours* Mapping pause menu UI elements to actual functions (Escape button to access pause menu, "Resume" button that exits pause menu, "Menu" button that takes you back to the main menu, and "Exit" button to quit the program)
+
+## Week 13
+
+### 18 Dec 2023
+* *1 hour* Finding texture packs for rocky mountains
+* *2 hours* Painting part of the terrain with mountain textures and changing the height of that part of the terrain to simulate a hill
+
+### 19 Dec 2023
+* *2 hours* Researching how to mass place rock objects in the terrain and have them be able to have colliders
+* *1 hour* Add colliders to different rock object
+
+### 20 Dec 2023
+* *1 hour* Placing rocks across terrain
+* *1 hour* Cleaning up rocks that spilled over into different parts of the terrain
+
+### 21 Dec 2023
+* *1 hour* Finding texture packs for snow
+* *2 hours* Painting part of the terrain with snow textures and changing the height of that part of the terrain to simulate a mountain
+
+### 22 Dec 2023
+* *1 hour* Researching how to make particle effects
+* *1.5 hours* Creating snow particle effect
+* *1 hour* Add particle effect into terrain and scaling so it is only present on the snowy mountain
+
+## Week 14
+*Christmas Break*
+
+## Week 15
+
+### 02 Jan 2024
+**2 hours*
