@@ -17,6 +17,65 @@ We're developing a soothing music game specifically for individuals dealing with
     * 4GB RAM
 
     * Windows, macOS, or Linux
+ 
+## Timeline
+Sure, I've added a '*' before every line:
+
+* Research (27/09/2023 - 02/10/2023):
+
+   * Research on the project's topic.
+
+   * Decision to use Unity for game development.
+
+   * Initial exploration of Unity and music theory.
+
+* Unity Exploration (02/10/2023 - 09/10/2023):
+
+   * Continued Unity exploration.
+
+   * Creation of a Unity project with movement and user controls.
+
+   * Research on music-based projects and their interaction.
+
+* Sound Interaction Examples (09/10/2023 - 16/10/2023):
+
+   * Creation of two sound interaction examples in Unity.
+
+* Title Screen and Camera System (16/10/2023 - 03/11/2023):
+
+   * Game titled as 'HarmonyScape.'
+
+   * Implementation of a 3rd Person Camera System.
+
+   * Creation of a terrain, skybox, and a testing environment.
+
+* User Study and Next Steps (13/11/2023):
+
+   * Setup of a testing environment with trigger zones.
+
+   * Conducted a hallway user study on game elements.
+
+   * Discussion of study results and feedback from the advisor.
+
+   * Setting objectives for the next week, including a design document.
+
+* Implementation and Documentation (20/11/2023):
+
+   * Implementation of boundaries to prevent falling off the terrain.
+
+   * Research on the best way to implement world boundaries.
+
+   * Discussion of hallway study results and planning for the upcoming weeks.
+
+* Upcoming Focus (20/11/2023 - 27/11/2023):
+
+   * Implementation of quality of life updates based on the user studies.
+
+   * Introduction of natural guiders in the world to guide players.
+   
+   * Exploration of a mini-map system or at least a compass.
+
+   * Implementation of design document.
 
 ## Backstory
 In the captivating world of "HarmonyScape," you take on the role of Rillo, a little red blob from a distant galaxy. Rillo's home, where music binds everyone together, is under threat from disharmony. Following a mysterious portal, Rillo finds themselves on HarmonyScape, an island shaped by the essence of the alien's presence.
