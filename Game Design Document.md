@@ -116,3 +116,19 @@ The game waits for a sequence of five notes from the player. If the player succe
 ##### Objective:
 Challenge your memory and musical skills as you explore the rhythm of the game. Can you remember and play back the notes in the right sequence to master the melody?
 
+##### Inspiration:
+[Memory Game (Unity 3D)](https://learn.awesometuts.com/courses/199187/lectures/3034407)
+
+## Characters
+
+### Main Player: Rillo
+In the vast expanse of the cosmos, Rillo was born on a distant celestial body known for its harmonious connection through the language of music. As a small, red blob alien, Rillo was different from others in their community. While their fellow beings thrived on creating harmonies, Rillo possessed a unique ability to feel and shape the very essence of the music around them.
+
+<img width="144" alt="Rillo" src="https://github.com/robbiet111/dissertation-project/assets/77496088/678c604d-4dfb-4736-8f57-7caf8171451b">
+
+## Location
+The game is set on an island surrounded by water. The landscape features grassy areas, trees, and flowers, with dynamic variations such as peaks and valleys. Future development plans include adding snowy and sandy areas to enhance the diversity of the environment. Players will explore these changing landscapes as they progress through the game.
+
+In the evolving island environment, upcoming additions will invite player interaction. Expect scattered elements like wind chimes, leaves, and fireflies, enhancing engagement. Each area will feature ambient sounds, such as rustling leaves or lapping waves, creating a sensory-rich experience. Unique rock formations will also be introduced, adding distinctive landmarks to the landscape.
+
+[Terrain Design Inspiration](https://www.youtube.com/watch?v=zvrQM8rFLe0&list=PLxBP4SL7zdxq90JRM_cYP0hcYU1MOFr5n)
