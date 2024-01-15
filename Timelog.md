@@ -240,4 +240,43 @@
 ## Week 15
 
 ### 02 Jan 2024
-**2 hours*
+* *2 hours* Researching games that have been backed with research to be enjoyable by people with neurodegenerative disorders
+* *1.5 hours* Finding appropriate guitar strum sound effects to use in music memory game used to unlock guitar
+
+### 03 Jan 2024
+* *0.5 hours* Attaching audio Players to blocks in the world that represent the different strings on a guitar
+* *1 hour* Researching how to create a sequence of events that are triggered by entering the "Guitar" block
+* *2 hours* Creating script that plays the strings in the desired order so the player can re-create it to win the minigame
+
+### 04 Jan 2024
+* *1 hour* Fixing bug where all strings would play at the same time after trigger event
+* *1 hour* Adding UI elements to "Start box" that say "Listen","Wait" and "GO"
+* *1.5 hours* Implementing script that makes the different text appear at the appropriate stage of the game on the box
+* *1 hour* Adding functionility to script so that you can reset the minigame by going through the "Start box" again
+
+### 05 Jan 2024
+* *3 hours* Creating script that keeps track of the game and if the player recreates the song that is played the game finishes (win condition)
+* *1 hour* Fixing bug where "Listen","Wait" and "GO" text would not appear after a game reset
+* *2 hours* Making the box assigned to the string that is currently playing dissapear for the duration of the note playing to make it more clear which note is playing (make it more apparent which string is being played)
+
+## Week 16
+
+### 09 Jan 2024
+* *0.5 hours* Alter script to make Guitar collectible appear when the win condition is satisfied
+* *1.5 hours* Fix bug where the initial play of the song (to show the player the order they need to recreate the strings in) satisifes the win condition (when it should be ignored)
+
+### 10 Jan 2024
+* *1 hour* Finding texture packs for sand
+* *2 hours* Painting part of the terrain with sand textures and changing the height of that part of the terrain to simulate a beach
+
+### 12 Jan 2024
+* *2 hours* Levelling out terrain in places where the instruments are placed to leave room for the minigames
+
+### 13 Jan 2024
+* *1 hour* Fixing texture issues within terrain
+* *1 hour* Planning music that is needed for the game
+
+## Week 17
+
+### 15 Jan 2024
+* *3 hours* Creating music for the game (Previous music had leftover breathing and counting that could be heard when only certain instruments had been collected). New music has different instruments (Bass, Bongo, Guitar, Shaker, Triangle, Ukelele)
