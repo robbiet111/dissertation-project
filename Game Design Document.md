@@ -1,5 +1,8 @@
 # Game Design Document
 
+<img width="234" alt="Screenshot 2023-12-04 at 22 10 01" src="https://github.com/robbiet111/dissertation-project/assets/77496088/6e9c4be4-4c1e-4fa2-864b-ce653eec2364">
+
+
 ## Elevator Pitch
 We're developing a soothing music game specifically for individuals dealing with brain disorders like Alzheimer's. With a stress-free approach and no fail states, the game kicks off with a foundational sound. Unlock the complete song by navigating through mini-challenges, including memory games, rhythmic tasks, and platforming elements. It's a serene and therapeutic exploration of music for a unique gaming experience.
 
@@ -90,4 +93,30 @@ The progression involves overcoming challenges and puzzles embedded in the envir
 
 ### Objectives
 In the game's climax, Rillo ascends to a crescendo of harmony, unlocking the complete symphony of the island. This peak marks a moment of unity, where the disruptive force is triumphed over, restoring the celestial realm to a state of balance.
+
+### Minigames
+
+#### Guitar Minigame
+Game Concept: Memory Strings
+
+In this guitar-themed memory game, players embark on a melodic journey where each key represents a different note. The challenge lies in remembering and reproducing the correct order of notes to progress through the game.
+
+Game Logic:
+
+The game environment consists of five blocks, each symbolizing different strings on a guitar. The player initiates the game by walking into the designated 'Start Zone' trigger.
+
+Play Melodic Sequence:
+
+A song comprising five unique notes is played.
+User Interaction:
+
+Players wait for their cue and, upon receiving it, are prompted to input notes.
+Each note corresponds to a specific block, and players input their choice by jumping on the corresponding block.
+Validation and Progress:
+
+The game waits for a sequence of five notes from the player.
+If the player successfully reproduces the correct sequence, the game concludes.
+Successful completion unlocks the blue guitar block, transforming it back into a trigger, ready to initiate the next round.
+Objective:
+Test your memory and musical prowess as you unlock the rhythm of the game. Can you recall and reproduce the notes in the correct order to master the melody? 
 
