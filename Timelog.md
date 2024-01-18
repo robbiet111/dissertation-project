@@ -280,3 +280,8 @@
 
 ### 15 Jan 2024
 * *3 hours* Creating music for the game (Previous music had leftover breathing and counting that could be heard when only certain instruments had been collected). New music has different instruments (Bass, Bongo, Guitar, Shaker, Triangle, Ukelele)
+
+### 18 Jan 2024
+* *0.5 hours* Meeting with supervisor
+* *0.5 hours* Writing meeting minutes
+* *1 hour* Altered player movement script to have character speed gradually increase to given maximum speed.
