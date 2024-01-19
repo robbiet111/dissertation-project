@@ -285,3 +285,13 @@
 * *0.5 hours* Meeting with supervisor
 * *0.5 hours* Writing meeting minutes
 * *1 hour* Altered player movement script to have character speed gradually increase to given maximum speed.
+* *1.5 hours* Adding teleportation script and objects to teleport to and from
+* *0.5 hours* Testing teleportation script
+
+### 19 Jan 2024
+* *1 hour* Implementing new music (replacing old instruments with new ones)
+* *2 hours* Researching how to alter music pitch based on players mvement
+* *1 hour* Creating Disseration tex file and starting the Introduction
+
+### 20 Jan 2024
+* *1.5 hours* Fleshing out Game Design document and adding it to GitHub Project.
