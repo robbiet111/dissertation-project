@@ -295,3 +295,7 @@
 
 ### 20 Jan 2024
 * *1.5 hours* Fleshing out Game Design document and adding it to GitHub Project.
+
+### 21 Jan 2024
+* *1 hour* Changing Icons to match new instrument
+* *2 hours* Researching how to capture players momentum and alter pitch based on how quick the player is going
