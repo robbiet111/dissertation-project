@@ -299,3 +299,14 @@
 ### 21 Jan 2024
 * *1 hour* Changing Icons to match new instrument
 * *2 hours* Researching how to capture players momentum and alter pitch based on how quick the player is going
+
+## Week 18
+### 24 Jan 2024
+* *2 hours* Researching how to implement sliding puzzle into 3D unity project
+* *2.5 hours* Creating 'Cube Movement Script' that slides 9 cubes that represent sliding puzzle in 3x3 grid, with one cube being empty, the only way tto move a cube is to swap its place with the empty puzzle piece, and can only be swapped with the empty puzzle piece if the piece is directly above, below, to the left of, or to the right of the empty piece.
+
+### 25 Jan 2024
+* *0.5 hours* Meeting with supervisor
+* *0.5 hours* Writing meeting minutes
+* *2 hours* Creating a management script for the sliding puzzle minigame that checks for win condition (all pieces are in the correct position)
+* *0.5 hours* Tweaking the sliding puzzle minigame, fixing bug where player could move multiple blocks at the same time
