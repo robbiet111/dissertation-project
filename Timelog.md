@@ -310,3 +310,40 @@
 * *0.5 hours* Writing meeting minutes
 * *2 hours* Creating a management script for the sliding puzzle minigame that checks for win condition (all pieces are in the correct position)
 * *0.5 hours* Tweaking the sliding puzzle minigame, fixing bug where player could move multiple blocks at the same time
+
+### 26 Jan 2024
+* *2 hours* Researching Matching Pairs of Cards game
+* *1 hour* Created script for block flipping to simulate 'card flip'
+* *2 hours* Tweaked script to only allow 2 cards to be flipped at once to keep track of 'pairings'
+* *1.5 hours* Added functionality to card flipping script to make cards disappear if two of the same card were flipped
+
+### 27 Jan 2024
+* *2.5 hours* Added functionality to card flipping script to make cards flip back over to being uncovered if false match
+* *2 hours* Fixed bug where cards would not stop flipping if they were selected as incorrect pair
+* *1 hour* Fixed terrain for all minigames to be more flat so the plane is consistent
+
+## Week 19
+
+### 30 Jan 2024
+* *1.5 hours* Created Matching Pairs of Cards game master script to bring in 'Triangle' block when all cards have been matched
+* *1 hour* Added CameraController script attached to Main Camera
+* *2.5 hours* Added functionality to CameraController to fix camera for Triangle/Card Matching minigame
+
+### 31 Jan 2024
+* *1 hour* Added catchment area for Triangle/Card Matching minigame to trigger fixed camera
+* *1.5 hours* Fixed bug in CameraController where perspective kept flipping between Fixed and Un-fixed view
+* *1 hour* Added functionality to CameraController to fix camera for Guitar/String Memory minigame
+
+### 1 Feb 2024
+* *0.5 hours* Meeting with supervisor
+* *0.5 hours* Writing meeting minutes
+
+### 2 Feb 2024
+* *1 hour* Added catchment area for Guitar/String Memory minigame to trigger fixed camera
+* *1.5 hours* Added functionality to CameraController to fix camera for Ukulele/Sliding Puzzle minigame
+* *1 hour* Added catchment area for Ukulele/Sliding Puzzle minigame to trigger fixed camera
+
+### 3 Feb 2024
+* *1.5 hours* Moved Triangle minigame to beach area
+* *1 hour* Painted paths leading from main paths to beach area
+* *1 hour* Tweaked the positioning of the camera in minigames to have more overhead view
