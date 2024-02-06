@@ -347,3 +347,21 @@
 * *1.5 hours* Moved Triangle minigame to beach area
 * *1 hour* Painted paths leading from main paths to beach area
 * *1 hour* Tweaked the positioning of the camera in minigames to have more overhead view
+* *1 hour* Searched for a minigame that would target a key area in Alzhiemer's and like disease
+* *1 hour* Explored implementation of "follow the sound" game in Unity 3D project (For game where auditory processing and spatial awareness as tested as they navigate solely through auditory cues. They must locate sound sources by following increasing volume levels as they get closer to the origin of the sounds.)
+
+## Week 19
+
+### 4 Feb 2024
+* *1 hour* Initial revision of the minigame that used different scenes, realised it would have to include data retention (retaining the instruments already collected) and that this would take a considerable amount more time
+* *1 hour* Troubleshooting and debugging, including resolving issues for first revision related to scene loading and audio management
+* *2 hours* Write Maracas Mini-game manager script that calculates the distance between the player and the audio sources as well as creating objects to be used in the minigame
+* *2 hours* Implemented LoadMaracasMinigame script to disable objects and mute audio sources on trigger enter (as not to overlap minigames)
+* *1 hour* Modified script to prevent immediate destruction of GameObjects during physics trigger events
+
+### 5 Feb 2024
+* *0.5 hours* Investigated and troubleshooted ObjectDisposedException related to SerializedProperty objects in the Unity Editor's UI system
+* *1.5 hours* Implemented FinishMaracas script to enable objects and unmute audio sources on trigger enter, using references from LoadMaracasMinigame (as too bring other minigames back into world)
+* *1 hour* Troubleshooted issues with triggering NotePlayer when triggering FinishMaracas, collider and trigger setup issues
+* *1 hour* Investigated NotePlayer script, added debug messages to track trigger and start method behavior
+* *1 hour* Investigated collider overlap and tag assignments, reviewed OnTrigger events to ensure proper logic
