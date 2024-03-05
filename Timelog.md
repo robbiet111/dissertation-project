@@ -334,16 +334,16 @@
 * *1.5 hours* Fixed bug in CameraController where perspective kept flipping between Fixed and Un-fixed view
 * *1 hour* Added functionality to CameraController to fix camera for Guitar/String Memory minigame
 
-### 1 Feb 2024
+### 01 Feb 2024
 * *0.5 hours* Meeting with supervisor
 * *0.5 hours* Writing meeting minutes
 
-### 2 Feb 2024
+### 02 Feb 2024
 * *1 hour* Added catchment area for Guitar/String Memory minigame to trigger fixed camera
 * *1.5 hours* Added functionality to CameraController to fix camera for Ukulele/Sliding Puzzle minigame
 * *1 hour* Added catchment area for Ukulele/Sliding Puzzle minigame to trigger fixed camera
 
-### 3 Feb 2024
+### 03 Feb 2024
 * *1.5 hours* Moved Triangle minigame to beach area
 * *1 hour* Painted paths leading from main paths to beach area
 * *1 hour* Tweaked the positioning of the camera in minigames to have more overhead view
@@ -352,16 +352,75 @@
 
 ## Week 19
 
-### 4 Feb 2024
+### 05 Feb 2024
 * *1 hour* Initial revision of the minigame that used different scenes, realised it would have to include data retention (retaining the instruments already collected) and that this would take a considerable amount more time
 * *1 hour* Troubleshooting and debugging, including resolving issues for first revision related to scene loading and audio management
 * *2 hours* Write Maracas Mini-game manager script that calculates the distance between the player and the audio sources as well as creating objects to be used in the minigame
 * *2 hours* Implemented LoadMaracasMinigame script to disable objects and mute audio sources on trigger enter (as not to overlap minigames)
 * *1 hour* Modified script to prevent immediate destruction of GameObjects during physics trigger events
 
-### 5 Feb 2024
+### 06 Feb 2024
 * *0.5 hours* Investigated and troubleshooted ObjectDisposedException related to SerializedProperty objects in the Unity Editor's UI system
 * *1.5 hours* Implemented FinishMaracas script to enable objects and unmute audio sources on trigger enter, using references from LoadMaracasMinigame (as too bring other minigames back into world)
+
+### 07 Feb 2024
 * *1 hour* Troubleshooted issues with triggering NotePlayer when triggering FinishMaracas, collider and trigger setup issues
 * *1 hour* Investigated NotePlayer script, added debug messages to track trigger and start method behavior
 * *1 hour* Investigated collider overlap and tag assignments, reviewed OnTrigger events to ensure proper logic
+
+## Week 20
+
+### 12 Feb 2024
+* *1 hour* Implemented music note movement functionality using sine wave motion.
+* *30 minutes* Integrated perpetual facing towards the player for music note objects.
+
+### 13 Feb 2024
+* *1 hour* Refactored music note movement script by adjusting speed and amplitude parameters
+
+### 14 Feb 2024
+* *0.5 hours* Meeting with supervisor
+* *0.5 hours* Writing meeting minutes
+
+### 15 Feb 2024
+* *3 hours* Reading for dissertation
+
+## Week 21
+
+### 19 Feb 2024
+* *2 hours* Experimented with free-look camera
+
+### 21 Feb 2024
+* *2 hours* Implemented fixed camera at beginning of the game
+* *1.5 hours* Fixed camera positioning in minigames to be further back
+
+### 22 Feb 2024
+* *3 hours* Drafted questionnaire for user study
+* *1 hour* Adapted questionnaire to address perceptions of individuals with disabilities and stereotypes about older adults' tech skills.
+* *1 hour* Added additional questions for those with experience caring for people with intellectual disabilites
+
+### 23 Feb 2024
+* *2 hours* Writing part of Background for dissertation
+
+## Week 22
+
+### 26 Feb 2024
+* *1.5 hours* Wrote about Active Music Therapy in dissertation
+
+### 27 Feb 2024 
+* *0.5 hours* Created pre-survey for user study
+* *2.5 hours* Completed setting up user study
+
+### 28 Feb 2024
+* *1 hour* Writing dissertation
+
+### 29 Feb 2024
+* *0.5 hours* Meeting with supervisor
+* *0.5 hours* Writing meeting minutes
+
+### 02 Mar 2024
+* *3 hours* Running User Study on 3 people
+
+## Week 23
+
+### 04 Mar 2024
+* *3.5 hours* Ran User Study on 5 more people
