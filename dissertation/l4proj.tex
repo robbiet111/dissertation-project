@@ -259,22 +259,32 @@ Figure \ref{fig:mem_match} shows screenshots from a digital implementation of th
 
 \subsection{Sliding Puzzle}
 
-Sasaki et al. (2020) explored the use of sliding puzzle's in the treatment of dementia. 
+A sliding puzzle is a classic game comprising a grid of square or rectangular tiles, with one space left empty to enable movement. Players aim to rearrange the tiles by sliding them horizontally or vertically into the vacant space until they align in a predetermined pattern or sequence, typically forming a complete picture or achieving a specific numerical order (Hearn, 2005). 
+
+Sasaki et al. (2020) explored the use of sliding puzzle's in the treatment of dementia with their brain training application. Employing the same mechanism found in the traditional sliding block puzzle, the user manipulates the panel within a single frame, utilising available space to organise it according to the desired arrangement (Sasaki et al., 2020). The act of sliding the puzzle pieces activates the frontal lobe, responsible for memory, as the user anticipates the direction in which the moving panels can be adjusted to achieve the desired order (Hirono et al., 1997). The user is required to alter the positions of the panels within the sliding block puzzle while retaining the original layout in memory (Sasaki et al., 2020).
+
+The spatial recognition capacity of the frontal lobe is engaged as the user formulates the steps necessary to reach the correct solution by comprehending the panel positions (Hirono et al., 1997). Completing the puzzle necessitates memory retention, figure arrangement, and spatial comprehension, suggesting a potential for preventing dementia progression (Sasaki et al., 2020).
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1.0\linewidth]{dissertation/images/sliding_puzzle.jpg}
-    \subcaption[a]{gag}
-    \subcaption[b]{gagg}
-
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{dissertation/images/uncompleted_sliding.png}
+        \caption{Uncompleted sliding puzzle.}
+        \label{fig:slide_uncompleted}
+    \end{subfigure}
+    ~ 
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{dissertation/images/completed_sliding.png}
+        \caption{Completed sliding puzzle.}
+        \label{fig:slide_completed}
+    \end{subfigure}
+    ~  
     \caption{Screenshots from brain training application developed by Sasaki et al. (2020), showing incomplete
-    }
-
-    \label{fig:sliding_puzzle} 
+    }\label{fig:sliding_puzzle}
 \end{figure}
 
 
-Similar to the traditional sliding block puzzle, in HarmonyScape the user manipulates the panel within the confines of one frame to arrange it into the desired order. Given that the sliding block puzzle requires goal-oriented memory, spatial awareness, and figure arrangement, research conducted by Sasaki et al. (2020) suggests that engagement with such puzzles by users may potentially suppress the progression of dementia.
+Similar to the traditional sliding block puzzle and the implementation by Sasaki et al. (2020), in HarmonyScape the user manipulates the panel within the confines of one frame to arrange it into the desired order. Given that the sliding block puzzle requires goal-oriented memory, spatial awareness, and figure arrangement, research conducted by Sasaki et al. (2020) suggests that engagement with such puzzles by users may potentially suppress the progression of dementia.
 
 \subsection{Music Memory}
 
