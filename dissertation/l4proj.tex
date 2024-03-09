@@ -103,10 +103,29 @@
 
 % The project is inspired by research indicating the therapeutic potential of music for individuals with dementia, as highlighted by studies such as Vink et al. (2003). By leveraging the relationship between music and cognitive function, the initiative seeks to explore how interactive music experiences can benefit individuals with intellectual disabilities.
 
+TOODO: \begin{itemize}
+    \item Aims
+\end{itemize}
+
+
 This opening chapter sets the stage for the HarmonyScape project by introducing the motivations and goals that led to its development. The following sections of this paper will explore distinct segments of the project, covering its background, design, implementation, and evaluation.
 
 \section{Motivation}
-As the prevalence of dementia increases within our aging population, with the number of older people with dementia in the UK projected to rise by 80\% from almost 885,000 in 2019 to around 1.6 million in 2040 (Wittenberg et al., 2019), the development of effective treatments and engaging activities to manage its symptoms becomes imperative.  The means of music as a form of therapy in the treatment of intellectual disabilities, such as Alzheimer's, is a unique approach that taps into preserved cognitive and emotional functions in individuals with dementia. 
+As the prevalence of dementia increases within our aging population, with the number of older people with dementia in the UK projected to rise by 80\% from almost 885,000 in 2019 to around 1.6 million in 2040 (Wittenberg \emp{et al.} 2019), the development of effective treatments and engaging activities to manage its symptoms becomes imperative.  The means of music as a form of therapy in the treatment of intellectual disabilities, such as Alzheimer's, is a unique approach that taps into preserved cognitive and emotional functions in individuals with dementia.
+
+Research by Vink AC \emph{et al.} (2004) shows promising results that for individuals with dementia, music-based therapeutic interventions can be employed to target depressive symptoms. While the potential benefits of game-based activities for cognitive function in dementia are highlighted by Vilkki et al. (2019), combining these approaches in a therapeutic setting has been seldom explored. This suggests a valuable avenue for future research in dementia care.
+
+This combined approach is particularly promising for our aging population. As lifespans increase, so does the prevalence of dementia. However, this generation also coincides with a rise in video game popularity. People who were 14 years old in 1973, the year the first home video game console, the Magnavox Odyssey\footnote{https://www.computinghistory.org.uk/det/16909/Magnavox-Odyssey/}, was released globally, would be 65 today. This being the age where the risk of dementia significantly increases (Chen \emph{et al.,} 2009). This generation's familiarity with games can be leveraged to create engaging and effective therapeutic activities. Despite the clear potential of this promising avenue for leveraging a familiar and potentially engaging activity, it remains largely unexplored.
+
+- Actively making music engages those with Alzheimer's
+
+- multisensory experiences provide mental and emotional stimulation for those with alzhiemers
+
+- enjoyment of music is something that doesn't dissipate as dementia progresses
+
+\section{Aims}
+
+
 
 % Why should the reader care about what are you doing and what are you actually doing?
 % \section{Guidance}
@@ -159,12 +178,12 @@ As the prevalence of dementia increases within our aging population, with the nu
 %     \emph{The Sense of Style} \cite{Pin15} Excellent, though quite in-depth.
 % \end{itemize}
 
-% \subsubsection{Citation styles}
+\subsubsection{Citation styles}
 
-% \begin{itemize}
-% \item If you are referring to a reference as a noun, then cite it as: ``\citet{Orw68} discusses the role of language in political thought.''
-% \item If you are referring implicitly to references, use: ``There are many good books on writing \citep{Orw68, Wil09, Pin15}.''
-% \end{itemize}
+\begin{itemize}
+\item If you are referring to a reference as a noun, then cite it as: ``\citet{Orw68} discusses the role of language in political thought.''
+\item If you are referring implicitly to references, use: ``There are many good books on writing \citep{Orw68, Wil09, Pin15}.''
+\end{itemize}
 
 % There is a complete guide on good citation practice by Peter Coxhead available here: \url{http://www.cs.bham.ac.uk/~pxc/refs/index.html}. 
 % If you are unsure about how to cite online sources, please see this guide: \url{https://student.unsw.edu.au/how-do-i-cite-electronic-sources}.
@@ -180,6 +199,15 @@ As the prevalence of dementia increases within our aging population, with the nu
 
 %==================================================================================================================================
 \chapter{Background}
+To DO:
+\begin{itemize}
+    \item Beginning section
+    \item ADD A SECTION ABOUT JARRING NOISES DISORIENTING USERS WITH DEMENTIA (Music Therapy in the Treatment of Dementia: A Review Article(Shirsat, Jha and Verma, 2023)) ((Caspar et al., 2017))
+    \item Write Follow The Sound
+    \item Move Minigame descriptions to Design
+\end{itemize}
+
+
 What did other people do, and how is it relevant to what you want to do?
 
 
@@ -232,8 +260,7 @@ AARP Staying Sharp is an online platform provided by AARP (formerly known as the
 
 Although AARP Staying Sharp has great potential in helping individuals maintain cognitive function through its variety of brain-training games and activities, a key downfall is the sole use of uni-sensory stimulation, and so is missing out on the range of potential benefits shown from multisensory treatment in those with neurodegenerative diseases, such as Alzheimer's.
 
-Sánchez et al. (2016) discuss these potential positive effects in comparison to uni-sensory experiences in the treatment of people with severe
-dementia. Specifically, they discuss the beneficial impact on anxiety symptoms that comes from stimulating different senses which allows for greater sensory environment control. HarmonyScape aims to capitalise on the principles outlined by Sánchez et al. (2016), offering multisensory engagement that intertwines visual and auditory stimuli.
+Sánchez et al. (2016) discuss these potential positive effects in comparison to uni-sensory experiences in the treatment of people with severe dementia. Specifically, they discuss the beneficial impact on anxiety symptoms that comes from stimulating different senses which allows for greater sensory environment control. HarmonyScape aims to capitalise on the principles outlined by Sánchez et al. (2016), offering multisensory engagement that intertwines visual and auditory stimuli.
 
 
 WRITE A DOWNFALL ABOUT HOW IT DOESNT EXPLICITY USE 
@@ -320,19 +347,71 @@ A systematic review conducted by Clare et al. (2003) examined the effectiveness 
 
 
 %==================================================================================================================================
-\chapter{Analysis/Requirements}
-What is the problem that you want to solve, and how did you arrive at it?
-\section{Guidance}
-Make it clear how you derived the constrained form of your problem via a clear and logical process. 
+\chapter{Requirements}
+
+This chapter dives into the specific requirements HarmonyScape needs to meet to effectively achieve the goals outlined in Chapter 1. These requirements leverage and build upon the research and relevant concepts explored in Chapter 2, ensuring the game aligns with established best practices.
+
+% \section{Guidance}
+% Make it clear how you derived the constrained form of your problem via a clear and logical process.
+
+\section{Functional Requirements}
+This section presents the functional requirements for HarmonyScape, informed by the research in Chapter 2. The MoSCow method prioritises these requirements, categorising them based on their necessity to achieving the evaluation goals: some are essential for core functionality (Must Haves), while others significantly enhance the user experience (Should Haves), and some are desirable for future iterations (Could Haves).
+
+\subsection{Must Have}
+Interactive Music: HarmonyScape's music must be interactive, dynamically responding to the player's movements. This aligns with Active Music Theory (Vink AC \emph{et al.,} 2004), where the players active participation directly affects the games soundscape. The aim of this feature is to encourage a sense of control and creative exploration through allowing players to influence the musical composition. Whilst also facilitating cognitive stimulation through providing opportunity for players to solve problems or puzzles through musical interaction.
+
+Multisensory Experience: HarmonyScape must incorporate a multisensory experience, specifically through the use of visual and auditory stimuli. This aligns with research by Sánchez et al. (2016) suggesting that stimulating multiple senses can benefit individuals living with dementia who are experiencing anxiety symptoms. This should empower players to exercise greater control over their sensory environment, potentially mitigating anxiety symptoms associated with dementia (Sánchez et al., 2016).
+
+Gentle Audio Design: I intend to implement the integration of new instruments into the game's soundscape, based on player input, to further develop the concept of interactive music within the game. The following chapter, "Design," explores this concept further. Research by Shirsat, Jha and Verma (2023) shows that jarring or disorienting changes in tone can exacerbate anxiety and confusion in individuals with dementia. Therefore, HarmonyScape should prioritises a calm and predictable soundscape. Familiar and consistent music plays a vital role in promoting a sense of security and reducing potential disorientation for people with dementia (Caspar et al., 2017). The gentle melody should serve as a constant anchor, allowing players to focus on the game-play without auditory distractions.
+
+\subsection{Should Have}
+Progress Tracker: HarmonyScape should include a progress tracker within the user interface. This tracker's purpose is to provide clear and consistent visual feedback on instrument collection throughout game-play. This tracker should utilise a simple and clear visual representation, such as colour-filling elements, to provide immediate feedback on instrument collection. Players with dementia often experience short-term memory challenges. A progress tracker could be particularly helpful for this group. Seeing progress can reinforce a sense of accomplishment and provides a clear marker of progress within the game (Vermeir et al., 2020). This, in turn, could enhance motivation and engagement for players living with dementia as they progress through HarmonyScape.
+
+\subsection{Could Have}
+Incorporation of reminiscence therapy: HarmonyScape could be further developed by incorporating elements of reminiscence therapy. This approach utilises familiar music to evoke positive memories and emotional well-being in users (Bhar and Sunil, 2014).  Players could be given the option to choose songs, familiar to them, they want to incorporate into the game. Research done in reminiscence therapy indicates that familiar music can trigger personal memories and enhance emotional well-being in those living with dementia (Cuevas et al., 2020). Integrating song selection could potentially unlock positive memories associated with their chosen music, expanding the potential therapeutic benefits of HarmonyScape.
+
+\section{Non-functional Requirements}
+HarmonyScape's non-functional requirements address broader aspects that contribute to a positive user experience during evaluation. As with the functional requirements, prioritisation has been applied using the MoSCoW method.
+
+\subsection{Must Have}
+Accessibility: I aim to ensure clear and concise instructions to support players with varying cognitive abilities. This can be achieved through visuals and audio cues that are simple and unambiguous, such as written instructions and contextual audio prompts.
+
+\subsection{Should Have}
+Visible Interaction: Making it obvious that player input is affecting the game. For example, upon player input, subtle animations for the instruments themselves and their corresponding game-play. A brief visual flourish or change in appearance could provide immediate confirmation that the player's action has registered. This type of clear and consistent visual feedback can be particularly beneficial for players with dementia, as studies suggest it can improve engagement and reduce frustration in users with cognitive decline (Ballard et al., 2008).
+
 
 %==================================================================================================================================
 \chapter{Design}
 How is this problem to be approached, without reference to specific implementation details? 
+
+TODO:
+\begin{itemize}
+    \item Overview
+    \item Player Movement
+    \item Music dynamically changing with movement
+    \item Minigames
+\end{itemize}
+
+
 \section{Guidance}
 Design should cover the abstract design in such a way that someone else might be able to do what you did, but with a different language or library or tool.
 
 %==================================================================================================================================
 \chapter{Implementation}
+
+TODO:
+\begin{itemize}
+    \item How the player movement script works
+    \item How the dynamic music was implemented
+    \item How each minigame was implementd
+    \begin{itemize}
+        \item Card Matching
+        \item Sliding Puzzle
+        \item Music Memory
+        \item Follow The Sound
+    \end{itemize}
+\end{itemize}
+
 What did you do to implement this idea, and what technical achievements did you make?
 \section{Guidance}
 You can't talk about everything. Cover the high level first, then cover important, relevant or impressive details.
@@ -523,6 +602,12 @@ Avoid putting large blocks of code in the report (more than a page in one block,
 
 %==================================================================================================================================
 \chapter{Evaluation} 
+
+TODOO:
+\begin{itemize}
+    \item Summarise based on results in user study
+\end{itemize}
+
 How good is your solution? How well did you solve the general problem, and what evidence do you have to support that?
 
 \section{Guidance}
