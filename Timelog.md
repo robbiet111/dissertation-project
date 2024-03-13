@@ -424,3 +424,40 @@
 
 ### 04 Mar 2024
 * *3.5 hours* Ran User Study on 5 more people
+
+### 05 Mar 2024
+* *2 hours* Ran User Study on 2 more people
+
+### 06 Mar 2024
+* *2 hours* Fleshing out the Introduction for the dissertation
+* *1 hour* Added abstract
+
+### 07 Mar 2024
+* *2 hours* Added Section for Music Therapy in Background
+* *2 hours* Added Section for Dementia and Alzhiemer's in Background
+
+### 08 Mar 2024
+* *0.5 hours* Meeting with supervisor
+* *0.5 hours* Writing meeting minutes
+* *1.5 hours* Added Section for Related Works in Background
+* *4 hours* Added Familiarity and Engagement in Traditional Games and Card Flipping part to background
+
+### 09 Mar 2024
+* *8 hours* Writing minigame sections iin dissertation
+
+### 10 Mar 2024
+* *2 hours* Writing dissertation outline to be reviewed by project advisor
+
+## Week 24
+
+### 11 Mar 2024
+* *7 hours* Writing requirements section of dissertation
+
+### 12 Mar 2024
+* *8.5 hours* Writing design section of dissertation
+
+### 13 Mar 2024
+* *2 hours* Refined sections on dementia and Alzheimer's disease, ensuring their usage and descriptions are appropriate
+* *1.5 hours* Developed "Overview" section for the Design portion of the dissertation, outlining HarmonyScape's core mechanics.
+* *1.5 hours* Expanded the "Design" section with subsections on "Player Movement and Control".
+* *2.5 hours* Created a new "Music" section in the Design portion. This included a subsection on "Instrument Collection" and a section on the dynamic music mechanics, including connections to the active music therapy principles.
