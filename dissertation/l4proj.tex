@@ -11,7 +11,7 @@
 
 %==============================================================================
 %% METADATA
-\title{HarmonyScape: Inclusive 3D Exploration with Music for Intellectual Disabilities}
+\title{HarmonyScape: Inclusive 3D Exploration with Music for those living with Dementia}
 \author{Robbie Tippen}
 \date{March 22, 2024}
 
@@ -104,28 +104,41 @@
 % The project is inspired by research indicating the therapeutic potential of music for individuals with dementia, as highlighted by studies such as Vink et al. (2003). By leveraging the relationship between music and cognitive function, the initiative seeks to explore how interactive music experiences can benefit individuals with intellectual disabilities.
 
 TOODO: \begin{itemize}
-    \item Aims & Abstract
+    \item Abstract
+    \item Present continuous tense (Happened already and continue happening)
+    \item Fix use of singular and double quotation marks
+    \item Should have objectives (more than 1 or 2 that are more specific, and act as stepping stones to reach the aims)
+    \item Should only have 1 or 2 aims (not as specific)
 \end{itemize}
 
 
 This opening chapter sets the stage for the HarmonyScape project by introducing the motivations and goals that led to its development. The following sections of this paper will explore distinct segments of the project, covering its background, design, implementation, and evaluation.
 
 \section{Motivation}
-As the prevalence of dementia increases within our aging population, with the number of older people with dementia in the UK projected to rise by 80\% from almost 885,000 in 2019 to around 1.6 million in 2040 (Wittenberg \emp{et al.} 2019), the development of effective treatments and engaging activities to manage its symptoms becomes imperative.  The means of music as a form of therapy in the treatment of intellectual disabilities, such as Alzheimer's, is a unique approach that taps into preserved cognitive and emotional functions in individuals with dementia.
+As the prevalence of dementia increases within our aging population, with the number of older people with dementia in the UK projected to rise by 80\% from almost 885,000 in 2019 to around 1.6 million in 2040 (Wittenberg \emp{et al.} 2019), the development of effective treatments and engaging activities to manage its symptoms becomes imperative.  The means of music as a form of therapy in the treatment of diseases linked with dementia, such as Alzheimer's, is a unique approach that taps into preserved cognitive and emotional functions in individuals with dementia.
 
 Research by Vink AC \emph{et al.} (2004) shows promising results that for individuals with dementia, music-based therapeutic interventions can be employed to target depressive symptoms. While the potential benefits of game-based activities for cognitive function in dementia are highlighted by Vilkki et al. (2019), combining these approaches in a therapeutic setting has been seldom explored. This suggests a valuable avenue for future research in dementia care.
 
 This combined approach is particularly promising for our aging population. As lifespans increase, so does the prevalence of dementia. However, this generation also coincides with a rise in video game popularity. People who were 14 years old in 1973, the year the first home video game console, the Magnavox Odyssey\footnote{https://www.computinghistory.org.uk/det/16909/Magnavox-Odyssey/}, was released globally, would be 65 today. This being the age where the risk of dementia significantly increases (Chen \emph{et al.,} 2009). This generation's familiarity with games can be leveraged to create engaging and effective therapeutic activities. Despite the clear potential of this promising avenue for leveraging a familiar and potentially engaging activity, it remains largely unexplored.
 
-- Actively making music engages those with Alzheimer's
-
-- multisensory experiences provide mental and emotional stimulation for those with alzhiemers
+% - multisensory experiences provide mental and emotional stimulation for those with alzhiemers
 
 - enjoyment of music is something that doesn't dissipate as dementia progresses
 
 \section{Aims}
+Considering the motivations outlined above, we will develop a multisensory, interactive 3D exploration game designed to potentially aid cognitive well-being in those with dementia, including diseases like Alzheimer's. This game will prioritise enjoyment and captivation while incorporating active music theory principles, where the soundscape dynamically responds to player movement.
 
+An evaluation will then be conducted to address the following question:
+Is the project a means of captivating and potentially aiding cognitive well-being in an enjoyable, interactive manner?
 
+This is a broad and complex question that cannot be definitively answered in a single evaluation, especially at this scale. Thus, we present four key questions to help answer the broader question
+
+\begin{itemize}
+    \item How intrinsically motivating is the game? Does the multisensory design and interactive music system encourage engagement from the player?
+    \item How pleasant and satisfying is the dynamic music-making system for players? Does it promote a sense of creative control and enjoyment?
+    \item Does the game show potential for aiding cognitive well-being in individuals with dementia?
+    \item Does the game induce any negative effects, such as stress or confusion, which could affect players with dementia?
+\end{itemize}
 
 % Why should the reader care about what are you doing and what are you actually doing?
 % \section{Guidance}
@@ -178,12 +191,12 @@ This combined approach is particularly promising for our aging population. As li
 %     \emph{The Sense of Style} \cite{Pin15} Excellent, though quite in-depth.
 % \end{itemize}
 
-\subsubsection{Citation styles}
+% \subsubsection{Citation styles}
 
-\begin{itemize}
-\item If you are referring to a reference as a noun, then cite it as: ``\citet{Orw68} discusses the role of language in political thought.''
-\item If you are referring implicitly to references, use: ``There are many good books on writing \citep{Orw68, Wil09, Pin15}.''
-\end{itemize}
+% \begin{itemize}
+% \item If you are referring to a reference as a noun, then cite it as: ``\citet{Orw68} discusses the role of language in political thought.''
+% \item If you are referring implicitly to references, use: ``There are many good books on writing \citep{Orw68, Wil09, Pin15}.''
+% \end{itemize}
 
 % There is a complete guide on good citation practice by Peter Coxhead available here: \url{http://www.cs.bham.ac.uk/~pxc/refs/index.html}. 
 % If you are unsure about how to cite online sources, please see this guide: \url{https://student.unsw.edu.au/how-do-i-cite-electronic-sources}.
@@ -202,6 +215,8 @@ This combined approach is particularly promising for our aging population. As li
 To DO:
 \begin{itemize}
     \item Beginning section
+    \item Add to Dementia section that its more specifically aimed at those with early to mid stages of dementia and that’s what I’m referring to from here on out when referring to those living with dementia
+    \item Definition of Gamification
 \end{itemize}
 
 
@@ -321,6 +336,11 @@ WRITE A DOWNFALL FOR SOMETHING BEING LACKING IN USER CREATIVITY WHICH CAN LIMIT 
 %==================================================================================================================================
 \chapter{Requirements}
 
+TODO:
+\begin{itemize}
+    \item Systematising name numbered tables with the requirements (Requirements should be numbered in a table to be able to refer back to later by number in design and implementation)
+\end{itemize}
+
 This chapter dives into the specific requirements HarmonyScape needs to meet to effectively achieve the goals outlined in Chapter 1. These requirements leverage and build upon the research and relevant concepts explored in Chapter 2, ensuring the game aligns with established best practices.
 
 % \section{Guidance}
@@ -359,6 +379,11 @@ How is this problem to be approached, without reference to specific implementati
 TODO:
 \begin{itemize}
     \item Refrence all figures in
+    \item How Terrain was designed
+    \item Overview needs to be more in depth, talking about the interactive music.
+    \item Overview does not give a sense of the feel of the game, how the game feels to be played, what its meant to be like to be to play
+    \item Imagery should be in the design part, show imagery of the game to showcase the feel of the game.
+    \item Can be written in the tense that it has already been done
 \end{itemize}
 
 
@@ -380,7 +405,7 @@ Secondly, Unity's asset store provides access to pre-made models, sound effects,
 
 Finally, Unity's suitability for novice developers makes it an ideal choice for this project. Its comprehensive resources and intuitive tools provide a strong foundation for learning core game development skills in 3D environment design, basic scripting, and gameplay logic.
 
-\section{Player Movement and Control}
+\section{Player Movement and Control}\label{sec:move_&_control}
 HarmonyScape will feature a player movement system designed for intuitive control and ease of use. The mechanics of this system are outlined in the following subsections.
 
 \subsection{Movement Mechanics}
@@ -390,9 +415,6 @@ HarmonyScape will feature a player movement system designed for intuitive contro
 \subsubsection{Acceleration:} To enhance the realism of the movement system and player engagement, the character's speed will increase incrementally when the player initiates movement. This smooth transition in velocity simulates momentum and avoids a disruptive change from a stationary state to full speed. This design feature will have particular relevance for the dynamic music system, which will be elaborated upon in a subsequent section.
 
 \subsubsection{Jumping Mechanic:} The player will have the ability to jump via a dedicated button or key. This mechanic, familiar to players of many classic games, offers increased freedom of movement and may provide advantages or creative options for navigating minigame challenges.
-
-
-
 
 \section{Minigames}
 This section describes the minigames within HarmonyScape and their design decisions. These minigames incorporate elements of familiar traditional games,  music-based activities, active music theory, and spatial navigation challenges. All of which have been serve as an interactive means of exercising cognitive skills for those living with dementia.
@@ -502,205 +524,296 @@ Chronological order of what happened, grouped by feature. For example starting w
 
 TODO:
 \begin{itemize}
-    \item How the player movement script works
-    \item How the dynamic music was implemented
-    \item How each minigame was implementd
+    \item Terrain and Navigation:
+    \begin{itemize}
+        \item How the terrain was implemented (mention foliage etc.)
+    \end{itemize}
+    \item How each minigame was implemented:
     \begin{itemize}
         \item Card Matching
-        \item Sliding Puzzle
+        \item Sliding Puzzle (incl. pic that shows it completed)
         \item Music Memory
-        \item Follow The Sound
+        \item Follow The Sound (incl. Instructions)
+        \item How the Camera Controller Script was implemented (Fixed Camera during minigames)
     \end{itemize}
-    \item Collection of instruments
+    \item Dynamic Music System:
+    \begin{itemize}
+        \item Collection of instruments (models and triggerSFX)
+        \item Audio Track Management (loading, storing instrument tracks)
+        \item How the dynamic music based on movement was implemented
+    \end{itemize}
+    \item User Interface:
+    \begin{itemize}
+        \item How the Menus were implemented (Scene Loaders)
+        \item Progress Tracker (Instrument Icons)
+    \end{itemize}
+    \item How Music Note (Guiders) were implemented
 \end{itemize}
 
-What did you do to implement this idea, and what technical achievements did you make?
-\section{Guidance}
-You can't talk about everything. Cover the high level first, then cover important, relevant or impressive details.
+\newpage
+
+\section{Development Environment}
+This section describes the development environment that the project was set up in. This includes, Unity version, programming languages, IDEs and external libraries and assets used.
+
+\subsection{Unity Version}
+Unity Version 2022.3.10f1 LTS was chosen for the development of HarmoyScape. Unity's Long-Term Support (LTS) version was selected to ensure stability and access to extensive documentation throughout the development process.
+
+\subsection{Programming Language}
+C# is the primary language in Unity for creating custom scripts that define the behavior of game objects, handle player input, manage game logic, and interface with Unity's various systems (UI, physics, etc.). This is the sole programming language that was used in the development of HarmonyScape.
+
+\subsection{Integrated Development Environment (IDE)}
+Visual Studio Code was chosen as the development environment due to its lightweight footprint, seamless Unity integration, and robust debugging capabilities.
+
+\subsection{External Libraries and Assets}
+Music created by Ashley Garven.
+
+\begin{itemize}
+    \item TextMeshPro: \url{https://docs.unity3d.com/Manual/com.unity.textmeshpro.html}
+    \item Unity-Standard-Assets: \url{https://assetstore.unity.com/packages/essentials/starter-assets-thirdperson-updates-in-new-charactercontroller-pa-196526}
+    \item Rock Package: \url{https://assetstore.unity.com/packages/3d/props/exterior/rock-package-118182}
+    \item Grass and Flowers Pack 1: \url{https://assetstore.unity.com/packages/2d/textures-materials/nature/grass-and-flowers-pack-1-17100}
+    \item ADJ Textures: \url{https://assetstore.unity.com/packages/3d/environments/landscapes/terrain-sample-asset-pack-145808}
+    \item Conifers [BOTD]: \url{https://assetstore.unity.com/packages/3d/vegetation/trees/conifers-botd-142076}
+    \item RPG Monster DUO PBR Polyart: \url{https://assetstore.unity.com/packages/3d/characters/creatures/rpg-monster-duo-pbr-polyart-157762}
+    \item Flooded\_Grounds: \url{https://assetstore.unity.com/packages/3d/environments/flooded-grounds-48529}
+\end{itemize}
+
+\section{Terrain and Navigation}
+Before implementing any player interactivity, minigames, or the dynamic music system, we needed to create a player-controlled character. We also needed a terrain for the character to explore and interact with.
+
+\subsection{Player-Controlled Character}
+The character, originally a capsule, was originally brought in with an attached "Player Control" script, that had basic input, jump and rotation handling.
+
+\subsubsection{HandleInput():}
+The HandleInput function, within the "Player Movement Script", is responsible for gathering player input and translating it into a desired movement direction. It retrieves horizontal and vertical axis values from Unity's Input system, which correspond to the commonly used WASD and arrow keys on a keyboard, either can be used depending on player preference. Using these familiar controls promotes ease of use and minimises the learning curve for players, as discussed in \ref{sec:move_&_control}. These input values are used to construct a 3D vector (movement direction) that captures the direction the player wants to move. The magnitude of this vector is calculated and clamped between 0 and 1, ensuring that movement speed remains consistent regardless of direction. Finally, the function returns this calculated movement direction, ready to be used by the MoveAndRotatePlayer function.
+
+\subsubsection{HandleJumping():}
+The HandleJumping function, within the "Player Movement Script", manages all logic related to the player's jumping ability. It first checks if the CharacterController is grounded, meaning the player is currently touching the floor. If so, it records the current time as 'lastGroundedTime'. The function listens for the "Jump" button press (the space-bar). If pressed, the jump button pressed time is recorded. It then manages a short grace period after leaving the ground, allowing the player to jump even if they didn't press the button the exact moment they left the ground. During this grace period, it adjusts the CharacterController's step offset and sets the vertical speed (ySpeed) to initiate the jump.
+
+\subsubsection{MoveAndRotatePlayer():}
+The MoveAndRotatePlayer function, within the "Player Movement Script", takes the calculated movement direction and handles the core tasks of physically moving the player and smoothly rotating them to face their movement direction. It first creates a velocity vector by multiplying the movement direction with the player's current speed. The vertical component of this velocity (velocity.y) is set to the ySpeed variable, which is influenced by gravity and jumping. The  CharacterController 'Move' function is then called to apply this velocity, updating the player's position. Finally, if the player is moving, the function calculates a target rotation based on movement direction and smoothly rotates the player object towards that target.
+
+\subsection{Camera System}
+Cinemachine is a powerful suite of tools included within Unity that provides intelligent and dynamic camera behaviors. It simplifies the process of creating complex camera systems, allowing developers to focus on the desired look and feel of the game rather than the low-level technical implementation of camera control.
+
+HarmonyScape implements the Cinemachine Free Look Camera, a versatile camera component designed to offer third-person style camera perspectives. This choice is rooted in the theory discussed in Section \ref{sec:third_person}, which highlights the benefits of a third-person perspective for players who may be more susceptible to simulation sickness and require enhanced situational awareness. It's commonly used in games where players need the flexibility to control the camera view to observe their surroundings and character. The Free Look Camera system consists of three virtual camera rigs (top, middle, and bottom) that orbit around a target object, with a spline system seamlessly blending between them.
+
+In HarmonyScape, I've set the target of the Cinemachine Free Look Camera to be the player-controlled character object. This ensures that the camera remains focused on the player as they move through the game world. The Free Look Camera functions as a component of the main camera, effectively overriding Unity's standard camera controls to provide the desired dynamic camera behavior.
+
+To prevent the camera from clipping through obstacles in the environment, I've added a Cinemachine Collider component to the Free Look Camera. This collider works in tandem with the camera system to detect potential collisions with objects in the scene. I've set the collider's strategy parameter to "Preserve Camera Distance." This means that if the camera's path would be obstructed, it smoothly readjusts its position to maintain a consistent distance from the player character, avoiding any jarring visual interruptions.
+
+\subsubsection{How this affects the "Player Movement" script:} Within the Player Movement Script, the movement direction calculated from player input is modified based on the Cinemachine Free Look Camera's orientation. The movement direction is rotated around the vertical axis to match the camera's Y-axis rotation. This ensures that player movement aligns with the camera's view, providing an intuitive control scheme. Additionally, the movement direction is normalised to maintain consistent movement speed regardless of the applied rotation.
+
+\section{Minigame Implementations}
+The various minigames within HarmonyScape are each implemented based on the corresponding design outlined in the Design Chapter. They share a core structure, utilising a central "Minigame Master" script. This master script handles the core logic for each minigame, including tracking the player's progress, evaluating win conditions, and managing the overall flow of the minigame. The "Follow the Sound" minigame functions differently, as will be explained in the following corresponding section. 
+
+Each minigame has its own unique set of objects placed within the game world that are specific to that minigame's functionality. These objects will often have additional scripts attached to them that manage their individual behaviours and interactions with the player.
+
+This section will delve into the specifics of each minigame implementation, detailing the functionalities of the Minigame Master script (where applicable), the unique objects used, and any additional scripts that contribute to their functionality.
+
+\subsection{Fixed Camera for Minigames}
+Each minigame within HarmonyScape temporarily overrides the standard camera behavior whilst it is being played. This adjustment is designed to ensure that the player has a clear, unobstructed view of all the necessary minigame components. This is achieved through a dedicated "CameraController" script attached to the main camera. This script works in conjunction with trigger zones, reffred to in the scripts as "catchment areas", placed around each minigame's location.
+
+When a player enters a minigame's catchment area, the corresponding trigger script communicates with the CameraController. The CameraController then disables the Cinemachine Brain component, taking direct control over the camera's position and rotation. The camera is repositioned and reoriented to provide an optimal view of the minigame's play area. Depending on the minigame, this might involve a top-down view or another specialised camera setup.
+
+The player may choose to exit the catchment area before a minigame is completed if they wish to explore or attempt a different minigame. Upon exiting the minigame's catchment area, the trigger script signals the "CameraController" to reset the camera. This re-enables the Cinemachine camera, transitioning back to the free look camera used for regular exploration. Additionally, successful completion of the minigame will also disable the catchment area and reset the camera.
+
+\subsection{Card Matching}
+...
+\subsection{Sliding Puzzle}
+...
+\subsection{Music Memory}
+...
+\subsection{Follow The Sound}
+...
+
+% What did you do to implement this idea, and what technical achievements did you make?
+% \section{Guidance}
+% You can't talk about everything. Cover the high level first, then cover important, relevant or impressive details.
 
 
 
-\section{General points}
+% \section{General points}
 
-These points apply to the whole dissertation, not just this chapter.
-
-
-
-\subsection{Figures}
-\emph{Always} refer to figures included, like Figure \ref{fig:relu}, in the body of the text. Include full, explanatory captions and make sure the figures look good on the page.
-You may include multiple figures in one float, as in Figure \ref{fig:synthetic}, using \texttt{subcaption}, which is enabled in the template.
+% These points apply to the whole dissertation, not just this chapter.
 
 
 
-% Figures are important. Use them well.
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{images/relu.pdf}    
-
-    \caption{In figure captions, explain what the reader is looking at: ``A schematic of the rectifying linear unit, where $a$ is the output amplitude,
-    $d$ is a configurable dead-zone, and $Z_j$ is the input signal'', as well as why the reader is looking at this: 
-    ``It is notable that there is no activation \emph{at all} below 0, which explains our initial results.'' 
-    \textbf{Use vector image formats (.pdf) where possible}. Size figures appropriately, and do not make them over-large or too small to read.
-    }
-
-    % use the notation fig:name to cross reference a figure
-    \label{fig:relu} 
-\end{figure}
+% \subsection{Figures}
+% \emph{Always} refer to figures included, like Figure \ref{fig:relu}, in the body of the text. Include full, explanatory captions and make sure the figures look good on the page.
+% You may include multiple figures in one float, as in Figure \ref{fig:synthetic}, using \texttt{subcaption}, which is enabled in the template.
 
 
-\begin{figure}
-    \centering
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{images/synthetic.png}
-        \caption{Synthetic image, black on white.}
-        \label{fig:syn1}
-    \end{subfigure}
-    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
-      %(or a blank line to force the subfigure onto a new line)
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{images/synthetic_2.png}
-        \caption{Synthetic image, white on black.}
-        \label{fig:syn2}
-    \end{subfigure}
-    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
-    %(or a blank line to force the subfigure onto a new line)    
-    \caption{Synthetic test images for edge detection algorithms. \subref{fig:syn1} shows various gray levels that require an adaptive algorithm. \subref{fig:syn2}
-    shows more challenging edge detection tests that have crossing lines. Fusing these into full segments typically requires algorithms like the Hough transform.
-    This is an example of using subfigures, with \texttt{subref}s in the caption.
-    }\label{fig:synthetic}
-\end{figure}
 
-\clearpage
+% % Figures are important. Use them well.
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.5\linewidth]{images/relu.pdf}    
 
-\subsection{Equations}
+%     \caption{In figure captions, explain what the reader is looking at: ``A schematic of the rectifying linear unit, where $a$ is the output amplitude,
+%     $d$ is a configurable dead-zone, and $Z_j$ is the input signal'', as well as why the reader is looking at this: 
+%     ``It is notable that there is no activation \emph{at all} below 0, which explains our initial results.'' 
+%     \textbf{Use vector image formats (.pdf) where possible}. Size figures appropriately, and do not make them over-large or too small to read.
+%     }
 
-Equations should be typeset correctly and precisely. Make sure you get parenthesis sizing correct, and punctuate equations correctly 
-(the comma is important and goes \textit{inside} the equation block). Explain any symbols used clearly if not defined earlier. 
+%     % use the notation fig:name to cross reference a figure
+%     \label{fig:relu} 
+% \end{figure}
 
-For example, we might define:
-\begin{equation}
-    \hat{f}(\xi) = \frac{1}{2}\left[ \int_{-\infty}^{\infty} f(x) e^{2\pi i x \xi} \right],
-\end{equation}    
-where $\hat{f}(\xi)$ is the Fourier transform of the time domain signal $f(x)$.
 
-\subsection{Algorithms}
-Algorithms can be set using \texttt{algorithm2e}, as in Algorithm \ref{alg:metropolis}.
+% \begin{figure}
+%     \centering
+%     \begin{subfigure}[b]{0.45\textwidth}
+%         \includegraphics[width=\textwidth]{images/synthetic.png}
+%         \caption{Synthetic image, black on white.}
+%         \label{fig:syn1}
+%     \end{subfigure}
+%     ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+%       %(or a blank line to force the subfigure onto a new line)
+%     \begin{subfigure}[b]{0.45\textwidth}
+%         \includegraphics[width=\textwidth]{images/synthetic_2.png}
+%         \caption{Synthetic image, white on black.}
+%         \label{fig:syn2}
+%     \end{subfigure}
+%     ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+%     %(or a blank line to force the subfigure onto a new line)    
+%     \caption{Synthetic test images for edge detection algorithms. \subref{fig:syn1} shows various gray levels that require an adaptive algorithm. \subref{fig:syn2}
+%     shows more challenging edge detection tests that have crossing lines. Fusing these into full segments typically requires algorithms like the Hough transform.
+%     This is an example of using subfigures, with \texttt{subref}s in the caption.
+%     }\label{fig:synthetic}
+% \end{figure}
 
-% NOTE: line ends are denoted by \; in algorithm2e
-\begin{algorithm}
-    \DontPrintSemicolon
-    \KwData{$f_X(x)$, a probability density function returing the density at $x$.\; $\sigma$ a standard deviation specifying the spread of the proposal distribution.\;
-    $x_0$, an initial starting condition.}
-    \KwResult{$s=[x_1, x_2, \dots, x_n]$, $n$ samples approximately drawn from a distribution with PDF $f_X(x)$.}
-    \Begin{
-        $s \longleftarrow []$\;
-        $p \longleftarrow f_X(x)$\;
-        $i \longleftarrow 0$\;
-        \While{$i < n$}
-        {
-            $x^\prime \longleftarrow \mathcal{N}(x, \sigma^2)$\;
-            $p^\prime \longleftarrow f_X(x^\prime)$\;
-            $a \longleftarrow \frac{p^\prime}{p}$\;
-            $r \longleftarrow U(0,1)$\;
-            \If{$r<a$}
-            {
-                $x \longleftarrow x^\prime$\;
-                $p \longleftarrow f_X(x)$\;
-                $i \longleftarrow i+1$\;
-                append $x$ to $s$\;
-            }
-        }
-    }
+% \clearpage
+
+% \subsection{Equations}
+
+% Equations should be typeset correctly and precisely. Make sure you get parenthesis sizing correct, and punctuate equations correctly 
+% (the comma is important and goes \textit{inside} the equation block). Explain any symbols used clearly if not defined earlier. 
+
+% For example, we might define:
+% \begin{equation}
+%     \hat{f}(\xi) = \frac{1}{2}\left[ \int_{-\infty}^{\infty} f(x) e^{2\pi i x \xi} \right],
+% \end{equation}    
+% where $\hat{f}(\xi)$ is the Fourier transform of the time domain signal $f(x)$.
+
+% \subsection{Algorithms}
+% Algorithms can be set using \texttt{algorithm2e}, as in Algorithm \ref{alg:metropolis}.
+
+% % NOTE: line ends are denoted by \; in algorithm2e
+% \begin{algorithm}
+%     \DontPrintSemicolon
+%     \KwData{$f_X(x)$, a probability density function returing the density at $x$.\; $\sigma$ a standard deviation specifying the spread of the proposal distribution.\;
+%     $x_0$, an initial starting condition.}
+%     \KwResult{$s=[x_1, x_2, \dots, x_n]$, $n$ samples approximately drawn from a distribution with PDF $f_X(x)$.}
+%     \Begin{
+%         $s \longleftarrow []$\;
+%         $p \longleftarrow f_X(x)$\;
+%         $i \longleftarrow 0$\;
+%         \While{$i < n$}
+%         {
+%             $x^\prime \longleftarrow \mathcal{N}(x, \sigma^2)$\;
+%             $p^\prime \longleftarrow f_X(x^\prime)$\;
+%             $a \longleftarrow \frac{p^\prime}{p}$\;
+%             $r \longleftarrow U(0,1)$\;
+%             \If{$r<a$}
+%             {
+%                 $x \longleftarrow x^\prime$\;
+%                 $p \longleftarrow f_X(x)$\;
+%                 $i \longleftarrow i+1$\;
+%                 append $x$ to $s$\;
+%             }
+%         }
+%     }
     
-\caption{The Metropolis-Hastings MCMC algorithm for drawing samples from arbitrary probability distributions, 
-specialised for normal proposal distributions $q(x^\prime|x) = \mathcal{N}(x, \sigma^2)$. The symmetry of the normal distribution means the acceptance rule takes the simplified form.}\label{alg:metropolis}
-\end{algorithm}
+% \caption{The Metropolis-Hastings MCMC algorithm for drawing samples from arbitrary probability distributions, 
+% specialised for normal proposal distributions $q(x^\prime|x) = \mathcal{N}(x, \sigma^2)$. The symmetry of the normal distribution means the acceptance rule takes the simplified form.}\label{alg:metropolis}
+% \end{algorithm}
 
-\subsection{Tables}
+% \subsection{Tables}
 
-If you need to include tables, like Table \ref{tab:operators}, use a tool like https://www.tablesgenerator.com/ to generate the table as it is
-extremely tedious otherwise. 
+% If you need to include tables, like Table \ref{tab:operators}, use a tool like https://www.tablesgenerator.com/ to generate the table as it is
+% extremely tedious otherwise. 
 
-\begin{table}[]
-    \caption{The standard table of operators in Python, along with their functional equivalents from the \texttt{operator} package. Note that table
-    captions go above the table, not below. Do not add additional rules/lines to tables. }\label{tab:operators}
-    %\tt 
-    \rowcolors{2}{}{gray!3}
-    \begin{tabular}{@{}lll@{}}
-    %\toprule
-    \textbf{Operation}    & \textbf{Syntax}                & \textbf{Function}                            \\ %\midrule % optional rule for header
-    Addition              & \texttt{a + b}                          & \texttt{add(a, b)}                                    \\
-    Concatenation         & \texttt{seq1 + seq2}                    & \texttt{concat(seq1, seq2)}                           \\
-    Containment Test      & \texttt{obj in seq}                     & \texttt{contains(seq, obj)}                           \\
-    Division              & \texttt{a / b}                          & \texttt{div(a, b) }  \\
-    Division              & \texttt{a / b}                          & \texttt{truediv(a, b) } \\
-    Division              & \texttt{a // b}                         & \texttt{floordiv(a, b)}                               \\
-    Bitwise And           & \texttt{a \& b}                         & \texttt{and\_(a, b)}                                  \\
-    Bitwise Exclusive Or  & \texttt{a \textasciicircum b}           & \texttt{xor(a, b)}                                    \\
-    Bitwise Inversion     & \texttt{$\sim$a}                        & \texttt{invert(a)}                                    \\
-    Bitwise Or            & \texttt{a | b}                          & \texttt{or\_(a, b)}                                   \\
-    Exponentiation        & \texttt{a ** b}                         & \texttt{pow(a, b)}                                    \\
-    Identity              & \texttt{a is b}                         & \texttt{is\_(a, b)}                                   \\
-    Identity              & \texttt{a is not b}                     & \texttt{is\_not(a, b)}                                \\
-    Indexed Assignment    & \texttt{obj{[}k{]} = v}                 & \texttt{setitem(obj, k, v)}                           \\
-    Indexed Deletion      & \texttt{del obj{[}k{]}}                 & \texttt{delitem(obj, k)}                              \\
-    Indexing              & \texttt{obj{[}k{]}}                     & \texttt{getitem(obj, k)}                              \\
-    Left Shift            & \texttt{a \textless{}\textless b}       & \texttt{lshift(a, b)}                                 \\
-    Modulo                & \texttt{a \% b}                         & \texttt{mod(a, b)}                                    \\
-    Multiplication        & \texttt{a * b}                          & \texttt{mul(a, b)}                                    \\
-    Negation (Arithmetic) & \texttt{- a}                            & \texttt{neg(a)}                                       \\
-    Negation (Logical)    & \texttt{not a}                          & \texttt{not\_(a)}                                     \\
-    Positive              & \texttt{+ a}                            & \texttt{pos(a)}                                       \\
-    Right Shift           & \texttt{a \textgreater{}\textgreater b} & \texttt{rshift(a, b)}                                 \\
-    Sequence Repetition   & \texttt{seq * i}                        & \texttt{repeat(seq, i)}                               \\
-    Slice Assignment      & \texttt{seq{[}i:j{]} = values}          & \texttt{setitem(seq, slice(i, j), values)}            \\
-    Slice Deletion        & \texttt{del seq{[}i:j{]}}               & \texttt{delitem(seq, slice(i, j))}                    \\
-    Slicing               & \texttt{seq{[}i:j{]}}                   & \texttt{getitem(seq, slice(i, j))}                    \\
-    String Formatting     & \texttt{s \% obj}                       & \texttt{mod(s, obj)}                                  \\
-    Subtraction           & \texttt{a - b}                          & \texttt{sub(a, b)}                                    \\
-    Truth Test            & \texttt{obj}                            & \texttt{truth(obj)}                                   \\
-    Ordering              & \texttt{a \textless b}                  & \texttt{lt(a, b)}                                     \\
-    Ordering              & \texttt{a \textless{}= b}               & \texttt{le(a, b)}                                     \\
-    % \bottomrule
-    \end{tabular}
-    \end{table}
-\subsection{Code}
+% \begin{table}[]
+%     \caption{The standard table of operators in Python, along with their functional equivalents from the \texttt{operator} package. Note that table
+%     captions go above the table, not below. Do not add additional rules/lines to tables. }\label{tab:operators}
+%     %\tt 
+%     \rowcolors{2}{}{gray!3}
+%     \begin{tabular}{@{}lll@{}}
+%     %\toprule
+%     \textbf{Operation}    & \textbf{Syntax}                & \textbf{Function}                            \\ %\midrule % optional rule for header
+%     Addition              & \texttt{a + b}                          & \texttt{add(a, b)}                                    \\
+%     Concatenation         & \texttt{seq1 + seq2}                    & \texttt{concat(seq1, seq2)}                           \\
+%     Containment Test      & \texttt{obj in seq}                     & \texttt{contains(seq, obj)}                           \\
+%     Division              & \texttt{a / b}                          & \texttt{div(a, b) }  \\
+%     Division              & \texttt{a / b}                          & \texttt{truediv(a, b) } \\
+%     Division              & \texttt{a // b}                         & \texttt{floordiv(a, b)}                               \\
+%     Bitwise And           & \texttt{a \& b}                         & \texttt{and\_(a, b)}                                  \\
+%     Bitwise Exclusive Or  & \texttt{a \textasciicircum b}           & \texttt{xor(a, b)}                                    \\
+%     Bitwise Inversion     & \texttt{$\sim$a}                        & \texttt{invert(a)}                                    \\
+%     Bitwise Or            & \texttt{a | b}                          & \texttt{or\_(a, b)}                                   \\
+%     Exponentiation        & \texttt{a ** b}                         & \texttt{pow(a, b)}                                    \\
+%     Identity              & \texttt{a is b}                         & \texttt{is\_(a, b)}                                   \\
+%     Identity              & \texttt{a is not b}                     & \texttt{is\_not(a, b)}                                \\
+%     Indexed Assignment    & \texttt{obj{[}k{]} = v}                 & \texttt{setitem(obj, k, v)}                           \\
+%     Indexed Deletion      & \texttt{del obj{[}k{]}}                 & \texttt{delitem(obj, k)}                              \\
+%     Indexing              & \texttt{obj{[}k{]}}                     & \texttt{getitem(obj, k)}                              \\
+%     Left Shift            & \texttt{a \textless{}\textless b}       & \texttt{lshift(a, b)}                                 \\
+%     Modulo                & \texttt{a \% b}                         & \texttt{mod(a, b)}                                    \\
+%     Multiplication        & \texttt{a * b}                          & \texttt{mul(a, b)}                                    \\
+%     Negation (Arithmetic) & \texttt{- a}                            & \texttt{neg(a)}                                       \\
+%     Negation (Logical)    & \texttt{not a}                          & \texttt{not\_(a)}                                     \\
+%     Positive              & \texttt{+ a}                            & \texttt{pos(a)}                                       \\
+%     Right Shift           & \texttt{a \textgreater{}\textgreater b} & \texttt{rshift(a, b)}                                 \\
+%     Sequence Repetition   & \texttt{seq * i}                        & \texttt{repeat(seq, i)}                               \\
+%     Slice Assignment      & \texttt{seq{[}i:j{]} = values}          & \texttt{setitem(seq, slice(i, j), values)}            \\
+%     Slice Deletion        & \texttt{del seq{[}i:j{]}}               & \texttt{delitem(seq, slice(i, j))}                    \\
+%     Slicing               & \texttt{seq{[}i:j{]}}                   & \texttt{getitem(seq, slice(i, j))}                    \\
+%     String Formatting     & \texttt{s \% obj}                       & \texttt{mod(s, obj)}                                  \\
+%     Subtraction           & \texttt{a - b}                          & \texttt{sub(a, b)}                                    \\
+%     Truth Test            & \texttt{obj}                            & \texttt{truth(obj)}                                   \\
+%     Ordering              & \texttt{a \textless b}                  & \texttt{lt(a, b)}                                     \\
+%     Ordering              & \texttt{a \textless{}= b}               & \texttt{le(a, b)}                                     \\
+%     % \bottomrule
+%     \end{tabular}
+%     \end{table}
+% \subsection{Code}
 
-Avoid putting large blocks of code in the report (more than a page in one block, for example). Use syntax highlighting if possible, as in Listing \ref{lst:callahan}.
+% Avoid putting large blocks of code in the report (more than a page in one block, for example). Use syntax highlighting if possible, as in Listing \ref{lst:callahan}.
 
-\begin{lstlisting}[language=python, float, caption={The algorithm for packing the $3\times 3$ outer-totalistic binary CA successor rule into a 
-    $16\times 16\times 16\times 16$ 4 bit lookup table, running an equivalent, notionally 16-state $2\times 2$ CA.}, label=lst:callahan]
-    def create_callahan_table(rule="b3s23"):
-        """Generate the lookup table for the cells."""        
-        s_table = np.zeros((16, 16, 16, 16), dtype=np.uint8)
-        birth, survive = parse_rule(rule)
+% \begin{lstlisting}[language=python, float, caption={The algorithm for packing the $3\times 3$ outer-totalistic binary CA successor rule into a 
+%     $16\times 16\times 16\times 16$ 4 bit lookup table, running an equivalent, notionally 16-state $2\times 2$ CA.}, label=lst:callahan]
+%     def create_callahan_table(rule="b3s23"):
+%         """Generate the lookup table for the cells."""        
+%         s_table = np.zeros((16, 16, 16, 16), dtype=np.uint8)
+%         birth, survive = parse_rule(rule)
 
-        # generate all 16 bit strings
-        for iv in range(65536):
-            bv = [(iv >> z) & 1 for z in range(16)]
-            a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p = bv
+%         # generate all 16 bit strings
+%         for iv in range(65536):
+%             bv = [(iv >> z) & 1 for z in range(16)]
+%             a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p = bv
 
-            # compute next state of the inner 2x2
-            nw = apply_rule(f, a, b, c, e, g, i, j, k)
-            ne = apply_rule(g, b, c, d, f, h, j, k, l)
-            sw = apply_rule(j, e, f, g, i, k, m, n, o)
-            se = apply_rule(k, f, g, h, j, l, n, o, p)
+%             # compute next state of the inner 2x2
+%             nw = apply_rule(f, a, b, c, e, g, i, j, k)
+%             ne = apply_rule(g, b, c, d, f, h, j, k, l)
+%             sw = apply_rule(j, e, f, g, i, k, m, n, o)
+%             se = apply_rule(k, f, g, h, j, l, n, o, p)
 
-            # compute the index of this 4x4
-            nw_code = a | (b << 1) | (e << 2) | (f << 3)
-            ne_code = c | (d << 1) | (g << 2) | (h << 3)
-            sw_code = i | (j << 1) | (m << 2) | (n << 3)
-            se_code = k | (l << 1) | (o << 2) | (p << 3)
+%             # compute the index of this 4x4
+%             nw_code = a | (b << 1) | (e << 2) | (f << 3)
+%             ne_code = c | (d << 1) | (g << 2) | (h << 3)
+%             sw_code = i | (j << 1) | (m << 2) | (n << 3)
+%             se_code = k | (l << 1) | (o << 2) | (p << 3)
 
-            # compute the state for the 2x2
-            next_code = nw | (ne << 1) | (sw << 2) | (se << 3)
+%             # compute the state for the 2x2
+%             next_code = nw | (ne << 1) | (sw << 2) | (se << 3)
 
-            # get the 4x4 index, and write into the table
-            s_table[nw_code, ne_code, sw_code, se_code] = next_code
+%             # get the 4x4 index, and write into the table
+%             s_table[nw_code, ne_code, sw_code, se_code] = next_code
 
-        return s_table
+%         return s_table
 
-\end{lstlisting}
+% \end{lstlisting}
 
 %==================================================================================================================================
 \chapter{Evaluation} 
@@ -727,32 +840,32 @@ How good is your solution? How well did you solve the general problem, and what 
         that your work is the most amazing product ever.
 \end{itemize}
 
-\section{Evidence}
-Make sure you present your evidence well. Use appropriate visualisations, reporting techniques and statistical analysis, as appropriate.
+% \section{Evidence}
+% Make sure you present your evidence well. Use appropriate visualisations, reporting techniques and statistical analysis, as appropriate.
 
-If you visualise, follow the basic rules, as illustrated in Figure \ref{fig:boxplot}:
-\begin{itemize}
-\item Label everything correctly (axis, title, units).
-\item Caption thoroughly.
-\item Reference in text.
-\item \textbf{Include appropriate display of uncertainty (e.g. error bars, Box plot)}
-\item Minimize clutter.
-\end{itemize}
+% If you visualise, follow the basic rules, as illustrated in Figure \ref{fig:boxplot}:
+% \begin{itemize}
+% \item Label everything correctly (axis, title, units).
+% \item Caption thoroughly.
+% \item Reference in text.
+% \item \textbf{Include appropriate display of uncertainty (e.g. error bars, Box plot)}
+% \item Minimize clutter.
+% \end{itemize}
 
-See the file \texttt{guide\_to\_visualising.pdf} for further information and guidance.
+% See the file \texttt{guide\_to\_visualising.pdf} for further information and guidance.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=1.0\linewidth]{images/boxplot_finger_distance.pdf}    
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=1.0\linewidth]{images/boxplot_finger_distance.pdf}    
 
-    \caption{Average number of fingers detected by the touch sensor at different heights above the surface, averaged over all gestures. Dashed lines indicate
-    the true number of fingers present. The Box plots include bootstrapped uncertainty notches for the median. It is clear that the device is biased toward 
-    undercounting fingers, particularly at higher $z$ distances.
-    }
+%     \caption{Average number of fingers detected by the touch sensor at different heights above the surface, averaged over all gestures. Dashed lines indicate
+%     the true number of fingers present. The Box plots include bootstrapped uncertainty notches for the median. It is clear that the device is biased toward 
+%     undercounting fingers, particularly at higher $z$ distances.
+%     }
 
-    % use the notation fig:name to cross reference a figure
-    \label{fig:boxplot} 
-\end{figure}
+%     % use the notation fig:name to cross reference a figure
+%     \label{fig:boxplot} 
+% \end{figure}
 
 
 %==================================================================================================================================
