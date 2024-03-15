@@ -626,9 +626,21 @@ The NotePlayer script manages the audio playback for its associated Note Block. 
 
 To provide the player with a clear indication that a note has been played, the script temporarily disables the Note Block's visual mesh and collider, making it appear to disappear. After a short delay, corresponding to the length of the audio clip, the mesh and collider are re-enabled.
 
-A crucial part of the NotePlayer script is its communication with the central GameMaster script (which we'll discuss later). When a Note Block is played, the script informs the GameMaster of the note type (A, B, C, etc.). This allows the GameMaster to track the player's progress within the minigame's sequence.
+A crucial part of the NotePlayer script is its communication with the central GameMaster script, which we'll discuss later. When a Note Block is played, the script informs the GameMaster of the note type (A, B, C, D or E). This allows the GameMaster to track the player's progress within the minigame's sequence.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{dissertation/images/Memory_Game_HarmonyScape.png}    
 
+    \caption{In figure captions, explain what the reader is looking at: ``A schematic of the rectifying linear unit, where $a$ is the output amplitude,
+    $d$ is a configurable dead-zone, and $Z_j$ is the input signal'', as well as why the reader is looking at this: 
+    ``It is notable that there is no activation \emph{at all} below 0, which explains our initial results.'' 
+    \textbf{Use vector image formats (.pdf) where possible}. Size figures appropriately, and do not make them over-large or too small to read.
+    }
+
+    % use the notation fig:name to cross reference a figure
+    \label{fig:mem_game} 
+\end{figure}
 
 
 \subsection{Card Matching}
