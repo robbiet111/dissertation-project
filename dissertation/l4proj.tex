@@ -115,7 +115,7 @@ TOODO: \begin{itemize}
 This opening chapter sets the stage for the HarmonyScape project by introducing the motivations and goals that led to its development. The following sections of this paper will explore distinct segments of the project, covering its background, design, implementation, and evaluation.
 
 \section{Motivation}
-As the prevalence of dementia increases within our aging population, with the number of older people with dementia in the UK projected to rise by 80\% from almost 885,000 in 2019 to around 1.6 million in 2040 (Wittenberg \emp{et al.} 2019), the development of effective treatments and engaging activities to manage its symptoms becomes imperative.  The means of music as a form of therapy in the treatment of diseases linked with dementia, such as Alzheimer's, is a unique approach that taps into preserved cognitive and emotional functions in individuals with dementia.
+As the prevalence of dementia increases within our aging population, with the number of older people with dementia in the UK projected to rise by 80\% from almost 885,000 in 2019 to around 1.6 million in 2040 (Wittenberg \emp{et al.,} 2019), the development of effective treatments and engaging activities to manage its symptoms becomes imperative.  The means of music as a form of therapy in the treatment of diseases linked with dementia, such as Alzheimer's, is a unique approach that taps into preserved cognitive and emotional functions in individuals with dementia.
 
 Research by Vink AC \emph{et al.} (2004) shows promising results that for individuals with dementia, music-based therapeutic interventions can be employed to target depressive symptoms. While the potential benefits of game-based activities for cognitive function in dementia are highlighted by Vilkki et al. (2019), combining these approaches in a therapeutic setting has been seldom explored. This suggests a valuable avenue for future research in dementia care.
 
@@ -618,12 +618,24 @@ When a player enters a minigame's catchment area, the corresponding trigger scri
 
 The player may choose to exit the catchment area before a minigame is completed if they wish to explore or attempt a different minigame. Upon exiting the minigame's catchment area, the trigger script signals the "CameraController" to reset the camera. This re-enables the Cinemachine camera, transitioning back to the free look camera used for regular exploration. Additionally, successful completion of the minigame will also disable the catchment area and reset the camera.
 
+\subsection{Music Memory}
+At the core of the Music Memory minigame are the interactive "Note Blocks." Each Note Block is a trigger zone within the game world, and they are equipped with a NotePlayer script. This script is responsible for several key functions.
+
+\textbf{NotePlayer Script} \newline
+The NotePlayer script manages the audio playback for its associated Note Block. When the player enters the trigger area, the script plays a unique audio clip representing that block's musical note, corresponding to notes A through E on a guitar.
+
+To provide the player with a clear indication that a note has been played, the script temporarily disables the Note Block's visual mesh and collider, making it appear to disappear. After a short delay, corresponding to the length of the audio clip, the mesh and collider are re-enabled.
+
+A crucial part of the NotePlayer script is its communication with the central GameMaster script (which we'll discuss later). When a Note Block is played, the script informs the GameMaster of the note type (A, B, C, etc.). This allows the GameMaster to track the player's progress within the minigame's sequence.
+
+
+
+
 \subsection{Card Matching}
 ...
 \subsection{Sliding Puzzle}
 ...
-\subsection{Music Memory}
-...
+
 \subsection{Follow The Sound}
 ...
 
