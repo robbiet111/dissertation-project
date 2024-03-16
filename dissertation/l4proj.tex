@@ -640,10 +640,8 @@ To provide the player with a clear indication that a note has been played, the s
         \label{fig:mem_game_played}
     \end{subfigure}
     ~     
-
     \caption{Note Blocks in the Music Memory minigame, demonstrating their visual transformation when a note is played.
     }
-
     % use the notation fig:name to cross reference a figure
     \label{fig:mem_game} 
 \end{figure}
@@ -665,20 +663,64 @@ If the player needs a reminder of the note order, they can re-enter the Start Bl
 \subsection{Card Matching}
 Completing the Card Matching minigame unlocks the Triangle part of the soundscapee. The core of the card-flipping minigame involves 5 pairs of cards placed within the minigame area. Each card is a cube object, with altered dimensions to resemble a card, and functions as a trigger zone.  Importantly, the cards are organized into pairs using a shared tag system (e.g., "Card\_A"). To help with identification, cards within a pair are named with a letter and number combination (e.g., "A\_1" and "A\_2").
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\linewidth]{dissertation/images/CardFlip_Before.png} 
+
+  \caption{Screenshot of the point-of-view from the player of the Card Flipping minigame area.}
+
+  \label{fig:card_matching_overview} 
+\end{figure}
+
 \textbf{CardFlip Script} \newline
 Attached to each of the cards, the CardFlip script is responsible for managing the visual flipping behaviour of individual cards and communicating these actions to the main TriangleGameMaster script, which we'll discuss in the following section. When the player collides with a card's trigger zone, the OnTriggerEnter function initiates the card-flipping process.
 
-The FlipCard coroutine within the script handles the physical flipping animation of the card, simulating the action of flipping an actual card. It involves moving the card upwards, rotating it 180 degrees around the Z-axis, and then returning it to its original position. Importantly, the script communicates with the TriangleGameMaster via the gameMaster.FlipCard() function, informing the minigame's central logic system that a card has been flipped. There's also a FlipBack coroutine to handle flipping the cards back to their original state if the game logic requires it.
+The FlipCard co-routine within the script handles the physical flipping animation of the card, simulating the action of flipping an actual card. It involves moving the card upwards, rotating it 180 degrees around the Z-axis, and then returning it to its original position. Importantly, the script communicates with the TriangleGameMaster via the gameMaster.FlipCard() function, informing the minigame's central logic system that a card has been flipped. There's also a FlipBack co-routine to handle flipping the cards back to their original state if the game logic requires it.
 
 To prevent the player from interacting with multiple cards too quickly, the script manages internal state using an isFlipping flag. Additionally, it works in conjunction with the gameMaster.IsProcessingMatch() flag to ensure the game logic processes card flips avoiding multiple cards being flipped at once.
 
 \textbf{TriangleGameMaster Script} \newline
 The TriangleGameMaster script serves as the central script for managing the Card Matching minigame's logic, progression, and completion. It maintains a meticulous record of flipped cards and facilitates the primary matching logic. Upon the initiation of a card flip, the FlipCard function verifies if the card has already been flipped. If it's a new flip, the card is added to a tracking list. When two cards have been flipped over, the CheckForMatch function determines if their tags match, signifying a successful pair.
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\linewidth]{dissertation/images/CardFlip_WrongPair.png} 
+  \caption{Screenshot demonstrating the `TriangleGameMaster` script's handling of incorrect card pairings. Mismatched cards are visually returned to their face-down state.} 
+  \label{fig:card_mismatch} 
+\end{figure}
+
 If a match is found, the cards are visually deactivated to represent their removal from the active play area. Conversely, if the cards do not match, the FlipBackCards function is called, restoring them to their face-down state. The AllMatchesMade function determines if all pairs have been discovered. After the player successfully pairs all card sets, the minigame ends, making the triangle model available for collection within the minigame area.
 
+\begin{figure}[h]
+  \centering
+ \begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{dissertation/images/CardFlip_Correct_Mid.png}
+  \caption{Screenshot illustrating a successful card match as determined by the `TriangleGameMaster` script.}
+  \label{fig:card_match}
+ \end{subfigure}
+ ~
+ \begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{dissertation/images/CardFlip_Correct_After.png}
+  \caption{Screenshot demonstrating the `TriangleGameMaster` script's deactivation of cards after a successful match. This represents a key step in the minigame's progression.}
+  \label{fig:card_deactivation}
+ \end{subfigure}  
+
+ \caption{Series of screenshots demonstrating the visual outcomes of the `TriangleGameMaster` script's card matching logic, focusing on successful matches and their consequences.}  
+
+ \label{fig:card_matching_success} 
+\end{figure}
+
 \subsection{Sliding Puzzle}
-...
+Series of screenshots demonstrating the visual outcomes of the `TriangleGameMaster` script's card matching logic, focusing on successful matches and their consequences.Series of screenshots demonstrating the visual outcomes of the `TriangleGameMaster` script's card matching logic, focusing on successful matches and their consequences.Series of screenshots demonstrating the visual outcomes of the `TriangleGameMaster` script's card matching logic, focusing on successful matches and their consequences.Series of screenshots demonstrating the visual outcomes of the `TriangleGameMaster` script's card matching logic, focusing on successful matches and their consequences.Series of screenshots demonstrating the visual outcomes of the `TriangleGameMaster` script's card matching logic, focusing on successful matches and their consequences.Series of screenshots demonstrating the visual outcomes of the `TriangleGameMaster` script's card matching logic, focusing on successful matches and their consequences.Series of screenshots demonstrating the visual outcomes of the `TriangleGameMaster` script's card matching logic, focusing on successful matches and their consequences.
+
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[width=0.7\linewidth]{dissertation/images/CardFlip_Correct_Before.png} 
+
+%   \caption{Screenshot illustrating the card-flipping animation controlled by the CardFlip script. The card has transitioned from its face-down state to its face-up state.}
+
+%   \label{fig:card_flip_in_action} 
+% \end{figure}
 
 \subsection{Follow The Sound}
 ...
