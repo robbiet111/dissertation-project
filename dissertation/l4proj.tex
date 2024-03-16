@@ -461,6 +461,8 @@ A sliding puzzle is a classic game comprising a grid of square or rectangular ti
 
 Similar to the traditional sliding block puzzle and the implementation by Sasaki et al. (2020) – as illustrated in Figures \ref{fig:slide_uncompleted} and \ref{fig:slide_completed} – HarmonyScape's version challenges the user to manipulate the panels within the frame to arrange tiles into the desired order. As discussed in Section \ref{sec:sliding_dementia}, this type of puzzle engages cognitive functions – including memory, spatial awareness, and figure arrangement – that may have the potential to slow the progression of dementia (Sasaki et al., 2020).
 
+It's also important to note that, to aid in solving the puzzle, a visual representation of its completed state will be provided within the player's field of view during the minigame. Providing a visual representation of the puzzle's solved state offers a crucial support mechanism for players with dementia. This reference image can alleviate potential confusion or frustration that may arise from the puzzle's mechanics. By having a clear visual goal, players can better understand the task at hand and form strategies to achieve the correct solution. This design choice prioritises the requirement for accessibility and aims to create a more positive and inclusive gameplay experience.
+
 \subsection{Music Memory Games}
 The concept of memory games involving sequences of sounds can be traced back to various sources and inspirations. However, one notable origin of such games is the electronic game "Simon" which was invented by Ralph H. Baer and Howard J. Morrison and manufactured and distributed by Milton Bradley in 1978 (Baer \& Morrison, 1980). As seen in Figure \ref{fig:simon}, "Simon" consists of four colored buttons (green, red, blue, and yellow) that light up and produce unique sounds in a sequence (Baer \& Morrison, 1980). Players have to memorise the sequence and then repeat it back by pressing the corresponding buttons (Baer \& Morrison, 1980).
 
@@ -619,7 +621,7 @@ When a player enters a minigame's catchment area, the corresponding trigger scri
 The player may choose to exit the catchment area before a minigame is completed if they wish to explore or attempt a different minigame. Upon exiting the minigame's catchment area, the trigger script signals the "CameraController" to reset the camera. This re-enables the Cinemachine camera, transitioning back to the free look camera used for regular exploration. Additionally, successful completion of the minigame will also disable the catchment area and reset the camera.
 
 \subsection{Music Memory}
-Completing the Music Memory minigame unlocks the Guitar part of the games soundscape. At the core of the minigame are the interactive "Note Blocks." Each Note Block is a trigger zone within the game world, and they are equipped with a NotePlayer script. This script is responsible for several key functions.
+Completing the Music Memory minigame unlocks the Guitar part of the game's soundscape. At the core of the minigame are the interactive "Note Blocks." Each Note Block is a trigger zone within the game world, and they are equipped with a NotePlayer script. This script is responsible for several key functions.
 
 \textbf{NotePlayer Script} \newline
 The NotePlayer script manages the audio playback for its associated Note Block. When the player enters the trigger area, the script plays a unique audio clip representing that block's musical note, corresponding to notes A through E on a guitar.
@@ -646,14 +648,14 @@ To provide the player with a clear indication that a note has been played, the s
     \label{fig:mem_game} 
 \end{figure}
 
-A crucial part of the NotePlayer script is its communication with the central GuitarGameMaster script, which we'll discuss later. When a Note Block is played, the script informs the GuitarGameMaster of the note type (A, B, C, D or E). This allows the GameMaster to track the player's progress within the minigame's sequence.
+A crucial part of the NotePlayer script is its communication with the central Guitar Game Master script, which we'll discuss later. When a Note Block is played, the script informs the Guitar Game Master of the note type (A, B, C, D or E). This allows the Guitar Game Master script to track the player's progress within the minigame's sequence.
 
-\textbf{GuitarGameMaster Script} \newline
-The GameMaster script serves as the central script for managing the Music Memory minigame's logic, progression, and completion. It's associated with a dedicated "Start Block" in the game world, shown as the larger block in both Figures \ref{fig:mem_game_unplayed} and  \ref{fig:mem_game_played}, which triggers the minigame when the player enters its area.
+\textbf{Guitar Game Master Script} \newline
+The Guitar Game Master script serves as the central script for managing the Music Memory minigame's logic, progression, and completion. It's associated with a dedicated "Start Block" in the game world, shown as the larger block in both Figures \ref{fig:mem_game_unplayed} and  \ref{fig:mem_game_played}, which triggers the minigame when the player enters its area.
 
 This script tracks the correct sequence of notes for the minigame and the player's current progress within that sequence. It communicates with the NotePlayer scripts on each Note Block to monitor when notes are played. Upon the player entering the Start Block's trigger area, the StartGame function is activated, initialising the minigame.
 
-During initialisation, the GameMaster prepares the minigame area by making the Note Blocks visible and enabling their colliders.  To ensure the player can focus on memorising the sequence, their movement is temporarily restricted.  The PlaySong function plays the correct sequence of notes for the player to memorise. Visual cues in the form of text changes (from "LISTEN" to "GO") signal when the player should listen for the sequence and then when they can start attempting the sequence.
+During initialisation, the Guitar Game Master scri[t prepares the minigame area by making the Note Blocks visible and enabling their colliders. To ensure the player can focus on memorising the sequence, their movement is temporarily restricted. The PlaySong function plays the correct sequence of notes for the player to memorise. Visual cues in the form of text changes (from "LISTEN" to "GO") signal when the player should listen for the sequence and then when they can start attempting the sequence.
 
 The NotePlayed function is the core of progress tracking during the music memory minigame. When a Note Block's NotePlayer script informs it of a note being played, the GameMaster compares it to the expected note at the current point in the sequence. Correct notes advance the player's progress. An incorrect note will trigger the ResetGame function, resetting the sequence back to the beginning. Successfully playing all notes in the correct order triggers the FinishGame function, ending the game, removing other minigame elements, and making the guitar model available to be collected in the minigame area.
 
@@ -661,7 +663,7 @@ If the player needs a reminder of the note order, they can re-enter the Start Bl
 
 
 \subsection{Card Matching}
-Completing the Card Matching minigame unlocks the Triangle part of the soundscapee. The core of the card-flipping minigame involves 5 pairs of cards placed within the minigame area. Each card is a cube object, with altered dimensions to resemble a card, and functions as a trigger zone.  Importantly, the cards are organized into pairs using a shared tag system (e.g., "Card\_A"). To help with identification, cards within a pair are named with a letter and number combination (e.g., "A\_1" and "A\_2"). Figure \ref{fig:card_matching_overview} provides a visual representation of the initial layout of the Card Matching minigame, with all cards face-down.
+Completing the Card Matching minigame unlocks the Triangle instrument in the game's soundscapee. The core of the card matching minigame involves 5 pairs of cards placed within the minigame area. Each card is a cube object, with altered dimensions to resemble a card, and functions as a trigger zone.  The cards are organised into pairs using a shared tag system (e.g., "Card\_A", "Card\_B"). To help with identification, cards within a pair are named with a letter and number combination (e.g., "A\_1" and "A\_2"). Figure \ref{fig:card_matching_overview} provides a visual representation of the initial layout of the Card Matching minigame, with all cards face-down.
 
 \begin{figure}[h]
   \centering
@@ -673,23 +675,23 @@ Completing the Card Matching minigame unlocks the Triangle part of the soundscap
 \end{figure}
 
 \textbf{CardFlip Script} \newline
-Attached to each of the cards, the CardFlip script is responsible for managing the visual flipping behaviour of individual cards and communicating these actions to the main TriangleGameMaster script, which we'll discuss in the following section. When the player collides with a card's trigger zone, the OnTriggerEnter function initiates the card-flipping process.
+Attached to each of the cards, the CardFlip script is responsible for managing the visual flipping behaviour of individual cards and communicating these actions to the main Triangle Game Master script, which we'll discuss in the following section. When the player collides with a card's trigger zone, the OnTriggerEnter function initiates the card-flipping process called FlipCard.
 
-The FlipCard co-routine within the script handles the physical flipping animation of the card, simulating the action of flipping an actual card. It involves moving the card upwards, rotating it 180 degrees around the Z-axis, and then returning it to its original position. Importantly, the script communicates with the TriangleGameMaster via the gameMaster.FlipCard() function, informing the minigame's central logic system that a card has been flipped. There's also a FlipBack co-routine to handle flipping the cards back to their original state if the game logic requires it.
+The FlipCard coroutine within the script handles the physical flipping animation of the card, simulating the action of flipping an actual card. It involves moving the card upwards, rotating it 180 degrees around the Z-axis, and then returning it to its original position. Importantly, the script communicates with the Triangle Game Master script via the FlipCard function, informing the minigame's central logic system that a card has been flipped. There's also a FlipBack coroutine to handle flipping the cards back to their original state if the game logic requires it.
 
-To prevent the player from interacting with multiple cards too quickly, the script manages internal state using an isFlipping flag. Additionally, it works in conjunction with the gameMaster.IsProcessingMatch() flag to ensure the game logic processes card flips avoiding multiple cards being flipped at once.
+To prevent the player from interacting with multiple cards too quickly, the script manages internal state using an isFlipping flag. Additionally, it works in conjunction with the Triangle Game Master script's 'IsProcessingMatch' flag to ensure the game logic processes card flips avoiding multiple cards being flipped at once.
 
-\textbf{TriangleGameMaster Script} \newline
-The TriangleGameMaster script serves as the central script for managing the Card Matching minigame's logic, progression, and completion. It maintains a record of flipped cards and facilitates the primary matching logic. Upon the initiation of a card flip, the FlipCard function verifies if the card has already been flipped. If it's a new flip, the card is added to a tracking list. When two cards have been flipped over, the CheckForMatch function determines if their tags match, signifying a successful pair.
+\textbf{Triangle Game Master Script} \newline
+The Triangle Game Master script serves as the central script for managing the Card Matching minigame's logic, progression, and completion. It maintains a record of flipped cards and facilitates the primary matching logic. Upon the initiation of a card flip, the FlipCard function verifies if the card has already been flipped. If it's a new flip, the card is added to a tracking list. When two cards have been flipped over, the CheckForMatch function determines if their tags match, signifying a successful pair.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.7\linewidth]{dissertation/images/CardFlip_WrongPair.png} 
-  \caption{Screenshot demonstrating the `TriangleGameMaster` script's handling of incorrect card pairings. Mismatched cards are visually flipped back to their face-down state.} 
+  \caption{Screenshot demonstrating the `Triangle Game Master` script's handling of incorrect card pairings. Mismatched cards are visually flipped back to their face-down state.} 
   \label{fig:card_mismatch} 
 \end{figure}
 
-If a match is found, the cards are visually deactivated to represent their removal from the active play area, as illustrated in \ref{fig:card_matching_success}. Conversely, if the cards do not match, the FlipBackCards function is called. This process, illustrated in Figure \ref{fig:card_mismatch}, restores mismatched cards to their face-down state. The AllMatchesMade function determines if all pairs have been discovered. After the player successfully pairs all card sets, the minigame ends, making the triangle model available for collection within the minigame area.
+If a match is found, the cards are visually deactivated to represent their removal from the active play area, as illustrated in \ref{fig:card_matching_success}. Conversely, if the cards do not match, the FlipBackCards function is called. This process, illustrated in Figure \ref{fig:card_mismatch}, restores mismatched cards to their face-down state. The AllMatchesMade function determines if all pairs have been discovered. After the player successfully pairs all card sets, the minigame ends, making the triangle instrument model available for collection within the minigame area.
 
 \begin{figure}[h]
   \centering
@@ -701,17 +703,14 @@ If a match is found, the cards are visually deactivated to represent their remov
  ~
  \begin{subfigure}[t]{0.45\textwidth}
   \includegraphics[width=\textwidth]{dissertation/images/CardFlip_Correct_After.png}
-  \caption{Screenshot demonstrating the `TriangleGameMaster` script's deactivation of cards after a successful match. This represents a key step in the minigame's progression.}
+  \caption{Screenshot demonstrating the `Triangle Game Master` script's deactivation of cards after a successful match. This represents a key step in the minigame's progression.}
   \label{fig:card_deactivation}
  \end{subfigure}  
 
- \caption{Series of screenshots demonstrating the visual outcomes of the `TriangleGameMaster` script's card matching logic, focusing on successful matches and their consequences.}  
+ \caption{Series of screenshots demonstrating the visual outcomes of the `Triangle Game Master` script's card matching logic, focusing on successful matches and their consequences.}  
 
  \label{fig:card_matching_success} 
 \end{figure}
-
-\subsection{Sliding Puzzle}
-
 
 % \begin{figure}[h]
 %   \centering
@@ -721,6 +720,47 @@ If a match is found, the cards are visually deactivated to represent their remov
 
 %   \label{fig:card_flip_in_action} 
 % \end{figure}
+
+\subsection{Sliding Puzzle}
+Completing the Sliding Puzzle minigame unlocks the Ukulele in the game's soundscape. This section will delve into the technical aspects of the sliding puzzle minigame. We'll begin by examining the teleportation mechanic, exploring how the player is seamlessly transferred from the snowy mountain environment to the dedicated puzzle platform. Following that, we'll deconstruct the individual components that make up the puzzle itself. This will include the invisible borders implemented to prevent the player from falling off the platform, ensuring a safe playing area. Finally, we'll analyse the scripts attached to these individual components, uncovering the logic and behaviours that govern their functionality within the puzzle.
+
+\textbf{Teleportation Script} \newline
+The sliding puzzle presents a unique intellectual challenge, requiring careful analysis and strategic thinking. To optimise the player's focus and mitigate potential distractions from the snowy mountain environment, they are briefly teleported to a separate platform. This isolated space minimises visual interference, allowing the player to fully concentrate on solving the puzzle. Upon completion, the player will be seamlessly returned to the mountain location to continue their journey.
+
+The Teleportation script is responsible for managing the instantaneous movement of the player from the snowy environment to the sliding puzzle platform. The teleport target variable within the script holds a reference to the transform component of the destination platform, specifying the precise location where the player should be teleported. The OnTriggerEnter() function is automatically called when a collider enters the blue box's trigger zone. The function verifies if the entering object is indeed the player. Should that be the case, the script updates the player's position to the position of the teleport target.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\linewidth]{dissertation/images/teleportation_mechanism.png} 
+  \caption{Screenshot of the teleportation mechanism within the snowy mountain environment. The blue box initiates the player's teleportation to the puzzle platform.} 
+  \label{fig:teleportation} 
+\end{figure}
+
+\textbf{Cube Movement Script} \newline
+The CubeMovement script is attached to each of the movable puzzle pieces within your sliding puzzle minigame. Its primary responsibility is managing the movement of these pieces and ensuring the fundamental rules of the puzzle are consistently upheld. The script includes an isMoving flag to prevent the player from attempting multiple moves simultaneously, to ensure smooth and predictable puzzle mechanics.
+
+The OnTriggerEnter() function is automatically triggered upon collision between a puzzle piece's collider and another collider. This function checks if the colliding object is the player, ensuring that puzzle piece movement is exclusively initiated through direct player interaction. The CanMove() function plays a crucial role in determining the validity of a move based on the sliding puzzle's rules. It verifies that the puzzle piece is directly adjacent to the empty space and confirms the absence of any obstructing puzzle pieces blocking its path. Finally, the MoveWithLerp() coroutine is responsible for the visually seamless movement of the puzzle piece to the empty space's position. It leverages a function called 'Lerp' for linear interpolation, resulting in an smooth transition of the puzzle piece from its original space to the empty space. This coroutine also updates the isMoving flag to accurately manage the movement state of the puzzle piece.
+
+\textbf{Ukulele Game Master Script} \newline
+The Ukulele Game Master script serves as the central script for managing the sliding puzzle minigame. It is attached to an empty game object that functions as the parent of the sliding puzzle pieces. Its responsibility is to manage the logic, progress tracking, and win checking of the minigame. The script includes a cubes array that maintains references to all movable puzzle pieces. Additionally, the 'winPositions' array stores references to the designated target positions for each individual puzzle piece.  The player must correctly position all puzzle pieces in these target positions to successfully complete the puzzle.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\linewidth]{dissertation/images/sliding_puzzle_incomplete.png} 
+  \caption{Screenshot of the sliding puzzle in progress. The player must strategically move the pieces to achieve the correct configuration.} 
+  \label{fig:puzzle_incomplete} 
+\end{figure}
+
+The CheckWin() function determines these victory conditions. The function iterates through the cubes array, comparing the position of each puzzle piece to its corresponding target position stored within the 'winPositions' array. Should all pieces align with their designated targets, the function returns true, signifying the puzzle as complete. Conversely, if a mismatch exists, the function returns false, signifying the puzzle as incomplete.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\linewidth]{dissertation/images/sliding_puzzle_complete.png} 
+  \caption{Screenshot of the completed sliding puzzle. This visual reference, provided during the minigame, aids players in understanding the puzzle's goal and solution.} 
+  \label{fig:puzzle_complete} 
+\end{figure}
+
+The Update() function is called automatically on each frame of gameplay. Its purpose is to continuously assess the win condition of the puzzle by employing the CheckWin() function. Upon successful completion of the puzzle, this triggers the activation of the Ukulele object, making it available for collection within the minigame area, and the resetting of the camera to its default position.
 
 \subsection{Follow The Sound}
 ...
