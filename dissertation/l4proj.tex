@@ -619,32 +619,64 @@ When a player enters a minigame's catchment area, the corresponding trigger scri
 The player may choose to exit the catchment area before a minigame is completed if they wish to explore or attempt a different minigame. Upon exiting the minigame's catchment area, the trigger script signals the "CameraController" to reset the camera. This re-enables the Cinemachine camera, transitioning back to the free look camera used for regular exploration. Additionally, successful completion of the minigame will also disable the catchment area and reset the camera.
 
 \subsection{Music Memory}
-At the core of the Music Memory minigame are the interactive "Note Blocks." Each Note Block is a trigger zone within the game world, and they are equipped with a NotePlayer script. This script is responsible for several key functions.
+Completing the Music Memory minigame unlocks the Guitar part of the games soundscape. At the core of the minigame are the interactive "Note Blocks." Each Note Block is a trigger zone within the game world, and they are equipped with a NotePlayer script. This script is responsible for several key functions.
 
 \textbf{NotePlayer Script} \newline
 The NotePlayer script manages the audio playback for its associated Note Block. When the player enters the trigger area, the script plays a unique audio clip representing that block's musical note, corresponding to notes A through E on a guitar.
 
-To provide the player with a clear indication that a note has been played, the script temporarily disables the Note Block's visual mesh and collider, making it appear to disappear. After a short delay, corresponding to the length of the audio clip, the mesh and collider are re-enabled.
-
-A crucial part of the NotePlayer script is its communication with the central GameMaster script, which we'll discuss later. When a Note Block is played, the script informs the GameMaster of the note type (A, B, C, D or E). This allows the GameMaster to track the player's progress within the minigame's sequence.
+To provide the player with a clear indication that a note has been played, the script temporarily disables the Note Block's visual mesh and collider, making it appear to disappear, as shown in Figure \ref{fig:mem_game}. After a short delay, corresponding to the length of the audio clip, the mesh and collider are re-enabled
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\linewidth]{dissertation/images/Memory_Game_HarmonyScape.png}    
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{dissertation/images/Memory_Game_HarmonyScape.png}
+        \caption{Whilst no note is being played during the Music Memory minigame, waiting for player to input notes.}
+        \label{fig:mem_game_unplayed}
+    \end{subfigure}
+    ~ 
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{dissertation/images/Memory_Game_During.png}
+        \caption{Whilst the sound corresponding to Note E is being played during the Music Memory minigame.}
+        \label{fig:mem_game_played}
+    \end{subfigure}
+    ~     
 
-    \caption{In figure captions, explain what the reader is looking at: ``A schematic of the rectifying linear unit, where $a$ is the output amplitude,
-    $d$ is a configurable dead-zone, and $Z_j$ is the input signal'', as well as why the reader is looking at this: 
-    ``It is notable that there is no activation \emph{at all} below 0, which explains our initial results.'' 
-    \textbf{Use vector image formats (.pdf) where possible}. Size figures appropriately, and do not make them over-large or too small to read.
+    \caption{Note Blocks in the Music Memory minigame, demonstrating their visual transformation when a note is played.
     }
 
     % use the notation fig:name to cross reference a figure
     \label{fig:mem_game} 
 \end{figure}
 
+A crucial part of the NotePlayer script is its communication with the central GuitarGameMaster script, which we'll discuss later. When a Note Block is played, the script informs the GuitarGameMaster of the note type (A, B, C, D or E). This allows the GameMaster to track the player's progress within the minigame's sequence.
+
+\textbf{GuitarGameMaster Script} \newline
+The GameMaster script serves as the central script for managing the Music Memory minigame's logic, progression, and completion. It's associated with a dedicated "Start Block" in the game world, shown as the larger block in both Figures \ref{fig:mem_game_unplayed} and  \ref{fig:mem_game_played}, which triggers the minigame when the player enters its area.
+
+This script tracks the correct sequence of notes for the minigame and the player's current progress within that sequence. It communicates with the NotePlayer scripts on each Note Block to monitor when notes are played. Upon the player entering the Start Block's trigger area, the StartGame function is activated, initialising the minigame.
+
+During initialisation, the GameMaster prepares the minigame area by making the Note Blocks visible and enabling their colliders.  To ensure the player can focus on memorising the sequence, their movement is temporarily restricted.  The PlaySong function plays the correct sequence of notes for the player to memorise. Visual cues in the form of text changes (from "LISTEN" to "GO") signal when the player should listen for the sequence and then when they can start attempting the sequence.
+
+The NotePlayed function is the core of progress tracking during the music memory minigame. When a Note Block's NotePlayer script informs it of a note being played, the GameMaster compares it to the expected note at the current point in the sequence. Correct notes advance the player's progress. An incorrect note will trigger the ResetGame function, resetting the sequence back to the beginning. Successfully playing all notes in the correct order triggers the FinishGame function, ending the game, removing other minigame elements, and making the guitar model available to be collected in the minigame area.
+
+If the player needs a reminder of the note order, they can re-enter the Start Block. This will reset the currentNoteIndex and activate the PlaySong function, replaying the musical sequence. This design feature allows players to reinforce their memory of the sequence before proceeding with another attempt.
+
 
 \subsection{Card Matching}
-...
+Completing the Card Matching minigame unlocks the Triangle part of the soundscapee. The core of the card-flipping minigame involves 5 pairs of cards placed within the minigame area. Each card is a cube object, with altered dimensions to resemble a card, and functions as a trigger zone.  Importantly, the cards are organized into pairs using a shared tag system (e.g., "Card\_A"). To help with identification, cards within a pair are named with a letter and number combination (e.g., "A\_1" and "A\_2").
+
+\textbf{CardFlip Script} \newline
+Attached to each of the cards, the CardFlip script is responsible for managing the visual flipping behaviour of individual cards and communicating these actions to the main TriangleGameMaster script, which we'll discuss in the following section. When the player collides with a card's trigger zone, the OnTriggerEnter function initiates the card-flipping process.
+
+The FlipCard coroutine within the script handles the physical flipping animation of the card, simulating the action of flipping an actual card. It involves moving the card upwards, rotating it 180 degrees around the Z-axis, and then returning it to its original position. Importantly, the script communicates with the TriangleGameMaster via the gameMaster.FlipCard() function, informing the minigame's central logic system that a card has been flipped. There's also a FlipBack coroutine to handle flipping the cards back to their original state if the game logic requires it.
+
+To prevent the player from interacting with multiple cards too quickly, the script manages internal state using an isFlipping flag. Additionally, it works in conjunction with the gameMaster.IsProcessingMatch() flag to ensure the game logic processes card flips avoiding multiple cards being flipped at once.
+
+\textbf{TriangleGameMaster Script} \newline
+The TriangleGameMaster script serves as the central script for managing the Card Matching minigame's logic, progression, and completion. It maintains a meticulous record of flipped cards and facilitates the primary matching logic. Upon the initiation of a card flip, the FlipCard function verifies if the card has already been flipped. If it's a new flip, the card is added to a tracking list. When two cards have been flipped over, the CheckForMatch function determines if their tags match, signifying a successful pair.
+
+If a match is found, the cards are visually deactivated to represent their removal from the active play area. Conversely, if the cards do not match, the FlipBackCards function is called, restoring them to their face-down state. The AllMatchesMade function determines if all pairs have been discovered. After the player successfully pairs all card sets, the minigame ends, making the triangle model available for collection within the minigame area.
+
 \subsection{Sliding Puzzle}
 ...
 
