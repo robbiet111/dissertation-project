@@ -533,9 +533,8 @@ TODO:
     \end{itemize}
     \item Dynamic Music System:
     \begin{itemize}
-        \item Collection of instruments (models and triggerSFX)
-        \item Audio Track Management (loading, storing instrument tracks)
-        \item How the dynamic music based on movement was implemented
+        \item Introduction/Overview
+        \item READ OVER How the dynamic music based on movement was implemented
     \end{itemize}
     \item User Interface:
     \begin{itemize}
@@ -576,7 +575,7 @@ Music created by Ashley Garven.
 \section{Terrain and Navigation}
 Before implementing any player interactivity, minigames, or the dynamic music system, we needed to create a player-controlled character. We also needed a terrain for the character to explore and interact with.
 
-\subsection{Player-Controlled Character}
+\subsection{Player-Controlled Character}\label{sec:player_script}
 The character, originally a capsule, was originally brought in with an attached "Player Control" script, that had basic input, jump and rotation handling.
 
 \subsubsection{HandleInput():}
@@ -794,6 +793,29 @@ After the player collects the last pair of maracas, this action initiates the "E
 The script begins by restoring the game's soundscape. It calls the UnmuteAudioSources() function, which iterates through the list of previously muted audio sources and reverses this process. This reintroduces the instrument tracks previously disabled for the focused gameplay experience of the minigame. Additionally, the script re-enables all game objects that were initially disabled by the "Load Maracas Minigame" script. The EnableObjectRecursively() function ensures the activation of both parent and child objects throughout the game object hierarchy. Finally, the script deactivates the rest of the "Follow The Sound" minigame elements. It deactivates the minigame instructions and visually signifies the player's success by activating the Maracas instrument model and adding the Maracas to the game's soundscape.
 
 \section{Dynamic Music System}
+...
+
+\subsection{Collection of Instruments}
+Each instrument within the game world is represented by a distinct corresponding model. These models appear dynamically upon the completion of their corresponding minigames. To facilitate player interaction and the unlocking of the musical elements, each instrument model has the TriggerSFX script attached. The TriggerSFX script manages the audio source associated with a particular instrument. Upon initialisation (in the Start() method), the audio source begins playing but is immediately muted, to be unmuted when the instrument has been collected.
+
+When the player enters the trigger zone associated with an instrument model (detected by the OnTriggerEnter() method), the script provides visual feedback. The audio source is unmuted, initiating the addition of the instrument's corresponding audio track to the game's sooundscape. Additionally, the script swaps between two images, transitioning the instrument's visual appearance in the UI from a black and white representation to its corresponding colour image. This change further signifies the instrument's collection. Finally, the script deactivates the instrument model's mesh renderer and the game object itself, removing it from the scene.
+
+\subsection{Audio Track Management}
+In HarmonyScape's dynamic music system, each instrument has a corresponding audio track that plays continuously from the beginning. These audio sources are attached directly to the player-controlled character. This design choice ensures that the volume of each instrument track remains consistent, regardless of the player's location within the game world.  Additionally, by continuously playing the tracks from the start, the system guarantees their rhythmic and harmonic synchronisation within the dynamic soundscape. This design ensures the instrumental tracks remain in time with one another, ultimately recreating the original song played in its entirety when all instruments have been collected. Upon completion of a minigame and collection of the corresponding instrument model, the TriggerSFX script unmutes the associated audio track. This action naturally integrates the new instrument into the game's evolving musical composition.
+
+\section{Dynamic Music Implementation}
+
+\subsection{Acceleration and Deceleration}
+Within the Player Movement script, as described in Section \ref{sec:player_script}, we meticulously crafted the acceleration and deceleration mechanics to enhance the player's sense of control. With the aim to create a satisfyingly natural and responsive feel for the player's movement dynamics, we invested considerable experimentation and iterative adjustments into the acceleration and deceleration mechanics within the Player Movement script.
+
+A vital element of this dynamic system is the ManageSpeed() function. This function acts as the controller of the player's speed, adjusting their 'current speed' value based on player input. We meticulously designed it to incorporate calculated acceleration and deceleration phases. When the player presses a movement key, the function initiates acceleration, progressively increasing the 'current speed' value until reaching the game's designated maximum speed. Conversely, when the player stops providing input, the function applies deceleration, gradually reducing the 'current speed' value. The calibration of these acceleration and deceleration rates was crucial for achieving the desired sense of momentum and responsiveness within the player's movement experience. The most innovative part of the implementation, as discussed in the following subsection, utilises these acceleration and deceleration functions to dynamically adjust the song tempo based on player movement.
+
+\subsection{How the dynamic music based on movement was implemented}
+At the heart of the UpdateAudioTempo function lies a direct correlation between the player's 'currentSpeed' value and the manipulation of the game soundtrack's tempo.  This 'currentSpeed' value, meticulously managed within the PlayMovement script, serves as the real-time input that drives the dynamic changes in music.  The UpdateAudioTempo function continuously monitors this value, providing the foundation for all tempo adjustments.
+
+The core mechanism within this function revolves around the manipulation of audio source pitch.  As the player's 'currentSpeed' increases, the function carefully calculates a corresponding increase in the pitch of all audio tracks within the game.  Conversely, as the player's speed decreases, the pitch is systematically lowered.  This meticulous and continuous adjustment of pitch is what directly influences the perceived tempo of the music.
+
+Undoubtedly, the meticulous calibration of this pitch-to-speed relationship was a point of significant refinement.  Achieving a sense of perfect synchronization between the pace of the music and the visual cues of the player's movement likely demanded numerous adjustments to the formulas or values governing these tempo shifts.  The result is a system where the music feels intrinsically responsive to the player's actions, heightening the immersive experience.
 
 % What did you do to implement this idea, and what technical achievements did you make?
 % \section{Guidance}
@@ -988,6 +1010,7 @@ The script begins by restoring the game's soundscape. It calls the UnmuteAudioSo
 
 TODOO:
 \begin{itemize}
+    \item Refer to initial testing last year
     \item Summarise based on results in user study
     \item Future work could implement directional sound in Follow The Sound mini game
 \end{itemize}
