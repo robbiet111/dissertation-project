@@ -529,14 +529,11 @@ TODO:
     \item Terrain and Navigation:
     \begin{itemize}
         \item How the terrain was implemented (mention foliage etc.)
+        \item Invisible Borders
     \end{itemize}
     \item How each minigame was implemented:
     \begin{itemize}
-        \item Card Matching
-        \item Sliding Puzzle (incl. pic that shows it completed)
-        \item Music Memory
         \item Follow The Sound (incl. Instructions)
-        \item How the Camera Controller Script was implemented (Fixed Camera during minigames)
     \end{itemize}
     \item Dynamic Music System:
     \begin{itemize}
@@ -722,40 +719,42 @@ If a match is found, the cards are visually deactivated to represent their remov
 % \end{figure}
 
 \subsection{Sliding Puzzle}
-Completing the Sliding Puzzle minigame unlocks the Ukulele in the game's soundscape. This section will delve into the technical aspects of the sliding puzzle minigame. We'll begin by examining the teleportation mechanic, exploring how the player is seamlessly transferred from the snowy mountain environment to the dedicated puzzle platform. Following that, we'll deconstruct the individual components that make up the puzzle itself. This will include the invisible borders implemented to prevent the player from falling off the platform, ensuring a safe playing area. Finally, we'll analyse the scripts attached to these individual components, uncovering the logic and behaviours that govern their functionality within the puzzle.
+Completing the Sliding Puzzle minigame unlocks the Ukulele in the game's soundscape. This section will delve into the technical aspects of the sliding puzzle minigame. We'll begin by examining the teleportation mechanic, exploring how the player is seamlessly transferred from the snowy mountain environment to the dedicated puzzle platform. Following that, we'll deconstruct the individual components that make up the puzzle itself. Finally, we'll analyse the scripts attached to these individual components, uncovering the logic and behaviours that govern their functionality within the puzzle.
+
+It is also important to note that the sliding puzzle platform incorporates invisible borders to prevent the player from accidentally falling off. This design element ensures a safe and uninterrupted gameplay experience. This was implemented in the same way as the borders for the terrain itself, objects around the perimeter with colliders but no mesh. This makes it so the barrier is there but is invisible so the player can still see their surroundings.
 
 \textbf{Teleportation Script} \newline
-The sliding puzzle presents a unique intellectual challenge, requiring careful analysis and strategic thinking. To optimise the player's focus and mitigate potential distractions from the snowy mountain environment, they are briefly teleported to a separate platform. This isolated space minimises visual interference, allowing the player to fully concentrate on solving the puzzle. Upon completion, the player will be seamlessly returned to the mountain location to continue their journey.
+The sliding puzzle presents a unique intellectual challenge, requiring careful analysis and strategic thinking. To optimise the player's focus and mitigate potential distractions from the snowy mountain environment, they are briefly teleported to a separate platform. This isolated space minimises visual interference, allowing the player to fully concentrate on solving the puzzle. Upon completion, the player will be returned to the mountain location to continue their journey.
 
-The Teleportation script is responsible for managing the instantaneous movement of the player from the snowy environment to the sliding puzzle platform. The teleport target variable within the script holds a reference to the transform component of the destination platform, specifying the precise location where the player should be teleported. The OnTriggerEnter() function is automatically called when a collider enters the blue box's trigger zone. The function verifies if the entering object is indeed the player. Should that be the case, the script updates the player's position to the position of the teleport target.
+This teleportation functionality is managed by a dedicated script attached to a distinct blue box within the snowy mountain environment, as shown in Figure \ref{fig:teleportation}. This blue box visually contrasts with the snowy surroundings, providing a clear point of interaction for the player. When the player enters the trigger zone surrounding the blue box, the OnTriggerEnter() function is automatically called. The script then verifies if the entering object is the player. If confirmed, the script initiates the teleportation process, instantly moving the player to the designated puzzle platform. The teleport target variable within the script holds a reference to the transform component of the destination platform, ensuring the player arrives at the location of the platform to begin solving the puzzle.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.7\linewidth]{dissertation/images/teleportation_mechanism.png} 
+  \includegraphics[width=0.7\linewidth]{dissertation/images/Sliding_Teleport.png} 
   \caption{Screenshot of the teleportation mechanism within the snowy mountain environment. The blue box initiates the player's teleportation to the puzzle platform.} 
   \label{fig:teleportation} 
 \end{figure}
 
 \textbf{Cube Movement Script} \newline
-The CubeMovement script is attached to each of the movable puzzle pieces within your sliding puzzle minigame. Its primary responsibility is managing the movement of these pieces and ensuring the fundamental rules of the puzzle are consistently upheld. The script includes an isMoving flag to prevent the player from attempting multiple moves simultaneously, to ensure smooth and predictable puzzle mechanics.
+The CubeMovement script is attached to each of the movable puzzle pieces within the sliding puzzle minigame. Its responsibility is managing the movement of these pieces and ensuring the fundamental rules of the puzzle are consistently upheld. The script includes an isMoving flag to prevent the player from attempting multiple moves simultaneously, to ensure the puzzle mechanics are smooth and predictable.
 
-The OnTriggerEnter() function is automatically triggered upon collision between a puzzle piece's collider and another collider. This function checks if the colliding object is the player, ensuring that puzzle piece movement is exclusively initiated through direct player interaction. The CanMove() function plays a crucial role in determining the validity of a move based on the sliding puzzle's rules. It verifies that the puzzle piece is directly adjacent to the empty space and confirms the absence of any obstructing puzzle pieces blocking its path. Finally, the MoveWithLerp() coroutine is responsible for the visually seamless movement of the puzzle piece to the empty space's position. It leverages a function called 'Lerp' for linear interpolation, resulting in an smooth transition of the puzzle piece from its original space to the empty space. This coroutine also updates the isMoving flag to accurately manage the movement state of the puzzle piece.
+The OnTriggerEnter() function is automatically triggered upon collision between a puzzle piece's collider and the player. The CanMove() function determines the validity of a move based on the sliding puzzle's rules. It verifies that the puzzle piece is directly adjacent to the empty space and confirms the absence of any obstructing puzzle pieces blocking its path. Finally, the MoveWithLerp() coroutine is responsible for the visual movement of the puzzle piece to the empty space's position. It leverages a function called 'Lerp' for linear interpolation, resulting in an smooth transition of the puzzle piece from its original space to the empty space. This coroutine also updates the isMoving flag to accurately manage the movement state of the puzzle piece.
 
 \textbf{Ukulele Game Master Script} \newline
-The Ukulele Game Master script serves as the central script for managing the sliding puzzle minigame. It is attached to an empty game object that functions as the parent of the sliding puzzle pieces. Its responsibility is to manage the logic, progress tracking, and win checking of the minigame. The script includes a cubes array that maintains references to all movable puzzle pieces. Additionally, the 'winPositions' array stores references to the designated target positions for each individual puzzle piece.  The player must correctly position all puzzle pieces in these target positions to successfully complete the puzzle.
+The Ukulele Game Master script serves as the central script for managing the sliding puzzle minigame. It is attached to an empty game object that is the parent object of the sliding puzzle pieces. Its responsibility is to manage the logic, progress tracking, and win checking of the minigame. The script includes a cubes array that maintains references to all movable puzzle pieces. Additionally, the 'winPositions' array stores references to the designated target positions for each individual puzzle piece.  The player must correctly position all puzzle pieces in these target positions to successfully complete the puzzle (see Figure \ref{fig:puzzle_incomplete}).
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.7\linewidth]{dissertation/images/sliding_puzzle_incomplete.png} 
-  \caption{Screenshot of the sliding puzzle in progress. The player must strategically move the pieces to achieve the correct configuration.} 
+  \includegraphics[width=0.7\linewidth]{dissertation/images/Sliding_Incomplete.png} 
+  \caption{Screenshot of the sliding puzzle in progress. The player must move the pieces into the order shown in the image with the black background above the puzzle itself.} 
   \label{fig:puzzle_incomplete} 
 \end{figure}
 
-The CheckWin() function determines these victory conditions. The function iterates through the cubes array, comparing the position of each puzzle piece to its corresponding target position stored within the 'winPositions' array. Should all pieces align with their designated targets, the function returns true, signifying the puzzle as complete. Conversely, if a mismatch exists, the function returns false, signifying the puzzle as incomplete.
+The CheckWin() function determines these winning conditions. The function iterates through the cubes array, comparing the position of each puzzle piece to its corresponding target position stored within the 'winPositions' array. Should all pieces align with their designated targets, as shown in Figure \ref{fig:puzzle_complete}, the function returns true, signifying the puzzle as complete. Conversely, if a mismatch exists, the function returns false, signifying the puzzle as incomplete.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.7\linewidth]{dissertation/images/sliding_puzzle_complete.png} 
+  \includegraphics[width=0.7\linewidth]{dissertation/images/Sliding_Complete.png} 
   \caption{Screenshot of the completed sliding puzzle. This visual reference, provided during the minigame, aids players in understanding the puzzle's goal and solution.} 
   \label{fig:puzzle_complete} 
 \end{figure}
@@ -763,7 +762,40 @@ The CheckWin() function determines these victory conditions. The function iterat
 The Update() function is called automatically on each frame of gameplay. Its purpose is to continuously assess the win condition of the puzzle by employing the CheckWin() function. Upon successful completion of the puzzle, this triggers the activation of the Ukulele object, making it available for collection within the minigame area, and the resetting of the camera to its default position.
 
 \subsection{Follow The Sound}
-...
+Upon completion of the "Follow the Sound of the Maracas" minigame, the "maracas" instrument is added to the game's soundscape. This minigame is initiated by the player entering the minigames first model of a pair of maracas, triggering the "Load Maracas Minigame" script. This script displays the instruction "Follow the Sound of the Maracas" in the UI against a contrasting white background, and it activates an audio cue to guide the player. Progression through the minigame is governed by the "Maracas Minigame Audio" script, which manages the sequential activation and deactivation of sound sources. This script also adjusts audio properties based on player proximity, providing the player navigation cues. Successful completion, initiated by interaction with the final pair of maracas, triggers the "End Maracas Minigame" script. This script removes the UI text, unlocks the "maracas" instrument to be collected.
+
+\textbf{Load Maracas Minigame Script} \newline
+The "Load Maracas Minigame" script, attached to the initial pair of maracas within the game's terrain, serves as the entry point for the "Follow the Sound of the Maracas" minigame. Upon the player triggering the maracas by entering them, the script then sets up the minigame.
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.7\linewidth]{dissertation/images/Maracas_Trigger.png} 
+ \caption{Screenshot of the initial pair of maracas within the game environment, serving as the entry point to the "Follow the Sound of the Maracas" minigame.} 
+ \label{fig:maracas_trigger} 
+\end{figure}
+
+The script begins by identifying and temporarily muting all audio sources attached to the player character, specifically the instruments they have previously unlocked. This ensures that external sounds do not interfere with the player's ability to navigate using the audio cues provided within the minigame. Additionally, the maracas object that triggered the script is visually disabled. This  reinforces to the player that they have initiated the minigame.
+
+The script also disables all game objects within the environment that are not essential to the "Follow the Sound of the Maracas" minigame. This includes elements from other minigames that could potentially distract the player or obstruct the sound cues needed for the minigame's mechanics.
+
+Another function of this script is to activate the "Maracas Minigame Audio" script, which manages the progression of auditory cues throughout the minigame. The script also presents on-screen instructions to clarify the minigame's objective for the player to 'follow the sound of the maracas'.
+
+\textbf{Maracas Minigame Audio Script} \newline
+The "Maracas Minigame Audio" script serves as the auditory foundation of the "Follow the Sound of the Maracas" minigame. This script manages several aspects of the audio experience to create the directional cues crucial for the minigame gameplay. One of its primary functions is to dynamically control the volume of the audio source associated with each pair of maracas. It constantly calculates the distance between the player and the maracas, adjusting the maracas sound volume accordingly. As the player draws closer to a maracas pair, the sound intensifies, guiding them towards the source.
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.7\linewidth]{dissertation/images/Maracas_Setup.png} 
+ \caption{Screenshot showcasing changes initiated by the "Load Maracas Minigame" script.  The "Follow the Sound of the Maracas" instructions are displayed with a contrasting background, non-essential game objects are disabled, and the triggering maracas are enabled. These modifications reinforce the start of the minigame.} 
+ \label{fig:maracas_setup} 
+\end{figure}
+
+The script also controls the minigame's progression. It manages the activation and deactivation of audio sources associated with each maracas pair. This ensures a smooth transition between auditory cues as the player advances through the minigame. Upon interaction with a maracas pair, the script deactivates the current audio source and triggers the activation of the subsequent pair in the sequence.
+
+\textbf{End Maracas Minigame Script} \newline
+After the player collects the last pair of maracas, this action initiates the "End Maracas Minigame" script, signaling the successful completion of the "Follow the Sound of the Maracas" minigame. This script's responsibility is to reverse the changes implemented by the "Load Maracas Minigame" script, ensuring a smooth transition back to the primary game environment.
+
+The script begins by restoring the game's soundscape. It calls the UnmuteAudioSources() function, which iterates through the list of previously muted audio sources and reverses this process. This reintroduces the instrument tracks previously disabled for the focused gameplay experience of the minigame. Additionally, the script re-enables all game objects that were initially disabled by the "Load Maracas Minigame" script. The EnableObjectRecursively() function ensures the activation of both parent and child objects throughout the game object hierarchy. Finally, the script deactiivates the rest of the follow the sound minigame elements. It deactivates the minigame instructions and visually signifies the player's success by activating the Maracas instrument model.
 
 % What did you do to implement this idea, and what technical achievements did you make?
 % \section{Guidance}
