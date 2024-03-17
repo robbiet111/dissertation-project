@@ -531,10 +531,6 @@ TODO:
         \item How the terrain was implemented (mention foliage etc.)
         \item Invisible Borders
     \end{itemize}
-    \item How each minigame was implemented:
-    \begin{itemize}
-        \item Follow The Sound (incl. Instructions)
-    \end{itemize}
     \item Dynamic Music System:
     \begin{itemize}
         \item Collection of instruments (models and triggerSFX)
@@ -762,10 +758,10 @@ The CheckWin() function determines these winning conditions. The function iterat
 The Update() function is called automatically on each frame of gameplay. Its purpose is to continuously assess the win condition of the puzzle by employing the CheckWin() function. Upon successful completion of the puzzle, this triggers the activation of the Ukulele object, making it available for collection within the minigame area, and the resetting of the camera to its default position.
 
 \subsection{Follow The Sound}
-Upon completion of the "Follow the Sound of the Maracas" minigame, the "maracas" instrument is added to the game's soundscape. This minigame is initiated by the player entering the minigames first model of a pair of maracas, triggering the "Load Maracas Minigame" script. This script displays the instruction "Follow the Sound of the Maracas" in the UI against a contrasting white background, and it activates an audio cue to guide the player. Progression through the minigame is governed by the "Maracas Minigame Audio" script, which manages the sequential activation and deactivation of sound sources. This script also adjusts audio properties based on player proximity, providing the player navigation cues. Successful completion, initiated by interaction with the final pair of maracas, triggers the "End Maracas Minigame" script. This script removes the UI text, unlocks the "maracas" instrument to be collected.
+Upon completion of the "Follow the Sound of the Maracas" minigame, the Maracas instrument is added to the game's soundscape. This minigame is initiated by the player entering the minigames first model of a pair of maracas, triggering the "Load Maracas Minigame" script. This script displays the instruction "Follow the Sound of the Maracas" in the UI against a contrasting white background, and it activates an audio cue to guide the player. Progression through the minigame is governed by the "Maracas Minigame Audio" script, which manages the sequential activation and deactivation of sound sources. This script also adjusts audio properties based on player proximity, providing the player navigation cues. Successful completion, initiated by interaction with the final pair of maracas, triggers the "End Maracas Minigame" script. This script removes the UI text and unlocks the "maracas" instrument to be collected.
 
 \textbf{Load Maracas Minigame Script} \newline
-The "Load Maracas Minigame" script, attached to the initial pair of maracas within the game's terrain, serves as the entry point for the "Follow the Sound of the Maracas" minigame. Upon the player triggering the maracas by entering them, the script then sets up the minigame.
+The "Load Maracas Minigame" script is attached to the initial pair of maracas within the game's terrain, as shown in Figure \ref{fig:maracas_trigger}. This serves as the entry point for the "Follow the Sound of the Maracas" minigame. Upon the player triggering the maracas by entering them, the script then sets up the minigame.
 
 \begin{figure}[h]
  \centering
@@ -778,24 +774,26 @@ The script begins by identifying and temporarily muting all audio sources attach
 
 The script also disables all game objects within the environment that are not essential to the "Follow the Sound of the Maracas" minigame. This includes elements from other minigames that could potentially distract the player or obstruct the sound cues needed for the minigame's mechanics.
 
-Another function of this script is to activate the "Maracas Minigame Audio" script, which manages the progression of auditory cues throughout the minigame. The script also presents on-screen instructions to clarify the minigame's objective for the player to 'follow the sound of the maracas'.
+Another function of this script is to activate the "Maracas Minigame Audio" script, which manages the progression of auditory cues throughout the minigame. The script also presents on-screen instructions to clarify the minigame's objective for the player to 'Follow the Sound of the Maracas', as shown in Figure \ref{fig:maracas_setup}.
 
 \textbf{Maracas Minigame Audio Script} \newline
-The "Maracas Minigame Audio" script serves as the auditory foundation of the "Follow the Sound of the Maracas" minigame. This script manages several aspects of the audio experience to create the directional cues crucial for the minigame gameplay. One of its primary functions is to dynamically control the volume of the audio source associated with each pair of maracas. It constantly calculates the distance between the player and the maracas, adjusting the maracas sound volume accordingly. As the player draws closer to a maracas pair, the sound intensifies, guiding them towards the source.
+The "Maracas Minigame Audio" script serves as the foundation of the progression through the "Follow the Sound of the Maracas" minigame. This script manages several aspects of the audio experience to create the directional cues for the minigame gameplay. One of its primary functions is to dynamically control the volume of the audio source associated with each pair of maracas. It constantly calculates the distance between the player and the maracas, adjusting the maracas sound volume accordingly. As the player draws closer to a maracas pair, the sound intensifies, guiding them towards the source.
 
 \begin{figure}[h]
  \centering
  \includegraphics[width=0.7\linewidth]{dissertation/images/Maracas_Setup.png} 
- \caption{Screenshot showcasing changes initiated by the "Load Maracas Minigame" script.  The "Follow the Sound of the Maracas" instructions are displayed with a contrasting background, non-essential game objects are disabled, and the triggering maracas are enabled. These modifications reinforce the start of the minigame.} 
+ \caption{Screenshot showcasing changes initiated by the "Load Maracas Minigame" script. The "Follow the Sound of the Maracas" instructions are displayed with a contrasting background, non-essential game objects are disabled, and the triggering maracas are enabled. These modifications reinforce the start of the minigame.} 
  \label{fig:maracas_setup} 
 \end{figure}
 
 The script also controls the minigame's progression. It manages the activation and deactivation of audio sources associated with each maracas pair. This ensures a smooth transition between auditory cues as the player advances through the minigame. Upon interaction with a maracas pair, the script deactivates the current audio source and triggers the activation of the subsequent pair in the sequence.
 
 \textbf{End Maracas Minigame Script} \newline
-After the player collects the last pair of maracas, this action initiates the "End Maracas Minigame" script, signaling the successful completion of the "Follow the Sound of the Maracas" minigame. This script's responsibility is to reverse the changes implemented by the "Load Maracas Minigame" script, ensuring a smooth transition back to the primary game environment.
+After the player collects the last pair of maracas, this action initiates the "End Maracas Minigame" script, signaling the successful completion of the "Follow the Sound" minigame. This script's responsibility is to reverse the changes implemented by the "Load Maracas Minigame" script, ensuring a smooth transition back to the primary game environment.
 
-The script begins by restoring the game's soundscape. It calls the UnmuteAudioSources() function, which iterates through the list of previously muted audio sources and reverses this process. This reintroduces the instrument tracks previously disabled for the focused gameplay experience of the minigame. Additionally, the script re-enables all game objects that were initially disabled by the "Load Maracas Minigame" script. The EnableObjectRecursively() function ensures the activation of both parent and child objects throughout the game object hierarchy. Finally, the script deactiivates the rest of the follow the sound minigame elements. It deactivates the minigame instructions and visually signifies the player's success by activating the Maracas instrument model.
+The script begins by restoring the game's soundscape. It calls the UnmuteAudioSources() function, which iterates through the list of previously muted audio sources and reverses this process. This reintroduces the instrument tracks previously disabled for the focused gameplay experience of the minigame. Additionally, the script re-enables all game objects that were initially disabled by the "Load Maracas Minigame" script. The EnableObjectRecursively() function ensures the activation of both parent and child objects throughout the game object hierarchy. Finally, the script deactivates the rest of the "Follow The Sound" minigame elements. It deactivates the minigame instructions and visually signifies the player's success by activating the Maracas instrument model and adding the Maracas to the game's soundscape.
+
+\section{Dynamic Music System}
 
 % What did you do to implement this idea, and what technical achievements did you make?
 % \section{Guidance}
