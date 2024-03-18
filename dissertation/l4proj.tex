@@ -247,14 +247,14 @@ To DO:
 
 \section{Dementia}
 
-Throughout this dissertation, I will use the term 'dementia' as an umbrella term for diseases that cause the decline in cognitive abilities that impacts a person's ability to perform everyday activities, which typically involves problems with memory, thinking, and behavior.  Dementia is a progressive condition, meaning symptoms worsen over time. While there are many causes of dementia, the most common is Alzheimer's disease.
+Throughout this dissertation, I will use the term 'dementia' as an umbrella term for diseases that cause the decline in cognitive abilities that impacts a person's ability to perform everyday activities, which typically involves problems with memory, thinking, and behaviour.  Dementia is a progressive condition, meaning symptoms worsen over time. While there are many causes of dementia, the most common is Alzheimer's disease.
 
 \subsection{Alzheimer's disease}
 Alzheimer's disease is a progressive neurological disorder that can affect memory, thinking skills and behaviour. As of 2024, it is the most common cause of dementia, a group of brain disorders that result in loss of intellectual and social skills that is severe enough to interfere with daily functioning (Li et al., 2024). Alzheimer's typically begins slowly and as the disease progresses, individuals can experience memory loss, confusion, difficulty with language and communication, impaired judgment, and changes in personality (Li et al., 2024). Currently, there is no cure for Alzheimer's disease, but treatments and interventions can manage symptoms and improve quality of life for those affected by the disease.
 
-Both pharmacological and non-pharmacological treatments have been trialed to alleviate symptoms of dementia. Pharmacological treatments, lik acetylcholinesterase inhibitors, primarily target cognitive symptoms without altering the progression of the disease. These treatments have shown minimal effectiveness in easing the behavioral and psychological symptoms linked to these diseases (Dyer et al., 2018).
+Both pharmacological and non-pharmacological treatments have been trialed to alleviate symptoms of dementia. Pharmacological treatments, lik acetylcholinesterase inhibitors, primarily target cognitive symptoms without altering the progression of the disease. These treatments have shown minimal effectiveness in easing the behavioural and psychological symptoms linked to these diseases (Dyer et al., 2018).
 
-Conversely, non-pharmacological interventions offer supplementary treatments, presenting diverse strategies to enhance the well-being of individuals with dementia, reduce behavioral incidents, and enhance or maintain their quality of life (Dyer et al., 2018).
+Conversely, non-pharmacological interventions offer supplementary treatments, presenting diverse strategies to enhance the well-being of individuals with dementia, reduce behavioural incidents, and enhance or maintain their quality of life (Dyer et al., 2018).
 
 \section{Music Therapy}\label{sec:music_therapy}
 
@@ -482,7 +482,7 @@ Similar to the traditional sliding block puzzle and the implementation by Sasaki
 It's also important to note that, to aid in solving the puzzle, a visual representation of its completed state will be provided within the player's field of view during the minigame. Providing a visual representation of the puzzle's solved state offers a crucial support mechanism for players with dementia. This reference image can alleviate potential confusion or frustration that may arise from the puzzle's mechanics. By having a clear visual goal, players can better understand the task at hand and form strategies to achieve the correct solution. This design choice prioritises the requirement for accessibility and aims to create a more positive and inclusive gameplay experience.
 
 \subsection{Music Memory Games}
-The concept of memory games involving sequences of sounds can be traced back to various sources and inspirations. However, one notable origin of such games is the electronic game "Simon" which was invented by Ralph H. Baer and Howard J. Morrison and manufactured and distributed by Milton Bradley in 1978 (Baer \& Morrison, 1980). As seen in Figure \ref{fig:simon}, "Simon" consists of four colored buttons (green, red, blue, and yellow) that light up and produce unique sounds in a sequence (Baer \& Morrison, 1980). Players have to memorise the sequence and then repeat it back by pressing the corresponding buttons (Baer \& Morrison, 1980).
+The concept of memory games involving sequences of sounds can be traced back to various sources and inspirations. However, one notable origin of such games is the electronic game "Simon" which was invented by Ralph H. Baer and Howard J. Morrison and manufactured and distributed by Milton Bradley in 1978 (Baer \& Morrison, 1980). As seen in Figure \ref{fig:simon}, "Simon" consists of four coloured buttons (green, red, blue, and yellow) that light up and produce unique sounds in a sequence (Baer \& Morrison, 1980). Players have to memorise the sequence and then repeat it back by pressing the corresponding buttons (Baer \& Morrison, 1980).
 
 \begin{figure}[h]
     \centering
@@ -571,7 +571,7 @@ This section describes the development environment that the project was set up i
 Unity Version 2022.3.10f1 LTS was chosen for the development of HarmoyScape. Unity's Long-Term Support (LTS) version was selected to ensure stability and access to extensive documentation throughout the development process.
 
 \subsection{Programming Language}
-C# is the primary language in Unity for creating custom scripts that define the behavior of game objects, handle player input, manage game logic, and interface with Unity's various systems (UI, physics, etc.). This is the sole programming language that was used in the development of HarmonyScape.
+C# is the primary language in Unity for creating custom scripts that define the behaviour of game objects, handle player input, manage game logic, and interface with Unity's various systems (UI, physics, etc.). This is the sole programming language that was used in the development of HarmonyScape.
 
 \subsection{Integrated Development Environment (IDE)}
 Visual Studio Code was chosen as the development environment due to its lightweight footprint, seamless Unity integration, and robust debugging capabilities.
@@ -606,11 +606,11 @@ The HandleJumping function, within the "Player Movement Script", manages all log
 The MoveAndRotatePlayer function, within the "Player Movement Script", takes the calculated movement direction and handles the core tasks of physically moving the player and smoothly rotating them to face their movement direction. It first creates a velocity vector by multiplying the movement direction with the player's current speed. The vertical component of this velocity (velocity.y) is set to the ySpeed variable, which is influenced by gravity and jumping. The  CharacterController 'Move' function is then called to apply this velocity, updating the player's position. Finally, if the player is moving, the function calculates a target rotation based on movement direction and smoothly rotates the player object towards that target.
 
 \subsection{Camera System}
-Cinemachine is a powerful suite of tools included within Unity that provides intelligent and dynamic camera behaviors. It simplifies the process of creating complex camera systems, allowing developers to focus on the desired look and feel of the game rather than the low-level technical implementation of camera control.
+Cinemachine is a powerful suite of tools included within Unity that provides intelligent and dynamic camera behaviours. It simplifies the process of creating complex camera systems, allowing developers to focus on the desired look and feel of the game rather than the low-level technical implementation of camera control.
 
 HarmonyScape implements the Cinemachine Free Look Camera, a versatile camera component designed to offer third-person style camera perspectives. This choice is rooted in the theory discussed in Section \ref{sec:third_person}, which highlights the benefits of a third-person perspective for players who may be more susceptible to simulation sickness and require enhanced situational awareness. It's commonly used in games where players need the flexibility to control the camera view to observe their surroundings and character. The Free Look Camera system consists of three virtual camera rigs (top, middle, and bottom) that orbit around a target object, with a spline system seamlessly blending between them.
 
-In HarmonyScape, I've set the target of the Cinemachine Free Look Camera to be the player-controlled character object. This ensures that the camera remains focused on the player as they move through the game world. The Free Look Camera functions as a component of the main camera, effectively overriding Unity's standard camera controls to provide the desired dynamic camera behavior.
+In HarmonyScape, I've set the target of the Cinemachine Free Look Camera to be the player-controlled character object. This ensures that the camera remains focused on the player as they move through the game world. The Free Look Camera functions as a component of the main camera, effectively overriding Unity's standard camera controls to provide the desired dynamic camera behaviour.
 
 To prevent the camera from clipping through obstacles in the environment, I've added a Cinemachine Collider component to the Free Look Camera. This collider works in tandem with the camera system to detect potential collisions with objects in the scene. I've set the collider's strategy parameter to "Preserve Camera Distance." This means that if the camera's path would be obstructed, it smoothly readjusts its position to maintain a consistent distance from the player character, avoiding any jarring visual interruptions.
 
@@ -624,7 +624,7 @@ Each minigame has its own unique set of objects placed within the game world tha
 This section will delve into the specifics of each minigame implementation, detailing the functionalities of the Minigame Master script (where applicable), the unique objects used, and any additional scripts that contribute to their functionality.
 
 \subsection{Fixed Camera for Minigames}
-Each minigame within HarmonyScape temporarily overrides the standard camera behavior whilst it is being played. This adjustment is designed to ensure that the player has a clear, unobstructed view of all the necessary minigame components. This is achieved through a dedicated "CameraController" script attached to the main camera. This script works in conjunction with trigger zones, reffred to in the scripts as "catchment areas", placed around each minigame's location.
+Each minigame within HarmonyScape temporarily overrides the standard camera behaviour whilst it is being played. This adjustment is designed to ensure that the player has a clear, unobstructed view of all the necessary minigame components. This is achieved through a dedicated "CameraController" script attached to the main camera. This script works in conjunction with trigger zones, reffred to in the scripts as "catchment areas", placed around each minigame's location.
 
 When a player enters a minigame's catchment area, the corresponding trigger script communicates with the CameraController. The CameraController then disables the Cinemachine Brain component, taking direct control over the camera's position and rotation. The camera is repositioned and reoriented to provide an optimal view of the minigame's play area. Depending on the minigame, this might involve a top-down view or another specialised camera setup.
 
@@ -722,15 +722,6 @@ If a match is found, the cards are visually deactivated to represent their remov
  \label{fig:card_matching_success} 
 \end{figure}
 
-% \begin{figure}[h]
-%   \centering
-%   \includegraphics[width=0.7\linewidth]{dissertation/images/CardFlip_Correct_Before.png} 
-
-%   \caption{Screenshot illustrating the card-flipping animation controlled by the CardFlip script. The card has transitioned from its face-down state to its face-up state.}
-
-%   \label{fig:card_flip_in_action} 
-% \end{figure}
-
 \subsection{Sliding Puzzle}
 Completing the Sliding Puzzle minigame unlocks the Ukulele in the game's soundscape. This section will delve into the technical aspects of the sliding puzzle minigame. We'll begin by examining the teleportation mechanic, exploring how the player is seamlessly transferred from the snowy mountain environment to the dedicated puzzle platform. Following that, we'll deconstruct the individual components that make up the puzzle itself. Finally, we'll analyse the scripts attached to these individual components, uncovering the logic and behaviours that govern their functionality within the puzzle.
 
@@ -816,24 +807,22 @@ The script begins by restoring the game's soundscape. It calls the UnmuteAudioSo
 \subsection{Collection of Instruments}
 Each instrument within the game world is represented by a distinct corresponding model. These models appear dynamically upon the completion of their corresponding minigames. To facilitate player interaction and the unlocking of the musical elements, each instrument model has the TriggerSFX script attached. The TriggerSFX script manages the audio source associated with a particular instrument. Upon initialisation (in the Start() method), the audio source begins playing but is immediately muted, to be unmuted when the instrument has been collected.
 
-When the player enters the trigger zone associated with an instrument model (detected by the OnTriggerEnter() method), the script provides visual feedback. The audio source is unmuted, initiating the addition of the instrument's corresponding audio track to the game's sooundscape. Additionally, the script swaps between two images, transitioning the instrument's visual appearance in the UI from a black and white representation to its corresponding colour image. This change further signifies the instrument's collection. Finally, the script deactivates the instrument model's mesh renderer and the game object itself, removing it from the scene.
+When the player enters the trigger zone associated with an instrument model (detected by the OnTriggerEnter() method), the script provides visual feedback. The audio source is unmuted, initiating the addition of the instrument's corresponding audio track to the game's soundscape. Additionally, the script swaps between two images, transitioning the instrument's visual appearance in the UI from a black and white representation to its corresponding colour image. This change further signifies the instrument's collection. Finally, the script deactivates the instrument model's mesh renderer and the game object itself, removing it from the scene.
 
 \subsection{Audio Track Management}
-In HarmonyScape's dynamic music system, each instrument has a corresponding audio track that plays continuously from the beginning. These audio sources are attached directly to the player-controlled character. This design choice ensures that the volume of each instrument track remains consistent, regardless of the player's location within the game world.  Additionally, by continuously playing the tracks from the start, the system guarantees their rhythmic and harmonic synchronisation within the dynamic soundscape. This design ensures the instrumental tracks remain in time with one another, ultimately recreating the original song played in its entirety when all instruments have been collected. Upon completion of a minigame and collection of the corresponding instrument model, the TriggerSFX script unmutes the associated audio track. This action naturally integrates the new instrument into the game's evolving musical composition.
+In HarmonyScape's dynamic music system, as previously discussed, each instrument has a corresponding audio track that plays continuously from the beginning. These audio sources are attached directly to the player-controlled character. This design choice ensures that the volume of each instrument track remains consistent, regardless of the player's location within the game world.  Additionally, by continuously playing the tracks from the start, the system guarantees each track's synchronisation with the other tracks within the dynamic soundscape. This design ensures the instrumental tracks remain in time with one another, ultimately recreating the original song played in its entirety when all instruments have been collected. Upon completion of a minigame and collection of the corresponding instrument model, the TriggerSFX script unmutes the associated audio track. This action integrates the new instrument into the game's evolving musical composition.
 
 \section{Dynamic Music Implementation}
 
 \subsection{Acceleration and Deceleration}
-Within the Player Movement script, as described in Section \ref{sec:player_script}, we meticulously crafted the acceleration and deceleration mechanics to enhance the player's sense of control. With the aim to create a satisfyingly natural and responsive feel for the player's movement dynamics, we invested considerable experimentation and iterative adjustments into the acceleration and deceleration mechanics within the Player Movement script.
+Within the Player Movement script, as described in Section \ref{sec:player_script}, we meticulously crafted the acceleration and deceleration mechanics to enhance the player's sense of control. With the aim to create a satisfyingly natural and responsive feel for the player's movement, we invested considerable experimentation and iterative adjustments into the acceleration and deceleration mechanics within the Player Movement script.
 
-A vital element of this dynamic system is the ManageSpeed() function. This function acts as the controller of the player's speed, adjusting their 'current speed' value based on player input. We meticulously designed it to incorporate calculated acceleration and deceleration phases. When the player presses a movement key, the function initiates acceleration, progressively increasing the 'current speed' value until reaching the game's designated maximum speed. Conversely, when the player stops providing input, the function applies deceleration, gradually reducing the 'current speed' value. The calibration of these acceleration and deceleration rates was crucial for achieving the desired sense of momentum and responsiveness within the player's movement experience. The most innovative part of the implementation, as discussed in the following subsection, utilises these acceleration and deceleration functions to dynamically adjust the song tempo based on player movement.
+A vital element of this dynamic system is the ManageSpeed() function. This function acts as the controller of the player's speed, adjusting their 'current speed' value based on player input. We meticulously designed it to incorporate calculated acceleration and deceleration phases. When the player presses a movement key, the function initiates acceleration, progressively increasing the 'current speed' value until reaching the game's designated maximum speed. Conversely, when the player stops providing input, the function applies deceleration, gradually reducing the 'current speed' value. The calibration of these acceleration and deceleration rates was important for achieving the desired sense of momentum and responsiveness within the player's movement experience. The most innovative part of the implementation, as discussed in the following subsection, utilises these acceleration and deceleration functions to dynamically adjust the song tempo based on player movement.
 
-\subsection{How the dynamic music based on movement was implemented}
+\subsection{How the dynamic music based on movement was implemented \textbf{TO BE EXPANDED UPON}} 
 At the heart of the UpdateAudioTempo function lies a direct correlation between the player's 'currentSpeed' value and the manipulation of the game soundtrack's tempo.  This 'currentSpeed' value, meticulously managed within the PlayMovement script, serves as the real-time input that drives the dynamic changes in music.  The UpdateAudioTempo function continuously monitors this value, providing the foundation for all tempo adjustments.
 
-The core mechanism within this function revolves around the manipulation of audio source pitch.  As the player's 'currentSpeed' increases, the function carefully calculates a corresponding increase in the pitch of all audio tracks within the game.  Conversely, as the player's speed decreases, the pitch is systematically lowered.  This meticulous and continuous adjustment of pitch is what directly influences the perceived tempo of the music.
-
-Undoubtedly, the meticulous calibration of this pitch-to-speed relationship was a point of significant refinement.  Achieving a sense of perfect synchronization between the pace of the music and the visual cues of the player's movement likely demanded numerous adjustments to the formulas or values governing these tempo shifts.  The result is a system where the music feels intrinsically responsive to the player's actions, heightening the immersive experience.
+The core mechanism within this function revolves around the manipulation of audio source pitch.  As the player's 'currentSpeed' increases, the function carefully calculates a corresponding increase in the pitch of all audio tracks within the game.  Conversely, as the player's speed decreases, the pitch is systematically lowered.  This meticulous and continuous adjustment of pitch is what directly influences the perceived tempo of the music. The result is a system where the music feels intrinsically responsive to the player's actions, heightening the immersive experience.
 
 % What did you do to implement this idea, and what technical achievements did you make?
 % \section{Guidance}
@@ -1077,7 +1066,7 @@ Format:
 \end{itemize}
 \newpage
 
-This chapter describes our evaluation of the interactive water fountain, designed to answer the research questions from Chapter 1. We'll present experimental results and discuss how they address our questions and connect to existing research.
+This chapter describes our evaluation of HarmonyScape, designed to answer the research questions from Chapter 1. We'll present experimental results and discuss how they address our questions and connect to existing research.
 
 \section{Aims}
 The overarching goal of the evaluation, as outlined in Chapter 1, seeks to determine if the HarmonyScape project effectively captivates users and potentially aids cognitive well-being within an enjoyable, interactive environment. Due to the complexity of this question, the evaluation will focus on a series of interrelated aims that contribute to answering this broader question:
@@ -1086,22 +1075,22 @@ The overarching goal of the evaluation, as outlined in Chapter 1, seeks to deter
     \item Assess the game's intrinsic motivation potential. Does the multisensory design and interactive music system successfully promote player engagement?
     \item Evaluate how satisfying and enjoyable the dynamic music-making system is for players. Does it foster a sense of creative control within the game experience?
     \item Explore whether the game exhibits potential for aiding cognitive well-being in individuals living with dementia.
-    \item Negative Effects Examine whether the game could induce any negative effects, such as stress or confusion, particularly for players with dementia.
+    \item Examine whether the game could induce any negative effects, such as stress or confusion, particularly for players with dementia.
 \end{itemize}
 
 \section{Experimental Design}
-The evaluation of the HarmonyScape project employed an approach that prioritised the collection of qualitative data centered on user experience. Given the target audience, the evaluation included caregivers and healthcare professionals who had experience working with individuals living with dementia or related conditions.
+The evaluation of the HarmonyScape project employed an approach that prioritised the collection of qualitative data centred on user experience. Given the target audience, the evaluation included caregivers and famiily members who had experience with individuals living with dementia or related conditions.
 
-The decision to focus on caregivers and professionals, rather than directly testing on individuals with dementia, was guided by several factors. Ethical considerations were an important factor, recognising the potential for people with dementia to have difficulty understanding the study's purpose or providing informed consent. Practical challenges related to potential unfamiliarity with technology and sustained focus could have presented limitations in gathering consistent feedback from participants with dementia. Additionally, due to limited resources of a student project, it would have proven difficult to recruit a sufficient number of participants with dementia.
+The decision to focus on caregivers and family members, rather than directly testing on individuals with dementia, was guided by several factors. Ethical considerations were an important factor, recognising the potential for people with dementia to have difficulty understanding the study's purpose or providing informed consent. Practical challenges related to potential unfamiliarity with technology and sustained focus could have presented limitations in gathering consistent feedback from participants with dementia. Additionally, due to limited resources of a student project, it would have proven difficult to recruit a sufficient number of participants with dementia.
 
-Caregivers and professionals possess a deep understanding of the capabilities, needs, and challenges of those living with dementia. Their participation allowed us to gain valuable insights into how the intended target audience might interact with and experience the game.
+Caregivers and family members of those with dementia possess a deep understanding of the capabilities, needs, and challenges of those living with dementia. Their participation allowed us to gain valuable insights into how the intended target audience might interact with and experience the game.
 
-To directly assess the impact of HarmonyScape on individuals with dementia, future studies should be conducted in collaboration with specialist care facilities or dementia research organisations. These insights provide a strong foundation for future research that directly evaluates the impact of HarmonyScape on individuals living with dementia. Such future studies must prioritise ethical considerations and adhere to appropriate approval procedures.
+These insights provide a strong foundation for future research that directly evaluates the impact of HarmonyScape on individuals living with dementia. However, to directly assess the impact of HarmonyScape on individuals with dementia, future studies should be conducted in collaboration with specialist care facilities or dementia research organisations. Such future studies must prioritise ethical considerations and adhere to appropriate approval procedures.
 
 \subsection{Pre-Study Survey}
-Before interacting with the HarmonyScape game, participants were asked to complete a short survey. This survey collected basic demographic information, including age range, gender identity, and their experience with individuals living with intellectual disabilities (such as Alzheimer's disease, Dementia, Huntington's disease).
+Before interacting with HarmonyScape, participants were asked to complete a short survey. This survey collected basic demographic information, including age range, gender identity, and their experience with individuals living with intellectual disabilities related to dementia, such as Alzheimer's disease.
 
-The purpose of this demographic data was to understand how representative the participant sample is and to help contextualize their feedback.
+The purpose of this demographic data was to understand how representative the participant sample is and to help contextualise their feedback.
 
 Additionally, participants were asked about their gaming experience. This aimed to establish their familiarity with video games and similar interactive experiences, providing insight into how their previous gaming habits might influence their interaction with HarmonyScape.
 
@@ -1110,15 +1099,15 @@ We chose to utilise the think-aloud protocol for its qualitative insights into t
 
 The think-aloud method can be particularly valuable when evaluating systems designed for individuals with dementia.  While the current study did not include participants with dementia, their caregivers and professionals have deep insights into the challenges dementia can pose.  The protocol encourages immediate externalisation of thoughts, potentially revealing design aspects that might be difficult for someone with dementia to articulate (Papachristou et al., 2016). Additionally, it facilitates the identification of specific design elements that could present challenges for individuals with dementia (Papachristou et al., 2016).
 
-Clear instructions to participants was provided to participants to collect all the game's instruments. These instructions, combined with the visual cues and guidance within the game itself, were designed to enable participants to complete the game independently and without intervention. Actual instructions on the key-mapping of the controls of the game, as discussed previously, was also given to ensure that there was no need for intervention. With their experience working with individuals living with dementia, participants were encouraged to consider and comment on any design aspects that could potentially aid or hinder the user experience for the target audience.
+Clear instructions were provided to participants to collect all the game's instruments. These instructions, combined with the visual cues and guidance within the game itself, were designed to enable participants to complete the game independently and without intervention. Actual instructions on the key-mapping of the controls of the game, as discussed previously, was also given to ensure that there was no need for intervention. With their experience working with individuals living with dementia, participants were encouraged to consider and comment on any design aspects that could potentially aid or hinder the user experience for the target audience.
 
 \subsection{Post-Study Interview}
-After completing HarmonyScape by collecting all the instruments and reaching the end-screen, participants engaged in a two-part, semi-structured interview. This interview aimed to gather qualitative insights into their experience across several key areas.  The first section of the interview was completed by everyone, while the second section was specifically designed for participants who had experience with individuals living with dementia.
+After completing HarmonyScape by collecting all the instruments and reaching the end-screen, participants engaged in a semi-structured interview. This interview aimed to gather qualitative insights into their experience across several key areas.  The first section of the interview was completed by everyone, while a second section was specifically designed for participants who had experience with individuals living with dementia.
 
 \subsubsection{Post-Interview Questions:}
 The first section of the interview comprised six subsections. 
 
-The first subsection focused on gathering general impressions of the game, including its visual appeal, overall engagement, and the participant's initial reactions.  This establishes a baseline of the participant's subjective enjoyment of the game.
+The first subsection focused on gathering general impressions of the game, including its visual appeal, overall engagement, and the participant's initial reactions.  %This establishes a baseline of the participant's subjective enjoyment of the game.
 
 The second subsection explored goal clarity and navigation, with questions designed to evaluate how clear the game's objectives appeared, the ease of understanding in-game progress, and whether the game environment posed any disorientation challenges.  Understanding these elements is crucial for assessing usability,  particularly for users who may experience cognitive challenges.  The third subsection asked participants to assess their levels of stress and anxiety while playing, as these factors can significantly impact user experience. This is especially important for those with dementia, where heightened stress or confusion could be detrimental.
 
@@ -1132,11 +1121,13 @@ Questions in this section aimed to gather their insights about the potential sui
 \subsection{Limitations}
 While the design of this evaluation provided valuable insights into HarmonyScape's potential, it's important to acknowledge certain limitations. 
 
-The study relied primarily on participants with experience working with individuals with dementia, rather than those directly living with the condition. Additionally, some participants had no prior experience with individuals with dementia. While all perspectives are valuable, direct observation of individuals with dementia, along with their feedback, is crucial for a comprehensive evaluation. Future studies should prioritize collaboration with specialist care facilities or dementia research organizations to ensure the inclusion of individuals with dementia, taking into account ethical considerations and appropriate approval processes.
+The study relied primarily on participants with experience working with individuals with dementia, rather than those directly living with the condition. Additionally, some participants had no prior experience with individuals with dementia. While all perspectives are valuable, direct observation of individuals with dementia, along with their feedback, is crucial for a comprehensive evaluation. Future studies should prioritise collaboration with specialist care facilities or dementia research organisations to ensure the inclusion of individuals with dementia, taking into account ethical considerations and appropriate approval processes.
 
 In addition to this, the study relied on a convenience sample consisting primarily of computing science students, friends, and family. This resulted in a limited demographic profile, particularly in terms of age range, technical experience, and crucially, experience with individuals living with dementia or related conditions. While the scope and timeframe of a student project limited the ability to recruit a participant pool exclusively composed of those with dementia care experience, future studies should ensure all participants possess this background to provide more targeted insights relevant to the game's intended audience.
 
 \section{Results}
+
+\subsection{Pre-Survey Results}
 A total of 11 participants were recruited through a convenience sampling method.  The age distribution skewed slightly younger, with six participants falling within the 25-34 age range and the remaining five within the 18-24 range.  The sample had a near-equal gender balance, with six participants identifying as female and five identifying as male.
 
 Regarding experience with individuals living with dementia-related conditions such as Alzheimer's disease, the majority of participants possessed some knowledge or background. Four participants indicated having some experience, while two reported extensive experience in this area.
@@ -1144,7 +1135,83 @@ Regarding experience with individuals living with dementia-related conditions su
 The sample also exhibited a range of gaming experience levels. Five participants identified as beginners, four reported advanced gaming skills, and two classified themselves as intermediate.
 
 \subsection{Post-Study Interview Results}
+Participant interviews were transcribed for analysis. We employed an open and axial coding approach, inspired by the methodology of Corbin and Strauss (1990).  Each segment of the transcripts was assigned codes, which were then iteratively grouped to identify broader patterns and themes. Due to the volume of unique themes that emerged, the subsequent discussion focuses on those deemed most aligned to the research questions. To protect participant confidentiality, each interviewee was assigned a unique ID. Quotations within the analysis will reference these identifiers to maintain anonymity.
+\newline
 
+\textbf{Camera Movement Concerns}
+
+Another theme that emerged from the feedback was the potential for the camera movement system to cause confusion or disorientation for players. Participant 2 noted, "The only thing I would tweak about the game is the camera movement. The game character moving with the mouse movements can at times be confusing." This sentiment was echoed by Participant 9, who specifically mentioned difficulty with inverted camera controls. Other participants expanded on this issue, highlighting challenges with navigating uneven terrain or experiencing unintentional perspective shifts, as described by Participant 4:  "I found the camera movements to be very disorienting and sometimes exiting/entering the mini-games was disorienting too because the perspective changed and sometimes unintentionally, like leaving the game accidentally." Participant 10 reinforced the concern, stating, "I think the only thing that may stress them [individuals with dementia] is the camera movement as it can be hard to get used to." The feedback highlights a crucial area for refinement. 
+
+Optimising the camera controls and transitions is essential to ensure a smooth and intuitive user experience, particularly for individuals with dementia who might be more susceptible to disorientation.
+\newline
+
+\textbf{Clarity of Instructions}
+
+While participants found the minigames themselves engaging, a recurring theme was the desire for more comprehensive instructions and guidance. Participants 1, 5, and 10 expressed a need for clearer directions within the minigames, outlining the specific actions required to complete them. Participant 9 suggested incorporating constant reminders for interactions, potentially benefiting individuals with dementia. Participant 5 proposed that adding text-based instructions within the user interface (UI), outside of the Follow The Sound minigame which has this, could offer further assistance for those with dementia. 
+
+Enhancing the clarity of instructions, both visually and through supplementary cues, seems crucial for maximising the accessibility and ease of use for individuals with varying levels of cognitive impairment.
+\newline
+
+\textbf{Instrument Symbol Visibility and Clarity}
+
+Participants generally found the instrument icons, representing game progress, to be helpful and intuitive. Comments such as "super easy to understand" (Participant 2) and "easy to understand"  (Participant 3) showcase this positive reception. Additionally, Participant 4  appreciated the multi-sensory feedback, with both visual cues (icons lighting up) and auditory cues (instruments playing) reinforcing progress.  However, some participants (5 and 6) suggested making the symbols larger or more prominent, as they initially went unnoticed. Participant 8 proposed additional celebratory visuals, such as confetti, to further emphasise successful instrument collection. 
+
+While the core design of the progress symbols was well-received, there's room to enhance their visibility and impact. This could be achieved through increased size, bolder design, or the addition of supplemental visual cues to ensure all users, particularly those with potential cognitive challenges, clearly track their progress.
+\newline
+
+\textbf{Potential of Personalised Music}
+
+Participant 2 expressed enthusiasm for the potential of incorporating a feature allowing users to add their own music to HarmonyScape. They envisioned this feature as a powerful tool for triggering positive memories and emotions in individuals with dementia. Specifically, they suggested that familiar music from a user's past could facilitate reminiscence and provide opportunities to connect with loved ones through shared experiences.
+
+This feedback highlights the potential impact of personalised music choices within HarmonyScape. Exploring the feasibility of such a feature could significantly enhance the therapeutic value of the game and create deeply meaningful experiences for individuals with dementia when playing through HarmonyScape.
+\newline
+
+\textbf{Musical Notes as Effective Guidance}
+
+Participants found the visual representation of musical notes in the sky to be a helpful navigational aid.  Participant 4 commented, "There were moments when I was unsure what to do, but then I noticed the clear instructions ... as the musical notes visible in the sky." Other participants echoed this positive response. Participant 1 noted, "The musical notes in the sky made it apparent where to go next" and Participant 2 drew upon their experience with similar games, stating, "Based on my previous experiences with other open-world games, the icons in the sky help to work out what the next goals are and how to get to them".
+
+The inclusion of musical notes as visual guides was well-received by participants and appears to be an effective way to provide directional cues within HarmonyScape's environment. This feature seems particularly valuable for users who may benefit from clear and intuitive navigational support.
+\newline
+
+\textbf{Navigational Challenges}
+
+Despite the helpful musical notes, a common theme in the feedback was a sense of disorientation, with several participants expressing significant confusion about their location within the game world. Participant 7's comment, "But I was very lost" highlights this sentiment. Others, like Participant 11, found the experience disorienting but enjoyable: "I was a little confused for a lot of it but it was still enjoyable."  Participants noted that certain areas of the terrain, particularly the hills, lacked distinct visual landmarks, making it difficult to determine their position.
+
+Participants proposed various solutions to improve navigation. "Minimap in the bottom of the screen or a full map upon pausing would make it easier to understand where you are in the world," suggests Participant 1.  Others advocated for visual signposting of paths or an arrow pointing towards the next objective:  "I think the paths without signposting may end up being confusing and frustrating... Using colours to help signpost when paths have been crossed will help the game become more simple" (Participant 9).
+
+The feedback strongly suggests that incorporating navigational aids is crucial for minimising frustration and confusion, particularly for users with dementia who might be more prone to disorientation. Implementing one or more of the proposed solutions could significantly improve the user experience and ensure HarmonyScape remains an enjoyable and accessible experience for those with dementia.
+\newline
+
+\textbf{Visually Appealing Environment}
+
+Participants overwhelmingly found the visual design of HarmonyScape to be engaging and stimulating. They appreciated the variety of landscapes, with comments like "different seasons within the game" (Participant 2) and "rocks, beaches, hills and snowy mountains grabbed my attention" (Participant 4). The use of bright colours was also noted as a positive element (Participants 5 and 6).  Participant 9 specifically mentioned that "the variety in landscape made me want to explore," while Participant 10 praised the graphics and character design. Though less focused on exploration, Participant 11 still found the changing landscapes and weather visually interesting.
+
+The feedback highlights the success of HarmonyScape's visual design in creating an appealing and immersive environment. The diverse landscapes and vibrant colours seem to encourage exploration and enhance the overall user experience.
+\newline
+
+\textbf{Strong Intrinsic Motivation}
+
+Participants expressed a high level of intrinsic motivation within HarmonyScape. They found the minigames themselves to be fun and engaging, describing a sense of satisfaction upon completion: "Intrinsically motivating because the mini-games were engaging and interesting and you got satisfaction from successfully completing them" (Participant 1). This intrinsic motivation was further fuelled by the desire to hear the complete song, as noted by Participant 3: "I find the music motivating to complete more minigames as I can only hear the song in parts so I want to hear the completed final song."
+
+While the feedback was largely positive, Participant 9 suggested a way to further increase intrinsic motivation: "Perhaps varying the music when in the minigames would make it more intrinsic, for example, adding a cool track that reflects the environment the minigame is played at - beach-type track playing during the beach minigame, for example."
+
+HarmonyScape appears to successfully foster intrinsic motivation through its  minigames and the gradual reveal of the dynamic soundtrack. Exploring ways to further personalise the musical experience, as suggested, could potentially enhance this aspect even further.
+
+
+\subsection{Dementia Specific Questions}
+
+\textbf{Tablet Interface Preference}
+
+A recurring theme in the post-interview responses was the suggestion that a tablet interface could significantly enhance usability for individuals with dementia. Participants with caregiving experience drew upon their observations to support this viewpoint. Participant 2 stated: "A tablet interface would enhance usability based on my experience. I have noticed people with intellectual disabilities that I have cared for have a much easier time navigating a tablet interface than a laptop/desktop.” Participants 3, 4, and 10 echoed similar sentiments, noting that a tablet or touchscreen could be more intuitive and accessible. Participant 10 specifically mentioned, “Yes, most of the individuals I worked with, with dementia and Alzheimer's, used an iPad as it is minimal and easy to use.” 
+
+This strong preference suggests that incorporating a tablet interface into future iterations of HarmonyScape may significantly improve the user experience for individuals with dementia.
+\newline
+
+\textbf{Music's Potential for Cognitive Stimulation and Stress Reduction}
+
+Participants highlighted the potential for HarmonyScape's dynamic music system to positively impact memory and reduce stress levels in individuals with dementia.  Participant 3 suggested, "The music however may be a big help for them to remember where they are.” Expanding on this, Participant 2 elaborated, "Music would reduce their stress and anxiety levels. People I know with Alzheimer's find music to be calming and they find it enjoyable to be interactive with music. Music seems to be something that they always understand and enjoy... those instincts remain intact even as their cognitive abilities degrade, and it is the same way with music, it still brings them joy even if they don't recognise it in the exact same way.” This participant also noted the interactive music's potential for cognitive stimulation. Participant 4 reinforced these observations, commenting, "The music used is really easing to the mind so I think you hit the nail on the head.” 
+
+These insights suggest that HarmonyScape's musical element could offer therapeutic benefits for individuals with dementia, both as a calming influence and a potential cognitive stimulant.
 
 % \section{Evidence}
 % Make sure you present your evidence well. Use appropriate visualisations, reporting techniques and statistical analysis, as appropriate.
