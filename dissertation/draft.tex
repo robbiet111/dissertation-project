@@ -1,6 +1,7 @@
 % REMEMBER: You must not plagiarise anything in your report. Be extremely careful.
 
 \documentclass{l4proj}
+
     
 %
 % put any additional packages here
@@ -20,33 +21,33 @@
 %% ABSTRACT
 \begin{abstract}
     
-    This dissertation investigates the development and implementation of HarmonyScape, an inclusive initiative tailored for individuals with intellectual disabilities, including Alzheimer's. Inspired by the profound link between music and cognitive function, HarmonyScape creates a captivating 3D world where music dynamically responds to user exploration. Through character control in an open-world setting and interactive music-based mini games, players unlock new instruments, filling out the games' musical landscape. The project's aim is to provide a multi-sensory environment that potentially aids cognitive well-being while offering an engaging, interactive experience. Initial user feedback indicates high levels of engagement and enjoyment, suggesting promising avenues for inclusive gaming and therapeutic interventions. This research underscores the significance of tailored approaches to accessibility and engagement in fostering cognitive well-being among individuals with intellectual disabilities.
-    \vskip 0.5em
-    Every abstract follows a similar pattern. Motivate; set aims; describe work; explain results.
-    \vskip 0.5em
-    ``XYZ is bad. This project investigated ABC to determine if it was better. 
-    ABC used XXX and YYY to implement ZZZ. This is particularly interesting as XXX and YYY have
-    never been used together. It was found that  
-    ABC was 20\% better than XYZ, though it caused rabies in half of subjects.''
+    % This dissertation investigates the development and implementation of HarmonyScape, an inclusive initiative tailored for individuals with intellectual disabilities, including Alzheimer's. Inspired by the profound link between music and cognitive function, HarmonyScape creates a captivating 3D world where music dynamically responds to user exploration. Through character control in an open-world setting and interactive music-based mini games, players unlock new instruments, filling out the games' musical landscape. The project's aim is to provide a multi-sensory environment that potentially aids cognitive well-being while offering an engaging, interactive experience. Initial user feedback indicates high levels of engagement and enjoyment, suggesting promising avenues for inclusive gaming and therapeutic interventions. This research underscores the significance of tailored approaches to accessibility and engagement in fostering cognitive well-being among individuals with intellectual disabilities.
+    % \vskip 0.5em
+    % Every abstract follows a similar pattern. Motivate; set aims; describe work; explain results.
+    % \vskip 0.5em
+    % ``XYZ is bad. This project investigated ABC to determine if it was better. 
+    % ABC used XXX and YYY to implement ZZZ. This is particularly interesting as XXX and YYY have
+    % never been used together. It was found that  
+    % ABC was 20\% better than XYZ, though it caused rabies in half of subjects.''
 \end{abstract}
 
-\begin{abstract}
-    \textbf{Inclusive 3D Exploration with Music for Intellectual Disabilities}
+% \begin{abstract}
+%     \textbf{Inclusive 3D Exploration with Music for Intellectual Disabilities}
 
  
 
-    Imagine an inclusive initiative tailored specifically for individuals with intellectual disabilities, including conditions like Alzheimer's. Through Unity, we plan to create a captivating 3D world that generates music in response to exploration. This project is inspired by the unique relationship between music and cognitive function (Baird \& Samson, 2015), and its therapeutic potential for those with dementia (Vink et al., 2003). By immersing users in a visually engaging environment where music dynamically responds to movement, we aim to provide a multisensory experience that not only captivates but also potentially aids cognitive well-being in an enjoyable, interactive manner.
+%     Imagine an inclusive initiative tailored specifically for individuals with intellectual disabilities, including conditions like Alzheimer's. Through Unity, we plan to create a captivating 3D world that generates music in response to exploration. This project is inspired by the unique relationship between music and cognitive function (Baird \& Samson, 2015), and its therapeutic potential for those with dementia (Vink et al., 2003). By immersing users in a visually engaging environment where music dynamically responds to movement, we aim to provide a multisensory experience that not only captivates but also potentially aids cognitive well-being in an enjoyable, interactive manner.
 
  
 
-    \textbf{Reading}  
+%     \textbf{Reading}  
     
-    Baird, A., \& Samson, S. (2015). Music and dementia. Progress in brain research, 217, 207-235.
+%     Baird, A., \& Samson, S. (2015). Music and dementia. Progress in brain research, 217, 207-235.
     
      
     
-    Vink, A. C., Bruinsma, M. S., \& Scholten, R. J. (2003). Music therapy for people with dementia. Cochrane database of systematic reviews, (4).
-\end{abstract}
+%     Vink, A. C., Bruinsma, M. S., \& Scholten, R. J. (2003). Music therapy for people with dementia. Cochrane database of systematic reviews, (4).
+% \end{abstract}
 
 %==============================================================================
 
@@ -106,15 +107,13 @@ TOODO: \begin{itemize}
     \item Abstract
     \item Present continuous tense (Happened already and continue happening)
     \item Fix use of singular and double quotation marks
-    \item Should have objectives (more than 1 or 2 that are more specific, and act as stepping stones to reach the aims)
-    \item Should only have 1 or 2 aims (not as specific)
 \end{itemize}
 
 
 This opening chapter sets the stage for the HarmonyScape project by introducing the motivations and goals that led to its development. The following sections of this paper will explore distinct segments of the project, covering its background, design, implementation, and evaluation.
 
 \section{Motivation}
-As the prevalence of dementia increases within our aging population, with the number of older people with dementia in the UK projected to rise by 80\% from almost 885,000 in 2019 to around 1.6 million in 2040 (Wittenberg \emph{et al.,} 2019), the development of effective treatments and engaging activities to manage its symptoms becomes imperative.  The means of music as a form of therapy in the treatment of diseases linked with dementia, such as Alzheimer's, is a unique approach that taps into preserved cognitive and emotional functions in individuals with dementia.
+As the prevalence of dementia increases within our aging population, with the number of older people with dementia in the UK projected to rise by 80\% from almost 885,000 in 2019 to around 1.6 million in 2040 (Wittenberg \emp{et al.,} 2019), the development of effective treatments and engaging activities to manage its symptoms becomes imperative.  The means of music as a form of therapy in the treatment of diseases linked with dementia, such as Alzheimer's, is a unique approach that taps into preserved cognitive and emotional functions in individuals with dementia.
 
 Research by Vink AC \emph{et al.} (2004) shows promising results that for individuals with dementia, music-based therapeutic interventions can be employed to target depressive symptoms. While the potential benefits of game-based activities for cognitive function in dementia are highlighted by Vilkki et al. (2019), combining these approaches in a therapeutic setting has been seldom explored. This suggests a valuable avenue for future research in dementia care.
 
@@ -238,9 +237,6 @@ To DO:
     \item Beginning section
     \item Add to Dementia section that its more specifically aimed at those with early to mid stages of dementia and that’s what I’m referring to from here on out when referring to those living with dementia
     \item Definition of Gamification
-    \item WRITE A DOWNFALL ABOUT HOW IT DOESNT EXPLICITY USE 
-    \item WRITE ABOUT A DOWNFALL FOR SOMETHING BEING THE EXPLICIT USE OF FAIL STATES
-    \item WRITE A DOWNFALL FOR SOMETHING BEING LACKING IN USER CREATIVITY WHICH CAN LIMIT ENGAGEMENT
 \end{itemize}
 
 
@@ -539,7 +535,7 @@ The progress tracker's design aligns with the principles outlined in Section \re
 %==================================================================================================================================
 \chapter{Implementation}
 
-Chronological order of what happened, grouped by feature. For example starting with setting up the unity project, and then tackle each component in the order it was implemented.
+% Chronological order of what happened, grouped by feature. For example starting with setting up the unity project, and then tackle each component in the order it was implemented.
 
 TODO:
 \begin{itemize}
@@ -561,7 +557,7 @@ TODO:
     \item How Music Note (Guiders) were implemented
 \end{itemize}
 
-\newpage
+% \newpage
 
 \section{Development Environment}
 This section describes the development environment that the project was set up in. This includes, Unity version, programming languages, IDEs and external libraries and assets used.
@@ -1019,54 +1015,51 @@ TODOO:
     \item Refer to initial testing last year
     \item Summarise based on results in user study
     \item Future work could implement directional sound in Follow The Sound mini game
-    \item Ensure use of “” instead of ""
-    \item Ensure use of emph for participant quotes
-    
 \end{itemize}
 
-How good is your solution? How well did you solve the general problem, and what evidence do you have to support that?
+% How good is your solution? How well did you solve the general problem, and what evidence do you have to support that?
 
-Format:
-\begin{itemize}
-    \item Evaluation:
-    \begin{itemize}
-        \item Aims
-        \item Experimental Design
-        \begin{itemize}
-            \item Pre-Study Survey
-            \item Experience Prototype
-            \item Post-Study Survey
-            \item Participant Interviews
-            \item Limitations
-        \end{itemize}
-        \item Results
-        \begin{itemize}
-            \item Pre and Post-Study Surveys
-            \item Interviews
-        \end{itemize}
-        \item Analysis and Discussion
-        \begin{itemize}
-            \item Encouraging use of Public Spaces
-            \item The Interaction Experience
-            \item Effect of Interpersonal Relationships
-        \end{itemize}
-    \end{itemize}
-\end{itemize}
+% Format:
+% \begin{itemize}
+%     \item Evaluation:
+%     \begin{itemize}
+%         \item Aims
+%         \item Experimental Design
+%         \begin{itemize}
+%             \item Pre-Study Survey
+%             \item Experience Prototype
+%             \item Post-Study Survey
+%             \item Participant Interviews
+%             \item Limitations
+%         \end{itemize}
+%         \item Results
+%         \begin{itemize}
+%             \item Pre and Post-Study Surveys
+%             \item Interviews
+%         \end{itemize}
+%         \item Analysis and Discussion
+%         \begin{itemize}
+%             \item Encouraging use of Public Spaces
+%             \item The Interaction Experience
+%             \item Effect of Interpersonal Relationships
+%         \end{itemize}
+%     \end{itemize}
+% \end{itemize}
 
-\section{Guidance}
-\begin{itemize}
-    \item
-        Ask specific questions that address the general problem.
-    \item
-        Answer them with precise evidence (graphs, numbers, statistical
-        analysis, qualitative analysis).
-    \item
-        Be fair and be scientific.
-    \item
-        The key thing is to show that you know how to evaluate your work, not
-        that your work is the most amazing product ever.
-\end{itemize}
-\newpage
+% \section{Guidance}
+% \begin{itemize}
+%     \item
+%         Ask specific questions that address the general problem.
+%     \item
+%         Answer them with precise evidence (graphs, numbers, statistical
+%         analysis, qualitative analysis).
+%     \item
+%         Be fair and be scientific.
+%     \item
+%         The key thing is to show that you know how to evaluate your work, not
+%         that your work is the most amazing product ever.
+% \end{itemize}
+% \newpage
 
 This chapter describes our evaluation of HarmonyScape, designed to answer the research questions from Chapter 1. We'll present experimental results and discuss how they address our questions and connect to existing research.
 
@@ -1138,7 +1131,6 @@ In addition to this, the study relied on a convenience sample consisting primari
 \subsection{Pre-Survey Results}
 A total of 11 participants were recruited through a convenience sampling method.  The age distribution skewed slightly younger, with six participants falling within the 25-34 age range and the remaining five within the 18-24 range.  The sample had a near-equal gender balance, with six participants identifying as female and five identifying as male.
 
-
 Regarding experience with individuals living with dementia-related conditions such as Alzheimer's disease, the majority of participants possessed some knowledge or background. Four participants indicated having some experience, while two reported extensive experience in this area. The remaining 5 having little-to-none.
 
 The sample also exhibited a range of gaming experience levels. Five participants identified as beginners, four reported advanced gaming skills, and two classified themselves as intermediate.
@@ -1149,7 +1141,7 @@ Participant interviews were transcribed for analysis. We employed an open and ax
 
 \textbf{Camera Movement Concerns}
 
-Another theme that emerged from the feedback was the potential for the camera movement system to cause confusion or disorientation for players. Participant 2 noted, \emph{“The only thing I would tweak about the game is the camera movement. The game character moving with the mouse movements can at times be confusing”}. This sentiment was echoed by Participant 9, who specifically mentioned difficulty with inverted camera controls. Other participants expanded on this issue, highlighting challenges with navigating uneven terrain or experiencing unintentional perspective shifts, as described by Participant 4, \emph{“I found the camera movements to be very disorienting and sometimes exiting/entering the mini-games was disorienting too because the perspective changed and sometimes unintentionally, like leaving the game accidentally”}. Participant 10 reinforced the concern, stating, \emph{“I think the only thing that may stress them [individuals with dementia] is the camera movement as it can be hard to get used to”}. The feedback highlights a crucial area for refinement. 
+Another theme that emerged from the feedback was the potential for the camera movement system to cause confusion or disorientation for players. Participant 2 noted, \emph{"The only thing I would tweak about the game is the camera movement. The game character moving with the mouse movements can at times be confusing"}. This sentiment was echoed by Participant 9, who specifically mentioned difficulty with inverted camera controls. Other participants expanded on this issue, highlighting challenges with navigating uneven terrain or experiencing unintentional perspective shifts, as described by Participant 4, \emph{"I found the camera movements to be very disorienting and sometimes exiting/entering the mini-games was disorienting too because the perspective changed and sometimes unintentionally, like leaving the game accidentally"}. Participant 10 reinforced the concern, stating, \emph{"I think the only thing that may stress them [individuals with dementia] is the camera movement as it can be hard to get used to"}. The feedback highlights a crucial area for refinement. 
 
 Optimising the camera controls and transitions is essential to ensure a smooth and intuitive user experience, particularly for individuals with dementia who might be more susceptible to disorientation.
 \newline
@@ -1163,7 +1155,7 @@ Enhancing the clarity of instructions, both visually and through supplementary c
 
 \textbf{Instrument Symbol Visibility and Clarity}
 
-Participants generally found the instrument icons, representing game progress, to be helpful and intuitive. Comments such as \emph{“super easy to understand”} (Participant 2) and \emph{“easy to understand”} (Participant 3) showcase this positive reception. Additionally, Participant 4 appreciated the multi-sensory feedback, with both visual cues (icons filling with colour) and auditory cues (instruments playing) reinforcing progress. However, some participants (5 and 6) suggested making the symbols larger or more prominent, as they initially went unnoticed. Participant 8 proposed additional celebratory visuals, such as confetti, to further emphasise successful instrument collection. 
+Participants generally found the instrument icons, representing game progress, to be helpful and intuitive. Comments such as \emph{"super easy to understand"} (Participant 2) and \emph{"easy to understand"} (Participant 3) showcase this positive reception. Additionally, Participant 4 appreciated the multi-sensory feedback, with both visual cues (icons filling with colour) and auditory cues (instruments playing) reinforcing progress. However, some participants (5 and 6) suggested making the symbols larger or more prominent, as they initially went unnoticed. Participant 8 proposed additional celebratory visuals, such as confetti, to further emphasise successful instrument collection. 
 
 While the core design of the progress symbols was well-received, there's room to enhance their visibility and impact. This could be achieved through increased size, bolder design, or the addition of supplemental visual cues to ensure all users, particularly those with potential cognitive challenges, clearly track their progress.
 \newline
@@ -1177,32 +1169,32 @@ This feedback highlights the potential impact of personalised music choices with
 
 \textbf{Musical Notes as Effective Guidance}
 
-Participants found the visual representation of musical notes in the sky to be a helpful navigational aid. Participant 4 commented, \emph{“There were moments when I was unsure what to do, but then I noticed the clear instructions ... as the musical notes visible in the sky”}. Other participants echoed this positive response. Participant 1 noted, \emph{“The musical notes in the sky made it apparent where to go next”} and Participant 2 drew upon their experience with similar games, stating, \emph{“Based on my previous experiences with other open-world games, the icons in the sky help to work out what the next goals are and how to get to them”}.
+Participants found the visual representation of musical notes in the sky to be a helpful navigational aid. Participant 4 commented, \emph{"There were moments when I was unsure what to do, but then I noticed the clear instructions ... as the musical notes visible in the sky"}. Other participants echoed this positive response. Participant 1 noted, \emph{"The musical notes in the sky made it apparent where to go next"} and Participant 2 drew upon their experience with similar games, stating, \emph{"Based on my previous experiences with other open-world games, the icons in the sky help to work out what the next goals are and how to get to them"}.
 
 The inclusion of musical notes as visual guides was well-received by participants and appears to be an effective way to provide directional cues within HarmonyScape's environment. This feature seems particularly valuable for users who may benefit from clear and intuitive navigational support.
 \newline
 
 \textbf{Navigational Challenges}
 
-Despite the helpful musical notes, a common theme in the feedback was a sense of disorientation, with several participants expressing significant confusion about their location within the game world. Participant 7's comment, \emph{“But I was very lost”} highlights this sentiment. Other participants found the experience disorienting but enjoyable. Participant 11 describes this feeling, saying, \emph{“I was a little confused for a lot of it but it was still enjoyable”}. Participants noted that certain areas of the terrain, particularly the hills, lacked distinct visual landmarks, making it difficult to determine their position.
+Despite the helpful musical notes, a common theme in the feedback was a sense of disorientation, with several participants expressing significant confusion about their location within the game world. Participant 7's comment, \emph{"But I was very lost"} highlights this sentiment. Other participants found the experience disorienting but enjoyable. Participant 11 describes this feeling, saying, \emph{"I was a little confused for a lot of it but it was still enjoyable"}. Participants noted that certain areas of the terrain, particularly the hills, lacked distinct visual landmarks, making it difficult to determine their position.
 
-Participants proposed various solutions to improve navigation. \emph{“Minimap in the bottom of the screen or a full map upon pausing would make it easier to understand where you are in the world”}, suggests Participant 1. Others advocated for visual signposting of paths or an arrow pointing towards the next objective: \emph{“I think the paths without signposting may end up being confusing and frustrating... Using colours to help signpost when paths have been crossed will help the game become more simple”} (Participant 9).
+Participants proposed various solutions to improve navigation. \emph{"Minimap in the bottom of the screen or a full map upon pausing would make it easier to understand where you are in the world"}, suggests Participant 1. Others advocated for visual signposting of paths or an arrow pointing towards the next objective: \emph{"I think the paths without signposting may end up being confusing and frustrating... Using colours to help signpost when paths have been crossed will help the game become more simple"} (Participant 9).
 
 The feedback strongly suggests that incorporating navigational aids is crucial for minimising frustration and confusion, particularly for users with dementia who might be more prone to disorientation. Implementing one or more of the proposed solutions could significantly improve the user experience and ensure HarmonyScape remains an enjoyable and accessible experience for those with dementia.
 \newline
 
 \textbf{Visually Appealing Environment}
 
-Participants overwhelmingly found the visual design of HarmonyScape to be engaging and stimulating. They appreciated the variety of landscapes, with comments like \emph{“different seasons within the game”} (Participant 2) and \emph{“rocks, beaches, hills and snowy mountains grabbed my attention”} (Participant 4). The use of bright colours was also noted as a positive element (Participants 5 and 6).  Participant 9 specifically mentioned that \emph{“the variety in landscape made me want to explore”}, while Participant 10 praised the graphics and character design. Though less focused on exploration, Participant 11 still found the changing landscapes and weather visually interesting.
+Participants overwhelmingly found the visual design of HarmonyScape to be engaging and stimulating. They appreciated the variety of landscapes, with comments like \emph{"different seasons within the game"} (Participant 2) and \emph{"rocks, beaches, hills and snowy mountains grabbed my attention"} (Participant 4). The use of bright colours was also noted as a positive element (Participants 5 and 6).  Participant 9 specifically mentioned that \emph{"the variety in landscape made me want to explore"}, while Participant 10 praised the graphics and character design. Though less focused on exploration, Participant 11 still found the changing landscapes and weather visually interesting.
 
 The feedback highlights the success of HarmonyScape's visual design in creating an appealing and immersive environment. The diverse landscapes and vibrant colours seem to encourage exploration and enhance the overall user experience.
 \newline
 
 \textbf{Strong Intrinsic Motivation}
 
-Participants expressed a high level of intrinsic motivation within HarmonyScape. They found the minigames themselves to be fun and engaging, describing a sense of satisfaction upon completion: \emph{“Intrinsically motivating because the mini-games were engaging and interesting and you got satisfaction from successfully completing them”} (Participant 1). This intrinsic motivation was further fuelled by the desire to hear the complete song, as noted by Participant 3: \emph{“I find the music motivating to complete more minigames as I can only hear the song in parts so I want to hear the completed final song”}.
+Participants expressed a high level of intrinsic motivation within HarmonyScape. They found the minigames themselves to be fun and engaging, describing a sense of satisfaction upon completion: \emph{"Intrinsically motivating because the mini-games were engaging and interesting and you got satisfaction from successfully completing them"} (Participant 1). This intrinsic motivation was further fuelled by the desire to hear the complete song, as noted by Participant 3: \emph{"I find the music motivating to complete more minigames as I can only hear the song in parts so I want to hear the completed final song"}.
 
-While the feedback was largely positive, Participant 9 suggested a way to further increase intrinsic motivation: \emph{“Perhaps varying the music when in the minigames would make it more intrinsic, for example, adding a cool track that reflects the environment the minigame is played at - beach-type track playing during the beach minigame, for example”}.
+While the feedback was largely positive, Participant 9 suggested a way to further increase intrinsic motivation: \emph{"Perhaps varying the music when in the minigames would make it more intrinsic, for example, adding a cool track that reflects the environment the minigame is played at - beach-type track playing during the beach minigame, for example"}.
 
 HarmonyScape appears to successfully foster intrinsic motivation through its minigames and the gradual reveal of the dynamic soundtrack. Exploring ways to further personalise the musical experience, as suggested, could potentially enhance this aspect even further.
 
@@ -1210,14 +1202,14 @@ HarmonyScape appears to successfully foster intrinsic motivation through its min
 
 \textbf{Tablet Interface Preference}
 
-A recurring theme in the post-interview responses was the suggestion that a tablet interface could significantly enhance usability for individuals with dementia. Participants with caregiving experience drew upon their observations to support this viewpoint. Participant 2 stated: \emph{“A tablet interface would enhance usability based on my experience. I have noticed people with intellectual disabilities that I have cared for have a much easier time navigating a tablet interface than a laptop/desktop”}. Participants 3, 4, and 10 echoed similar sentiments, noting that a tablet or touchscreen could be more intuitive and accessible. Participant 10 specifically mentioned, \emph{“Yes, most of the individuals I worked with, with dementia and Alzheimer's, used an iPad as it is minimal and easy to use”}. 
+A recurring theme in the post-interview responses was the suggestion that a tablet interface could significantly enhance usability for individuals with dementia. Participants with caregiving experience drew upon their observations to support this viewpoint. Participant 2 stated: \emph{"A tablet interface would enhance usability based on my experience. I have noticed people with intellectual disabilities that I have cared for have a much easier time navigating a tablet interface than a laptop/desktop"}. Participants 3, 4, and 10 echoed similar sentiments, noting that a tablet or touchscreen could be more intuitive and accessible. Participant 10 specifically mentioned, \emph{"Yes, most of the individuals I worked with, with dementia and Alzheimer's, used an iPad as it is minimal and easy to use"}. 
 
 This strong preference suggests that incorporating a tablet interface into future iterations of HarmonyScape may significantly improve the user experience for individuals with dementia.
 \newline
 
 \textbf{Music's Potential for Cognitive Stimulation and Stress Reduction}
 
-Participants highlighted the potential for HarmonyScape's dynamic music system to positively impact memory and reduce stress levels in individuals with dementia. Participant 3 suggested, \emph{“The music however may be a big help for them to remember where they are”}. Expanding on this, Participant 2 elaborated, \emph{“Music would reduce their stress and anxiety levels. People I know with Alzheimer's find music to be calming and they find it enjoyable to be interactive with music. Music seems to be something that they always understand and enjoy... those instincts remain intact even as their cognitive abilities degrade, and it is the same way with music, it still brings them joy even if they don't recognise it in the exact same way”}. This participant also noted the interactive music's potential for cognitive stimulation. Participant 4 reinforced these observations, commenting, \emph{“The music used is really easing to the mind so I think you hit the nail on the head”}. 
+Participants highlighted the potential for HarmonyScape's dynamic music system to positively impact memory and reduce stress levels in individuals with dementia. Participant 3 suggested, \emph{"The music however may be a big help for them to remember where they are"}. Expanding on this, Participant 2 elaborated, \emph{"Music would reduce their stress and anxiety levels. People I know with Alzheimer's find music to be calming and they find it enjoyable to be interactive with music. Music seems to be something that they always understand and enjoy... those instincts remain intact even as their cognitive abilities degrade, and it is the same way with music, it still brings them joy even if they don't recognise it in the exact same way"}. This participant also noted the interactive music's potential for cognitive stimulation. Participant 4 reinforced these observations, commenting, \emph{"The music used is really easing to the mind so I think you hit the nail on the head"}. 
 
 These insights suggest that HarmonyScape's musical element could offer therapeutic benefits for individuals with dementia, both as a calming influence and a potential cognitive stimulant.
 
