@@ -630,28 +630,46 @@ HarmonyScape prioritises clarity and ease of use, understanding the potential ch
 
 \subsubsection{The Title Screen} establishes a clear starting point. It will feature a simple display of the game title and a "Start" button, providing a clear entry point into the experience (see Figure \ref{fig:title_screen}).
 
+% \begin{figure}[h!]
+%  \centering
+%  \includegraphics[width=0.7\linewidth]{dissertation/images/title_screen.png} 
+%  \caption{Screenshot of the HarmonyScape title screen, featuring the game title and a "Start" button.}
+%  \label{fig:title_screen} 
+% \end{figure}
+
 \begin{figure}[h]
- \centering
- \includegraphics[width=0.7\linewidth]{dissertation/images/title_screen.png} 
- \caption{Screenshot of the HarmonyScape title screen, featuring the game title and a "Start" button.}
- \label{fig:title_screen} 
+  \centering
+  \begin{subfigure}[t]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{dissertation/images/title_screen.png}
+    \caption{Screenshot of the HarmonyScape title screen, featuring the game title and a "Start" button.}
+    \label{fig:title_screen}
+  \end{subfigure}
+  ~ 
+  \begin{subfigure}[t]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{dissertation/images/instructions_screen.png} 
+    \caption{Screenshot of the HarmonyScape instructions screen, presenting core controls using simple visuals and concise language.}
+    \label{fig:instructions_screen}
+  \end{subfigure}
+  ~  
+  \caption{Screenshots illustrating the design of HarmonyScape's title and instructions screens. }
+  \label{fig:intro_screens}
 \end{figure}
 
 \subsubsection{The Instructions Screen} will clearly present core controls and gameplay mechanics using simple visuals and concise language, as shown in Figure \ref{fig:instructions_screen}. This screen acknowledges the importance of repetition and reinforcement for those with cognitive decline, creating a familiar point of reference and reducing confusion.
 
-\begin{figure}[h]
- \centering
- \includegraphics[width=0.7\linewidth]{dissertation/images/instructions_screen.png} 
- \caption{Example of a clear and concise instructions screen.}
- \label{fig:instructions_screen} 
-\end{figure}
+% \begin{figure}[h]
+%  \centering
+%  \includegraphics[width=0.7\linewidth]{dissertation/images/instructions_screen.png} 
+%  \caption{Example of a clear and concise instructions screen.}
+%  \label{fig:instructions_screen} 
+% \end{figure}
 
-\subsubsection{The Pause Screen} will allow for cognitive breaks during gameplay, managing sensory input and offering moments of rest. Users will be able to easily revisit the instructions screen for reminders, supporting those who may have short-term memory difficulties, see Figure \ref{fig:pause_screen}.
+\subsubsection{The Pause Screen} will allow for cognitive breaks during gameplay, managing sensory input and offering moments of rest. Users will be able to easily revisit the instructions screen for reminders, supporting those who may have short-term memory difficulties, see Figure \ref{fig:pause_screen}. The user will also have the option to resume gameplay, go to back to the main menu.
 
 \begin{figure}[h]
  \centering
  \includegraphics[width=0.7\linewidth]{dissertation/images/pause_screen.png} 
- \caption{Example of a pause screen with options to access instructions.}
+ \caption{HarmonyScape pause screen with options to access instructions, resume, go back to the menu and quit the game.}
  \label{fig:pause_screen} 
 \end{figure}
 
@@ -660,12 +678,30 @@ HarmonyScape prioritises clarity and ease of use, understanding the potential ch
 \begin{figure}[h]
  \centering
  \includegraphics[width=0.7\linewidth]{dissertation/images/end_screen.png} 
- \caption{Example of an end screen with a progress summary.}
+ \caption{Screenshot of the HarmonyScape end screen, featuring a progress summary highlighting the player's collected instruments.}
  \label{fig:end_screen} 
 \end{figure}
 
 \section{Progress Tracker}
 HarmonyScape will incorporate a visual progress tracker to support players with keeping track of which instruments they have collected. This system features instrument icons displayed in the top left corner of the screen. Initially presented in black and white, these icons gain colour as the player successfully completes the corresponding minigame and unlocks the instrument. This colour transformation provides immediate visual feedback, signifying achievement and clearly marking which instruments have been collected.
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{dissertation/images/progress_tracker_empty.png}
+    \caption{Empty progress tracker before collecting instruments.}
+    \label{fig:progress_empty}
+  \end{subfigure}
+  ~ 
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{dissertation/images/progress_tracker_partial.png} 
+    \caption{Progress tracker with Maracas, Bass Guitar, and Ukulele collected.}
+    \label{fig:progress_partial}
+  \end{subfigure}
+  ~  
+  \caption{Screenshots of the HarmonyScape progress tracker. The left image shows the tracker's initial state, while the right image demonstrates the transformation after collecting some instruments.}
+  \label{fig:progress_tracker}
+\end{figure}
 
 The progress tracker's design aligns with the principles outlined in Section \ref{sec:progress_tracking} as it serves as an external memory aid, helping players with dementia to recall their progress within the game. This visual representation reinforces accomplishment as there is feedback on their progress, promoting a sense of achievement. This design aims to reduces potential frustration that might stem from memory difficulties. 
 
@@ -676,6 +712,7 @@ Chronological order of what happened, grouped by feature. For example starting w
 
 TODO:
 \begin{itemize}
+    \item Fix Music By Ashley Garven
     \item Terrain and Navigation:
     \begin{itemize}
         \item How the terrain was implemented (mention foliage etc.)
