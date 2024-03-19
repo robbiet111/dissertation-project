@@ -1,7 +1,7 @@
 % REMEMBER: You must not plagiarise anything in your report. Be extremely careful.
 
 \documentclass{l4proj}
-    
+\usepackage{longtable}
 %
 % put any additional packages here
 %
@@ -114,15 +114,19 @@ TOODO: \begin{itemize}
 This opening chapter sets the stage for the HarmonyScape project by introducing the motivations and goals that led to its development. The following sections of this paper will explore distinct segments of the project, covering its background, design, implementation, and evaluation.
 
 \section{Motivation}
-As the prevalence of dementia increases within our aging population, with the number of older people with dementia in the UK projected to rise by 80\% from almost 885,000 in 2019 to around 1.6 million in 2040 (Wittenberg \emph{et al.,} 2019), the development of effective treatments and engaging activities to manage its symptoms becomes imperative.  The means of music as a form of therapy in the treatment of diseases linked with dementia, such as Alzheimer's, is a unique approach that taps into preserved cognitive and emotional functions in individuals with dementia.
 
-Research by Vink AC \emph{et al.} (2004) shows promising results that for individuals with dementia, music-based therapeutic interventions can be employed to target depressive symptoms. While the potential benefits of game-based activities for cognitive function in dementia are highlighted by Vilkki et al. (2019), combining these approaches in a therapeutic setting has been seldom explored. This suggests a valuable avenue for future research in dementia care.
+As the prevalence of dementia increases within our aging population, with the number of older people with dementia in the UK projected to rise by 80\% from almost 885,000 in 2019 to around 1.6 million in 2040 (Wittenberg \emph{et al.,} 2019), the development of effective treatments and engaging activities to manage its symptoms becomes imperative.
+
+The means of music as a form of therapy in the treatment of diseases linked with dementia, such as Alzheimer's, is a unique approach that taps into preserved cognitive and emotional functions in individuals with dementia. Music therapy is defined by the World Federation of Music Therapy (2011) as the professional application of musical elements (sound, rhythm, melody, and harmony) by qualified therapists to facilitate communication, relationships, learning, expression, and other therapeutic objectives. Research by Vink AC \emph{et al.} (2004) highlights the potential of music-based therapeutic interventions to target depressive symptoms in individuals with dementia.
+
+
+While the potential benefits of game-based activities for cognitive function in dementia are highlighted by Vilkki et al. (2019), combining these approaches in a therapeutic setting has been seldom explored. This suggests a valuable avenue for future research in dementia care.
 
 This combined approach is particularly promising for our aging population. As lifespans increase, so does the prevalence of dementia. However, this generation also coincides with a rise in video game popularity. People who were 14 years old in 1973, the year the first home video game console, the Magnavox Odyssey\footnote{https://www.computinghistory.org.uk/det/16909/Magnavox-Odyssey/}, was released globally, would be 65 today. This being the age where the risk of dementia significantly increases (Chen \emph{et al.,} 2009). This generation's familiarity with games can be leveraged to create engaging and effective therapeutic activities. Despite the clear potential of this promising avenue for leveraging a familiar and potentially engaging activity, it remains largely unexplored.
 
 % - multisensory experiences provide mental and emotional stimulation for those with alzhiemers
 
-- enjoyment of music is something that doesn't dissipate as dementia progresses
+% - enjoyment of music is something that doesn't dissipate as dementia progresses
 
 % \section{Aims}
 % Considering the motivations outlined above, we will develop a multisensory, interactive 3D exploration game designed to potentially aid cognitive well-being in those with dementia, including diseases like Alzheimer's. This game will prioritise enjoyment and captivation while incorporating active music theory principles, where the soundscape dynamically responds to player movement.
@@ -140,25 +144,26 @@ This combined approach is particularly promising for our aging population. As li
 % \end{itemize}
 
 \section{Objectives and Aims}
-This section outlines the key objectives and overarching aims guiding the development and evaluation of the HarmonyScape project. The objectives establish the core milestones in the project's design, implementation, and assessment. These objectives serve as stepping stones towards achieving the broader aims, which define the project's ultimate goals and aspirations.
+This section outlines the overarching aims and key objectives guiding the development and evaluation of the HarmonyScape project. The overarching aims define the project's ultimate vision and desired outcomes. The objectives establish the specific actions and targets in the project's design, implementation, and assessment, serving as essential steps towards achieving these aims.
+
+\subsection{Aims}
+
+Building upon the motivations discussed, this project has two core aims.
+
+\begin{itemize}
+    \item Create a game that has the potential to serve as a music-based therapeutic tool, offering enjoyment and potentially aiding cognitive well-being in individuals living with dementia.
+    \item Evaluate the HarmonyScape project as a means of captivating users and potentially aiding cognitive well-being. This evaluation will focus on key questions regarding player engagement, enjoyment, potential benefits, and any potential negative effects.
+\end{itemize}
 
 \subsection{Objectives}
 
-The following objectives serve as stepping stones towards successfully developing and evaluating the HarmonyScape project.
+The following objectives have been established, serving as stepping stones toward achieving the aims outlined above.
 
 \begin{itemize}
     \item Create a game environment that prioritises enjoyment and engagement for potential users living with dementia. This includes visually stimulating elements and sound design tailored for these users.
     \item Develop a system where player movement directly influences the soundtrack of the game, incorporating elements of music theory to promote a sense of creative control for the player.
+    \item Integrate music theory concepts into the game's design to facilitate musical expression and creativity, offering opportunities for self-directed musical exploration.
     \item Design and execute an evaluation process to assess the project's effectiveness, addressing both the player experience and potential impact on cognitive well-being.
-\end{itemize}
-
-\subsection{Aims}
-
-Anchored in the motivations and guided by the objectives, this project has two core aims.
-
-\begin{itemize}
-    \item Create a game that has the potential to serve as a therapeutic tool, offering enjoyment and potentially aiding cognitive well-being in individuals living with dementia.
-    \item Evaluate the HarmonyScape project as a means of captivating users and potentially aiding cognitive well-being. This evaluation will focus on key questions regarding player engagement, enjoyment, potential benefits, and any potential negative effects.
 \end{itemize}
 
 % Why should the reader care about what are you doing and what are you actually doing?
@@ -236,8 +241,6 @@ Anchored in the motivations and guided by the objectives, this project has two c
 To DO:
 \begin{itemize}
     \item Beginning section
-    \item Add to Dementia section that its more specifically aimed at those with early to mid stages of dementia and that’s what I’m referring to from here on out when referring to those living with dementia
-    \item Definition of Gamification
     \item WRITE A DOWNFALL ABOUT HOW IT DOESNT EXPLICITY USE 
     \item WRITE ABOUT A DOWNFALL FOR SOMETHING BEING THE EXPLICIT USE OF FAIL STATES
     \item WRITE A DOWNFALL FOR SOMETHING BEING LACKING IN USER CREATIVITY WHICH CAN LIMIT ENGAGEMENT
@@ -246,16 +249,17 @@ To DO:
 
 \section{Dementia}
 
-Throughout this dissertation, I will use the term 'dementia' as an umbrella term for diseases that cause the decline in cognitive abilities that impacts a person's ability to perform everyday activities, which typically involves problems with memory, thinking, and behaviour.  Dementia is a progressive condition, meaning symptoms worsen over time. While there are many causes of dementia, the most common is Alzheimer's disease.
+Throughout this dissertation, I will use the term 'dementia' as an umbrella term for diseases that cause the decline in cognitive abilities that impacts a person's ability to perform everyday activities, which typically involves problems with memory, thinking, and behavior. Dementia is a progressive condition, meaning symptoms worsen over time. This dissertation will specifically focus on individuals with early to mid-stages of dementia. From this point forward, references to 'those living with dementia' will pertain to individuals within these stages. While there are many causes of dementia, the most common is Alzheimer's disease.
 
-\subsection{Alzheimer's disease}
-Alzheimer's disease is a progressive neurological disorder that can affect memory, thinking skills and behaviour. As of 2024, it is the most common cause of dementia, a group of brain disorders that result in loss of intellectual and social skills that is severe enough to interfere with daily functioning (Li et al., 2024). Alzheimer's typically begins slowly and as the disease progresses, individuals can experience memory loss, confusion, difficulty with language and communication, impaired judgment, and changes in personality (Li et al., 2024). Currently, there is no cure for Alzheimer's disease, but treatments and interventions can manage symptoms and improve quality of life for those affected by the disease.
+Alzheimer's disease is a progressive neurological disorder that can affect memory, thinking skills, and behavior. As of 2024, it is the most common cause of dementia, a group of brain disorders that result in the loss of intellectual and social skills that is severe enough to interfere with daily functioning (Li et al., 2024). Alzheimer's typically begins slowly, and as the disease progresses, individuals can experience memory loss, confusion, difficulty with language and communication, impaired judgment, and changes in personality (Li et al., 2024). Currently, there is no cure for Alzheimer's disease, but treatments and interventions can manage symptoms and improve the quality of life for those affected by the disease.
 
-Both pharmacological and non-pharmacological treatments have been trialed to alleviate symptoms of dementia. Pharmacological treatments, lik acetylcholinesterase inhibitors, primarily target cognitive symptoms without altering the progression of the disease. These treatments have shown minimal effectiveness in easing the behavioural and psychological symptoms linked to these diseases (Dyer et al., 2018).
+Both pharmacological and non-pharmacological treatments have been trialed to alleviate symptoms of dementia. Pharmacological treatments, like acetylcholinesterase inhibitors, primarily target cognitive symptoms without altering the progression of the disease. These treatments have shown minimal effectiveness in easing the behavioral and psychological symptoms linked to these diseases (Dyer et al., 2018).
 
-Conversely, non-pharmacological interventions offer supplementary treatments, presenting diverse strategies to enhance the well-being of individuals with dementia, reduce behavioural incidents, and enhance or maintain their quality of life (Dyer et al., 2018).
+Conversely, non-pharmacological interventions offer supplementary treatments, presenting diverse strategies to enhance the well-being of individuals with dementia, reduce behavioral incidents, and enhance or maintain their quality of life (Dyer et al., 2018).
 
 \section{Music Therapy}\label{sec:music_therapy}
+
+% Research suggests that whilst dementia can significantly disrupt a person's sense of self, the enjoyment of music often remains remarkably preserved. This preservation offers a unique therapeutic avenue, as music can be used to tap into and engage with aspects of a person's identity even in later stages of the disease (Baird \& Thompson, 2018). Studies exploring the relationship between music and self-preservation in dementia have highlighted how music can activate neural networks related to self-referential processing (Baird \& Thompson, 2018). This suggests music serves as a powerful tool for maintaining or even strengthening those connections, potentially having profound positive effects on the well-being of individuals with dementia (Baird \& Thompson, 2018).
 
 Music therapy is defined by the World Federation of Music Therapy (2011) as the professional application of musical elements (sound, rhythm, melody, and harmony) by qualified therapists to facilitate communication, relationships, learning, expression, and other therapeutic objectives. It is employed across medical, educational, and everyday settings to optimise quality of life and enhance physical, social, communicative, emotional, intellectual, and spiritual health and well-being.
 
@@ -318,7 +322,7 @@ Sudden, loud, or jarring noises are especially likely to trigger a negative resp
 Understanding this impact is crucial in making HarmonyScape a supportive tool for individuals living with dementia. Minimising unnecessary noise, designing spaces with good acoustics, and using soothing sounds like calming music will be essential for promoting comfort and reducing distress for individuals with dementia as they explore the game (Caspar et al., 2017).
 
 \subsection{Progress Tracking in Supporting Players with Dementia}\label{sec:progress_tracking}
-Players with dementia often experience short-term memory challenges, making it difficult to recall previous actions or retain  information within a gameplay session. A progress tracker can be particularly helpful for this group, as it provides a visual and tangible representation of their achievements. Studies suggest that external memory aids, such as visual representations of progress, can support memory function in individuals with dementia (Bourgeois et al., 2003). Seeing progress reinforces a sense of accomplishment and  provides a clear marker of progress within the game. This, in turn, could enhance motivation and engagement for players living with dementia as they progress through HarmonyScape, potentially leading to improved well-being (Orrell et al., 2017). Furthermore, gamification elements like progress trackers can tap into this concept of positive reinforcement, promoting enjoyment within computerized activities (Vermeir et al., 2020).
+Players with dementia often experience short-term memory challenges, making it difficult to recall previous actions or retain  information within a gameplay session. A progress tracker can be particularly helpful for this group, as it provides a visual and tangible representation of their achievements. Studies suggest that external memory aids, such as visual representations of progress, can support memory function in individuals with dementia (Bourgeois et al., 2003). Seeing progress reinforces a sense of accomplishment and  provides a clear marker of progress within the game. This, in turn, could enhance motivation and engagement for players living with dementia as they progress through HarmonyScape, potentially leading to improved well-being (Orrell et al., 2017). Furthermore, elements like progress trackers can tap into this concept of positive reinforcement, promoting enjoyment within computerised activities (Vermeir et al., 2020).
 
 \subsection{Third-Person Perspective in Dementia-Focused Game Design}\label{sec:third_person}
 There are a cpuple of compelling reasons to consider a third-person perspective in games designed for those with dementia
@@ -329,7 +333,7 @@ Secondly, a third-person perspective in video games significantly enhances situa
 
 
 \section{Related Works}
-In my comprehensive review of existing literature, I found a notable absence of multisensory experiences tailored for individuals with intellectual disabilities such as Alzheimer’s that incorporate active music theory within a gaming setting. However, a range of experiences created for both academic and commercial purposes have been introduced with a similar goal as that of HarmonyScape in aiding those with intellectual disabilities, including conditions like Alzheimer’s, in enhancing their cognitive well-being in an enjoyable, interactive manner.
+In my review of existing literature, I found a notable absence of multisensory experiences tailored for individuals with intellectual disabilities such as Alzheimer’s that incorporate active music theory within a gaming setting. However, a range of experiences created for both academic and commercial purposes have been introduced with a similar goal as that of HarmonyScape in aiding those with intellectual disabilities, including conditions like Alzheimer’s, in enhancing their cognitive well-being in an enjoyable, interactive manner.
 
 \subsection{AARP Staying Sharp}
 AARP Staying Sharp is an online platform provided by AARP (formerly known as the American Association of Retired Persons) that offers a variety of brain-training games and activities designed to help individuals maintain cognitive function and mental acuity as they age. These games cover a range of cognitive skills such as memory, attention, problem-solving, and language.
@@ -353,55 +357,156 @@ Sánchez et al. (2016) discuss these potential positive effects in comparison to
 %==================================================================================================================================
 \chapter{Requirements}
 
-TODO:
-\begin{itemize}
-    \item Systematising name numbered tables with the requirements (Requirements should be numbered in a table to be able to refer back to later by number in design and implementation)
-\end{itemize}
-
-This chapter dives into the specific requirements HarmonyScape needs to meet to effectively achieve the goals outlined in Chapter 1. These requirements leverage and build upon the research and relevant concepts explored in Chapter 2, ensuring the game aligns with established best practices.
+% TODO:
+% \begin{itemize}
+%     \item (Requirements should be numbered in a table to be able to refer back to later by number in design and implementation)
+% \end{itemize}
 
 % \section{Guidance}
 % Make it clear how you derived the constrained form of your problem via a clear and logical process.
+
+This chapter dives into the specific requirements HarmonyScape needs to meet to effectively achieve the goals outlined in Chapter 1. These requirements leverage and build upon the research and relevant concepts explored in Chapter 2, ensuring the game aligns with established best practices.
 
 \section{Functional Requirements}
 This section presents the functional requirements for HarmonyScape, informed by the research in Chapter 2. The MoSCow method prioritises these requirements, categorising them based on their necessity to achieving the evaluation goals: some are essential for core functionality (Must Haves), while others significantly enhance the user experience (Should Haves), and some are desirable for future iterations (Could Haves).
 
 \subsection{Must Have}
-Interactive Music: HarmonyScape's music must be interactive, dynamically responding to the player's movements. This aligns with Active Music Theory (Vink AC \emph{et al.,} 2004), where the players active participation directly affects the games soundscape. The aim of this feature is to encourage a sense of control and creative exploration through allowing players to influence the musical composition. Whilst also facilitating cognitive stimulation through providing opportunity for players to solve problems or puzzles through musical interaction.
+\subsubsection{1. Interactive Music:} HarmonyScape's music must be interactive, dynamically responding to the player's movements. This aligns with Active Music Theory (Vink AC \emph{et al.,} 2004), where the players active participation directly affects the games soundscape. The aim of this feature is to encourage a sense of control and creative exploration through allowing players to influence the musical composition. Whilst also facilitating cognitive stimulation through providing opportunity for players to solve problems or puzzles through musical interaction.
 
-Multisensory Experience: HarmonyScape must incorporate a multisensory experience, specifically through the use of visual and auditory stimuli. This aligns with research by Sánchez et al. (2016) suggesting that stimulating multiple senses can benefit individuals living with dementia who are experiencing anxiety symptoms. This should empower players to exercise greater control over their sensory environment, potentially mitigating anxiety symptoms associated with dementia (Sánchez et al., 2016).
+\subsubsection{2. Multisensory Experience:} HarmonyScape must incorporate a multisensory experience, specifically through the use of visual and auditory stimuli. This aligns with research by Sánchez et al. (2016) suggesting that stimulating multiple senses can benefit individuals living with dementia who are experiencing anxiety symptoms. This should empower players to exercise greater control over their sensory environment, potentially mitigating anxiety symptoms associated with dementia (Sánchez et al., 2016).
 
-Gentle Audio Design: I intend to implement the integration of new instruments into the game's soundscape, based on player input, to further develop the concept of interactive music within the game. The following chapter, "Design," explores this concept further. Research by Shirsat, Jha and Verma (2023) shows that jarring or disorienting changes in tone can exacerbate anxiety and confusion in individuals with dementia. Therefore, HarmonyScape should prioritises a calm and predictable soundscape. Familiar and consistent music plays a vital role in promoting a sense of security and reducing potential disorientation for people with dementia (Caspar et al., 2017). The gentle melody should serve as a constant anchor, allowing players to focus on the game-play without auditory distractions.
+\subsubsection{3. Gentle Audio Design:} I intend to implement the integration of new instruments into the game's soundscape, based on player input, to further develop the concept of interactive music within the game. The following chapter, "Design," explores this concept further. Research by Shirsat, Jha and Verma (2023) shows that jarring or disorienting changes in tone can exacerbate anxiety and confusion in individuals with dementia. Therefore, HarmonyScape should prioritises a calm and predictable soundscape. Familiar and consistent music plays a vital role in promoting a sense of security and reducing potential disorientation for people with dementia (Caspar et al., 2017). The gentle melody should serve as a constant anchor, allowing players to focus on the game-play without auditory distractions.
 
 \subsection{Should Have}
-Progress Tracker: HarmonyScape should include a progress tracker within the user interface. This tracker's purpose is to provide clear and consistent visual feedback on instrument collection throughout game-play. This tracker should utilise a simple and clear visual representation, such as colour-filling elements, to provide immediate feedback on instrument collection. Players with dementia often experience short-term memory challenges. A progress tracker could be particularly helpful for this group. Seeing progress can reinforce a sense of accomplishment and provides a clear marker of progress within the game (Bourgeois et al., 2003). This, in turn, could enhance motivation and engagement for players living with dementia as they progress through HarmonyScape.
+\subsubsection{4. Progress Tracker:} HarmonyScape should include a progress tracker within the user interface. This tracker's purpose is to provide clear and consistent visual feedback on instrument collection throughout game-play. This tracker should utilise a simple and clear visual representation, such as colour-filling elements, to provide immediate feedback on instrument collection. Players with dementia often experience short-term memory challenges. A progress tracker could be particularly helpful for this group. Seeing progress can reinforce a sense of accomplishment and provides a clear marker of progress within the game (Bourgeois et al., 2003). This, in turn, could enhance motivation and engagement for players living with dementia as they progress through HarmonyScape.
 
 \subsection{Could Have}
-Incorporation of reminiscence therapy: HarmonyScape could be further developed by incorporating elements of reminiscence therapy. This approach utilises familiar music to evoke positive memories and emotional well-being in users (Bhar and Sunil, 2014).  Players could be given the option to choose songs, familiar to them, they want to incorporate into the game. Research done in reminiscence therapy indicates that familiar music can trigger personal memories and enhance emotional well-being in those living with dementia (Cuevas et al., 2020). Integrating song selection could potentially unlock positive memories associated with their chosen music, expanding the potential therapeutic benefits of HarmonyScape.
+\subsubsection{5. Incorporation of Reminiscence Therapy:} HarmonyScape could be enhanced through the integration of reminiscence therapy elements. This could involve the use of familiar music to evoke positive memories and emotional well-being (Bhar \& Sunil, 2014). Offering players the option to select personally meaningful songs could trigger positive memories associated with the music, potentially expanding HarmonyScape's therapeutic benefits (Cuevas et al., 2020).
+
+\subsubsection{6. Familiar Menu Structure:} HarmonyScape should employ classic game menu structures to minimise the learning curve for users. This approach aligns with the findings of De Siqueira et al. (2017), where familiarity with traditional game elements proved beneficial for individuals with cognitive decline. By utilising established patterns, users can rely on prior knowledge, reducing the need for new instruction and potentially evoking positive memories associated with gaming experiences.
 
 \section{Non-functional Requirements}
 HarmonyScape's non-functional requirements address broader aspects that contribute to a positive user experience during evaluation. As with the functional requirements, prioritisation has been applied using the MoSCoW method.
 
 \subsection{Must Have}
-Accessibility: I aim to ensure clear and concise instructions to support players with varying cognitive abilities. This can be achieved through visuals and audio cues that are simple and unambiguous, such as written instructions and contextual audio prompts.
+\subsubsection{7. Accessibility:} I aim to ensure clear and concise instructions to support players with varying cognitive abilities. This can be achieved through visuals and audio cues that are simple and unambiguous, such as written instructions and contextual audio prompts.
 
 \subsection{Should Have}
-Visible Interaction: Making it obvious that player input is affecting the game. For example, upon player input, subtle animations for the instruments themselves and their corresponding game-play. A brief visual flourish or change in appearance could provide immediate confirmation that the player's action has registered. This type of clear and consistent visual feedback can be particularly beneficial for players with dementia, as studies suggest it can improve engagement and reduce frustration in users with cognitive decline (Ballard et al., 2008).
+\subsubsection{8. Visible Interaction:} Making it obvious that player input is affecting the game. For example, upon player input, subtle animations for the instruments themselves and their corresponding game-play. A brief visual flourish or change in appearance could provide immediate confirmation that the player's action has registered. This type of clear and consistent visual feedback can be particularly beneficial for players with dementia, as studies suggest it can improve engagement and reduce frustration in users with cognitive decline (Ballard et al., 2008).
+
+\subsubsection{9. Clear Instructions:} HarmonyScape must utilise simple visuals and concise language to convey gameplay mechanics, objectives, and controls. Instructions should be presented in easily digestible segments to minimise the potential for confusion. Integrating instructions directly into the gameplay, through tutorials or contextual cues, should be used to further enhance understanding and reduce frustration. This approach aligns with the need to minimise cognitive load for those living with dementia and aligns with the benefits of familiar elements highlighted by De Siqueira et al. (2017).
+
+
+\newpage
+\subsection{Functional Requirements} 
+\begin{longtable}{|p{4cm}|p{10cm}|} 
+\caption{Functional Requirements for HarmonyScape} \label{tab:functional-reqs}\\
+\hline
+\textbf{Priority} & \textbf{Requirement} \\ 
+\hline 
+\endfirsthead
+
+\multicolumn{2}{c}{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+\textbf{Priority} & \textbf{Requirement} \\ 
+\hline 
+\endhead
+
+\hline \multicolumn{2}{r}{{Continued on next page}} \\ 
+\endfoot
+
+\hline
+\endlastfoot
+
+Must Have & \textbf{Interactive Music:} HarmonyScape's music must be interactive, dynamically responding to the player's movements. This aligns with Active Music Theory (Vink AC \emph{et al.,} 2004), where the players active participation directly affects the games soundscape. The aim of this feature is to encourage a sense of control and creative exploration through allowing players to influence the musical composition. Whilst also facilitating cognitive stimulation through providing opportunity for players to solve problems or puzzles through musical interaction. \\ 
+\hline
+Must Have & \textbf{Multisensory Experience:} HarmonyScape must incorporate a multisensory experience, specifically through the use of visual and auditory stimuli. This aligns with research by Sánchez et al. (2016) suggesting that stimulating multiple senses can benefit individuals living with dementia who are experiencing anxiety symptoms. This should empower players to exercise greater control over their sensory environment, potentially mitigating anxiety symptoms associated with dementia (Sánchez et al., 2016). \\
+\hline 
+Must Have & \textbf{Gentle Audio Design:} I intend to implement the integration of new instruments into the game's soundscape, based on player input, to further develop the concept of interactive music within the game. The following chapter, "Design," explores this concept further. Research by Shirsat, Jha and Verma (2023) shows that jarring or disorienting changes in tone can exacerbate anxiety and confusion in individuals with dementia. Therefore, HarmonyScape should prioritises a calm and predictable soundscape. Familiar and consistent music plays a vital role in promoting a sense of security and reducing potential disorientation for people with dementia (Caspar et al., 2017). The gentle melody should serve as a constant anchor, allowing players to focus on the game-play without auditory distractions.  \\ 
+\hline
+Should Have & \textbf{Progress Tracker:} HarmonyScape should include a progress tracker within the user interface. This tracker's purpose is to provide clear and consistent visual feedback on instrument collection throughout game-play. This tracker should utilise a simple and clear visual representation, such as colour-filling elements, to provide immediate feedback on instrument collection. Players with dementia often experience short-term memory challenges. A progress tracker could be particularly helpful for this group. Seeing progress can reinforce a sense of accomplishment and provides a clear marker of progress within the game (Bourgeois et al., 2003). This, in turn, could enhance motivation and engagement for players living with dementia as they progress through HarmonyScape. \\ 
+\hline
+Could Have & \textbf{Incorporation of reminiscence therapy:} HarmonyScape could be enhanced through the integration of reminiscence therapy elements. This could involve the use of familiar music to evoke positive memories and emotional well-being (Bhar \& Sunil, 2014). Offering players the option to select personally meaningful songs could trigger positive memories associated with the music, potentially expanding HarmonyScape's therapeutic benefits (Cuevas et al., 2020). \\ 
+\hline
+Could Have & \textbf{Familiar Menu Structure:} HarmonyScape should employ classic game menu structures to minimise the learning curve for users. This approach aligns with the findings of De Siqueira et al. (2017), where familiarity with traditional game elements proved beneficial for individuals with cognitive decline. By utilising established patterns, users can rely on prior knowledge, reducing the need for new instruction and potentially evoking positive memories associated with gaming experiences. \\
+\end{longtable}
+
+
+
+
+\subsection{Non-Functional Requirements} 
+\begin{longtable}{|p{4cm}|p{10cm}|} 
+\caption{Non-Functional Requirements for HarmonyScape} \label{tab:non-functional-reqs}\\
+\hline
+\textbf{Priority} & \textbf{Requirement} \\ 
+\hline 
+\endfirsthead
+
+\multicolumn{2}{c}{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+\textbf{Priority} & \textbf{Requirement} \\ 
+\hline 
+\endhead
+
+\hline \multicolumn{2}{r}{{Continued on next page}} \\ 
+\endfoot
+
+\hline
+\endlastfoot
+
+Must Have & \textbf{Accessibility:} I aim to ensure clear and concise instructions to support players with varying cognitive abilities. This can be achieved through visuals and audio cues that are simple and unambiguous, such as written instructions and contextual audio prompts. \\ 
+\hline
+Should Have & \textbf{Visible Interaction:} Making it obvious that player input is affecting the game. For example, upon player input, subtle animations for the instruments themselves and their corresponding game-play. A brief visual flourish or change in appearance could provide immediate confirmation that the player's action has registered. This type of clear and consistent visual feedback can be particularly beneficial for players with dementia, as studies suggest it can improve engagement and reduce frustration in users with cognitive decline (Ballard et al., 2008). \\ 
+\hline
+Should Have & \textbf{Clear Instructions:} HarmonyScape must utilise simple visuals and concise language to convey gameplay mechanics, objectives, and controls. Instructions should be presented in easily digestible segments to minimise the potential for confusion. Integrating instructions directly into the gameplay, through tutorials or contextual cues, should be used to further enhance understanding and reduce frustration. \\ 
+% \hline
+% Could Have & Incorporation of reminiscence therapy: HarmonyScape could be further developed... \\ 
+\end{longtable}
+
+
+
+
+
+
+% \begin{table}
+% \centering
+% \caption{HarmonyScape Requirements}
+% \label{tab:requirements}
+% \begin{tabular}{|p{2cm}|p{10cm}|p{2cm}|}
+% \hline \textbf{Requirement} & \textbf{Description} & \textbf{Priority}\\ 
+% \hline 
+% \multicolumn{3}{|c|}{\textbf{Functional Requirements}} \\
+% \hline
+% 1.  &  Interactive Music: HarmonyScape's music must be interactive, dynamically responding to the player's movements. This aligns with Active Music Theory (Vink AC \emph{et al.,} 2004), where the players active participation directly affects the games soundscape. The aim of this feature is to encourage a sense of control and creative exploration through allowing players to influence the musical composition. Whilst also facilitating cognitive stimulation through providing opportunity for players to solve problems or puzzles through musical interaction. & Must Have\\  \hline
+% 2.  &  Multisensory Experience: HarmonyScape must incorporate a multisensory experience, specifically through the use of visual and auditory stimuli. This aligns with research by Sánchez et al. (2016) suggesting that stimulating multiple senses can benefit individuals living with dementia who are experiencing anxiety symptoms. This should empower players to exercise greater control over their sensory environment, potentially mitigating anxiety symptoms associated with dementia (Sánchez et al., 2016). & Must Have \\  \hline
+% 3. &  Gentle Audio Design: I intend to implement the integration of new instruments into the game's soundscape, based on player input, to further develop the concept of interactive music within the game. The following chapter, "Design," explores this concept further. Research by Shirsat, Jha and Verma (2023) shows that jarring or disorienting changes in tone can exacerbate anxiety and confusion in individuals with dementia. Therefore, HarmonyScape should prioritises a calm and predictable soundscape. Familiar and consistent music plays a vital role in promoting a sense of security and reducing potential disorientation for people with dementia (Caspar et al., 2017). The gentle melody should serve as a constant anchor, allowing players to focus on the game-play without auditory distractions.  & Must Have\\ \hline
+
+% 4. & Progress Tracker: HarmonyScape should include a progress tracker within the user interface. This tracker's purpose is to provide clear and consistent visual feedback on instrument collection throughout game-play. This tracker should utilise a simple and clear visual representation, such as colour-filling elements, to provide immediate feedback on instrument collection. Players with dementia often experience short-term memory challenges. A progress tracker could be particularly helpful for this group. Seeing progress can reinforce a sense of accomplishment and provides a clear marker of progress within the game (Bourgeois et al., 2003). This, in turn, could enhance motivation and engagement for players living with dementia as they progress through HarmonyScape.   & Should Have \\  \hline
+% 5. & Incorporation of reminiscence therapy: HarmonyScape could be further developed by incorporating elements of reminiscence therapy. This approach utilises familiar music to evoke positive memories and emotional well-being in users (Bhar and Sunil, 2014).  Players could be given the option to choose songs, familiar to them, they want to incorporate into the game. Research done in reminiscence therapy indicates that familiar music can trigger personal memories and enhance emotional well-being in those living with dementia (Cuevas et al., 2020). Integrating song selection could potentially unlock positive memories associated with their chosen music, expanding the potential therapeutic benefits of HarmonyScape.  & Could Have\\  \hline
+
+% \multicolumn{3}{|c|}{\textbf{Non-functional Requirements}} \\
+% \hline 
+% 6. & Accessibility: I aim to ensure clear and concise instructions to support players with varying cognitive abilities. This can be achieved through visuals and audio cues that are simple and unambiguous, such as written instructions and contextual audio prompts. & Must Have\\ \hline
+% 7. & Making it obvious that player input is affecting the game. For example, upon player input, subtle animations for the instruments themselves and their corresponding game-play. A brief visual flourish or change in appearance could provide immediate confirmation that the player's action has registered. This type of clear and consistent visual feedback can be particularly beneficial for players with dementia, as studies suggest it can improve engagement and reduce frustration in users with cognitive decline (Ballard et al., 2008). & Should Have \\ \hline
+
+% \end{tabular}
+% \end{table}
+
 
 
 %==================================================================================================================================
 \chapter{Design}
 How is this problem to be approached, without reference to specific implementation details? 
 
-TODO:
-\begin{itemize}
-    \item Refrence all figures in
-    \item How Terrain was designed
-    \item Overview needs to be more in depth, talking about the interactive music.
-    \item Overview does not give a sense of the feel of the game, how the game feels to be played, what its meant to be like to be to play
-    \item Imagery should be in the design part, show imagery of the game to showcase the feel of the game.
-    \item Can be written in the tense that it has already been done
-\end{itemize}
+% TODO:
+% \begin{itemize}
+%     \item Refrence all figures in
+%     \item How Terrain was designed
+%     \item Overview needs to be more in depth, talking about the interactive music.
+%     \item Overview does not give a sense of the feel of the game, how the game feels to be played, what its meant to be like to be to play
+%     \item Imagery should be in the design part, show imagery of the game to showcase the feel of the game.
+%     \item Can be written in the tense that it has already been done
+% \end{itemize}
 
 
 % \section{Guidance}
@@ -596,7 +701,7 @@ Before implementing any player interactivity, minigames, or the dynamic music sy
 The character, originally a capsule, was originally brought in with an attached "Player Control" script, that had basic input, jump and rotation handling.
 
 \subsubsection{HandleInput():}
-The HandleInput function, within the "Player Movement Script", is responsible for gathering player input and translating it into a desired movement direction. It retrieves horizontal and vertical axis values from Unity's Input system, which correspond to the commonly used WASD and arrow keys on a keyboard, either can be used depending on player preference. Using these familiar controls promotes ease of use and minimises the learning curve for players, as discussed in \ref{sec:move_&_control}. These input values are used to construct a 3D vector (movement direction) that captures the direction the player wants to move. The magnitude of this vector is calculated and clamped between 0 and 1, ensuring that movement speed remains consistent regardless of direction. Finally, the function returns this calculated movement direction, ready to be used by the MoveAndRotatePlayer function.
+The HandleInput function, within the "Player Movement Script", is responsible for gathering player input and translating it into a desired movement direction. It retrieves horizontal and vertical axis values from Unity's Input system, which correspond to the commonly used WASD and arrow keys on a keyboard, either can be used depending on player preference. Using these familiar controls promotes ease of use and minimises the learning curve for players, as discussed in Section \ref{sec:move_&_control}. These input values are used to construct a 3D vector (movement direction) that captures the direction the player wants to move. The magnitude of this vector is calculated and clamped between 0 and 1, ensuring that movement speed remains consistent regardless of direction. Finally, the function returns this calculated movement direction, ready to be used by the MoveAndRotatePlayer function.
 
 \subsubsection{HandleJumping():}
 The HandleJumping function, within the "Player Movement Script", manages all logic related to the player's jumping ability. It first checks if the CharacterController is grounded, meaning the player is currently touching the floor. If so, it records the current time as 'lastGroundedTime'. The function listens for the "Jump" button press (the space-bar). If pressed, the jump button pressed time is recorded. It then manages a short grace period after leaving the ground, allowing the player to jump even if they didn't press the button the exact moment they left the ground. During this grace period, it adjusts the CharacterController's step offset and sets the vertical speed (ySpeed) to initiate the jump.
@@ -1021,6 +1126,7 @@ TODOO:
     \item Future work could implement directional sound in Follow The Sound mini game
     \item Ensure use of “” instead of ""
     \item Ensure use of emph for participant quotes
+    \item Graph survey results
     
 \end{itemize}
 
@@ -1136,12 +1242,50 @@ In addition to this, the study relied on a convenience sample consisting primari
 \section{Results}
 
 \subsection{Pre-Survey Results}
-A total of 11 participants were recruited through a convenience sampling method.  The age distribution skewed slightly younger, with six participants falling within the 25-34 age range and the remaining five within the 18-24 range.  The sample had a near-equal gender balance, with six participants identifying as female and five identifying as male.
+A total of 11 participants were recruited through a convenience sampling method.  The age distribution skewed slightly younger, with six participants falling within the 25-34 age range and the remaining five within the 18-24 range, as shown in Figure \ref{fig:age_representation}. The sample had a near-equal gender balance, with six participants identifying as female and five identifying as male (See Figure \ref{fig:gender_representation}).
 
+\begin{figure}[h]
+  \centering
 
-Regarding experience with individuals living with dementia-related conditions such as Alzheimer's disease, the majority of participants possessed some knowledge or background. Four participants indicated having some experience, while two reported extensive experience in this area. The remaining 5 having little-to-none.
+  \begin{subfigure}[t]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{dissertation/images/age_representation.png} 
+    \caption{Age distribution of the study participants.}
+    \label{fig:age_representation} 
+  \end{subfigure}
+  ~ 
+  \begin{subfigure}[t]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{dissertation/images/gender_representation.png}
+    \caption{Gender balance within the sample.}
+    \label{fig:gender_representation} 
+  \end{subfigure}  
 
-The sample also exhibited a range of gaming experience levels. Five participants identified as beginners, four reported advanced gaming skills, and two classified themselves as intermediate.
+  \caption{Overview of the participant demographics.}  
+  \label{fig:participant_demographics} 
+\end{figure}
+
+Regarding experience with individuals living with dementia-related conditions such as Alzheimer's disease, the majority of participants possessed some knowledge or background (see Figure \ref{fig:dementia_experience}). Four participants indicated having some experience, while two reported extensive experience in this area. The remaining 5 having little-to-none.
+
+The sample also exhibited a range of gaming experience levels (see Figure \ref{fig:gaming_experience}). Five participants identified as beginners, four reported advanced gaming skills, and two classified themselves as intermediate.
+
+\begin{figure}[h]
+  \centering
+
+  \begin{subfigure}[t]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{dissertation/images/dementia_representation.png}
+    \caption{Participant's experience with dementia-related conditions.}
+    \label{fig:dementia_experience} 
+  \end{subfigure}
+  ~
+  \begin{subfigure}[t]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{dissertation/images/gaming_experience.png}
+    \caption{Distribution of gaming skills among participants.}
+    \label{fig:gaming_experience} 
+  \end{subfigure} 
+
+  \caption{Overview of the participant experience levels.}  
+  \label{fig:participant_experience} 
+\end{figure}
+
 
 \subsection{Post-Study Interview Results}
 Participant interviews were transcribed for analysis. We employed an open and axial coding approach, inspired by the methodology of Corbin and Strauss (1990).  Each segment of the transcripts was assigned codes, which were then iteratively grouped to identify broader patterns and themes. Due to the volume of unique themes that emerged, the subsequent discussion focuses on those deemed most aligned to the research questions. To protect participant confidentiality, each interviewee was assigned a unique ID number. Quotations within the analysis will reference these identifiers to maintain anonymity.
