@@ -350,7 +350,7 @@
 * *1 hour* Searched for a minigame that would target a key area in Alzhiemer's and like disease
 * *1 hour* Explored implementation of "follow the sound" game in Unity 3D project (For game where auditory processing and spatial awareness as tested as they navigate solely through auditory cues. They must locate sound sources by following increasing volume levels as they get closer to the origin of the sounds.)
 
-## Week 19
+## Week 20
 
 ### 05 Feb 2024
 * *1 hour* Initial revision of the minigame that used different scenes, realised it would have to include data retention (retaining the instruments already collected) and that this would take a considerable amount more time
@@ -368,7 +368,7 @@
 * *1 hour* Investigated NotePlayer script, added debug messages to track trigger and start method behavior
 * *1 hour* Investigated collider overlap and tag assignments, reviewed OnTrigger events to ensure proper logic
 
-## Week 20
+## Week 21
 
 ### 12 Feb 2024
 * *1 hour* Implemented music note movement functionality using sine wave motion.
@@ -384,7 +384,7 @@
 ### 15 Feb 2024
 * *3 hours* Reading for dissertation
 
-## Week 21
+## Week 22
 
 ### 19 Feb 2024
 * *2 hours* Experimented with free-look camera
@@ -401,7 +401,7 @@
 ### 23 Feb 2024
 * *2 hours* Writing part of Background for dissertation
 
-## Week 22
+## Week 23
 
 ### 26 Feb 2024
 * *1.5 hours* Wrote about Active Music Therapy in dissertation
@@ -420,7 +420,7 @@
 ### 02 Mar 2024
 * *3 hours* Running User Study on 3 people
 
-## Week 23
+## Week 24
 
 ### 04 Mar 2024
 * *3.5 hours* Ran User Study on 5 more people
@@ -448,7 +448,7 @@
 ### 10 Mar 2024
 * *2 hours* Writing dissertation outline to be reviewed by project advisor
 
-## Week 24
+## Week 25
 
 ### 11 Mar 2024
 * *7 hours* Writing requirements section of dissertation
@@ -474,7 +474,7 @@
 ### 17 Mar 2024
 * *9 hours* Writing dissertation
 
-## Week 24
+## Week 26
 ### 18 Mar 2024
 * *10.5 hours* Writing dissertation
 
