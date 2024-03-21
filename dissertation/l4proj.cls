@@ -271,6 +271,7 @@ textfont=it,tableposition=above]{caption}
 \usepackage[plain, noline, shortend, linesnumberedhidden]{algorithm2e}
 \SetAlFnt{\sffamily \small}
 
+
 % adjust spacing
 \titlespacing{\section}{10pt}{1.5\baselineskip}{8pt plus 3pt minus 3pt}
 \titlespacing{\subsection}{10pt}{\baselineskip}{8pt plus 4pt minus 1pt}
