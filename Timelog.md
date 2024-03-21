@@ -461,3 +461,33 @@
 * *1.5 hours* Developed "Overview" section for the Design portion of the dissertation, outlining HarmonyScape's core mechanics.
 * *1.5 hours* Expanded the "Design" section with subsections on "Player Movement and Control".
 * *2.5 hours* Created a new "Music" section in the Design portion. This included a subsection on "Instrument Collection" and a section on the dynamic music mechanics, including connections to the active music therapy principles.
+
+### 14 Mar 2024
+* *9 hours* Writing dissertation
+
+### 15 Mar 2024
+* *10 hours* Writing dissertation
+
+### 16 Mar 2024
+* *9 hours* Writing dissertation
+
+### 17 Mar 2024
+* *9 hours* Writing dissertation
+
+## Week 24
+### 18 Mar 2024
+* *10.5 hours* Writing dissertation
+
+### 19 Mar 2024
+* *10 hours* Writing dissertation
+
+### 20 Mar 2024
+* *9 hours* Writing dissertation
+
+### 21 Mar 2024
+* *4 hours* Writing dissertation
+* *3 hours* Converting game to executable
+* *3.5 hours* Writing script for, preparing and filming video presentation for project
+
+### 22 Mar 2024
+* *4 hours* Finishing touches and submission
