@@ -102,10 +102,6 @@
 
 % The project is inspired by research indicating the therapeutic potential of music for individuals with dementia, as highlighted by studies such as Vink et al. (2003). By leveraging the relationship between music and cognitive function, the initiative seeks to explore how interactive music experiences can benefit individuals with intellectual disabilities.
 
-TOODO: \begin{itemize}
-    \item Fix use of singular and double quotation marks
-\end{itemize}
-
 
 This opening chapter sets the stage for the HarmonyScape project by introducing the motivations and goals that led to its development. The following sections of this paper will explore distinct segments of the project, covering its background, design, implementation, and evaluation.
 
@@ -579,14 +575,32 @@ HarmonyScape incorporates a card matching minigame, building upon the principles
 
 Furthermore, playing a card matching game requires attention, and memory recall, which can help stimulate cognitive function in individuals with dementia (Eichhorn et al., 2018). The game directly targets memory skills by challenging players to remember the location of matching pairs of cards, which Eichhorn et al. (2018) discuss as having the potential to improve short-term memory and concentration.
 
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=1.0\linewidth]{dissertation/images/mem_matching.jpg}    
+
+%     \caption{Screenshots of different scenes when playing the digital card matching memory game by MemoryMatching.com
+%     }
+
+%     \label{fig:mem_match} 
+% \end{figure}
+
 \begin{figure}[h]
-    \centering
-    \includegraphics[width=1.0\linewidth]{dissertation/images/mem_matching.jpg}    
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{dissertation/images/mem_matching_unflipped.jpg}
+    \caption{Memory matching game with no matches made.}
+    \label{fig:mem_match_unmatched}
+  \end{subfigure}
+  \hfill 
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{dissertation/images/mem_matching_midmatch.jpg}
+    \caption{Memory matching game with some matches made.}
+    \label{fig:mem_match_matched}
+  \end{subfigure}
 
-    \caption{Screenshots of different scenes when playing the digital card matching memory game by MemoryMatching.com
-    }
-
-    \label{fig:mem_match} 
+  \caption{Screenshots of a memory matching game. These illustrate a potential implementation for HarmonyScape's memory minigame.} 
+  \label{fig:mem_match}
 \end{figure}
 
 Figure \ref{fig:mem_match} shows screenshots from a digital implementation of the card-matching memory game by MemoryMatching.com. HarmonyScape will adapt this concept into a 3D space where the player-controlled character will need to make physical contact with the cards to flip them. HarmonyScape's implementation involves 5 pairs of cards placed within the minigame area. Each card is a cube object, with altered dimensions to resemble a card, and functions as a trigger zone. The player will enter the cards trigger zone which will initiate a physical flip of the card on the screen. This emphasis on a physical action to trigger a visible change reinforces the principles of NFR-2.
@@ -634,13 +648,13 @@ The concept of memory games involving sequences of sounds can be traced back to 
 \begin{figure}[h!] % The '!' helps prioritize exact placement 
   \centering
 
-  \begin{subfigure}[b]{0.45\textwidth}
+  \begin{subfigure}[b]{0.4\textwidth}
     \includegraphics[width=\textwidth]{dissertation/images/simon_before.png}
     \caption{Simon with no buttons lit.}
     \label{fig:simon_no_lights}
   \end{subfigure}
   ~ 
-  \begin{subfigure}[b]{0.45\textwidth}
+  \begin{subfigure}[b]{0.4\textwidth}
     \includegraphics[width=\textwidth]{dissertation/images/simon_during.png}
     \caption{Simon with one button lit.}
     \label{fig:simon_lit}
@@ -1268,12 +1282,6 @@ This line of code smooths out minor fluctuations in the player's speed, preventi
 %==================================================================================================================================
 \chapter{Evaluation} 
 
-TODOO:
-\begin{itemize}
-    \item Add bit for how the users felt about the dynamic music.
-    
-\end{itemize}
-
 % How good is your solution? How well did you solve the general problem, and what evidence do you have to support that?
 
 % Format:
@@ -1436,7 +1444,7 @@ The sample also exhibited a range of gaming experience levels (see Figure \ref{f
 
 
 \subsection{Post-Study Interview Results}
-Participant interviews were transcribed for analysis. We employed an open and axial coding approach, inspired by the methodology of Corbin and Strauss (1990).  Each segment of the transcripts was assigned codes, which were then iteratively grouped to identify broader patterns and themes. Due to the volume of unique themes that emerged, the subsequent discussion focuses on those deemed most aligned to the research questions. To protect participant confidentiality, each interviewee was assigned a unique ID number. Quotations within the analysis will reference these identifiers to maintain anonymity.
+Participant interviews were transcribed for analysis. We employed an open and axial coding approach, inspired by the methodology of Corbin and Strauss (1990).  Each segment of the transcripts was assigned codes, which were then iteratively grouped to identify broader patterns and themes. Due to the volume of unique themes that emerged, the subsequent discussion focuses on those deemed most aligned to the research questions. To protect participant confidentiality, each interviewee was assigned a unique ID number. Quotations within the analysis will reference these identifiers to maintain anonymity. Additionally, each thematic section will conclude with a brief paragraph summarising the key takeaways, their implications for HarmonyScape's design, and how the findings illuminate whether the project's aims have been achieved.
 \newline
 
 \textbf{Camera Movement Concerns}
@@ -1497,14 +1505,15 @@ Participants expressed a high level of intrinsic motivation within HarmonyScape.
 While the feedback was largely positive, Participant 9 suggested a way to further increase intrinsic motivation: \emph{“Perhaps varying the music when in the minigames would make it more intrinsic, for example, adding a cool track that reflects the environment the minigame is played at - beach-type track playing during the beach minigame, for example”}.
 
 HarmonyScape appears to successfully foster intrinsic motivation through its minigames and the gradual reveal of the dynamic soundtrack. Exploring ways to further personalise the musical experience, as suggested, could potentially enhance this aspect even further.
+\newline
 
 \textbf{Dynamic Music}
-\begin{figure}[h]
- \centering
- \includegraphics[width=0.7\linewidth]{dissertation/images/Pleasentness.png} 
- \caption{Survey results on the pleasantness of music and sounds in a game.} 
- \label{fig:pleasentness} 
-\end{figure}
+
+Participants expressed enthusiasm for HarmonyScape's unique dynamic soundtrack, where collecting instruments gradually builds the music.  This evolving soundscape was not only enjoyable but highly rated for pleasantness (see Figure \ref{fig:pleasentness}). Many found it motivating and rewarding. Participant 7 said, "It was very satisfying to hear a new instrument added to the music each time I found one!". Several participants noted a sense of active involvement in music creation. Participant 3 described, "It made me feel like I was actually making the music, not just listening to it. That gave me a sense of creative control".
+
+This feedback suggests that active, dynamic music elements can offer a sense of creative control for players. This may be particularly beneficial for individuals with dementia, as research indicates that maintaining a sense of agency and creative expression can positively impact well-being for those living with dementia (Sánchez et al., 2016).
+
+
 
 
 \subsection{Dementia Specific Questions}
@@ -1597,6 +1606,15 @@ Typical inclusions in the appendices are:
 
 \textbf{Don't include your source code in the appendices}. It will be
 submitted separately.
+
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.7\linewidth]{dissertation/images/Pleasentness.png} 
+ \caption{Survey results on the pleasantness of music and sounds in a game.} 
+ \label{fig:pleasentness} 
+\end{figure}
+
 
 \end{appendices}
 
