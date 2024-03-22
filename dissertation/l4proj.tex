@@ -120,8 +120,8 @@ This section outlines the overarching aims and key objectives guiding the develo
 Building upon the motivations discussed, this project has two core aims.
 
 \begin{itemize}
-    \item Create a game that has the potential to serve as a music-based therapeutic tool, offering enjoyment and potentially aiding cognitive well-being in individuals living with dementia.
-    \item Evaluate the HarmonyScape project as a means of captivating users and potentially aiding cognitive well-being. This evaluation will focus on key questions regarding player engagement, enjoyment, potential benefits, and any potential negative effects.
+    \item \emph{Create a game that has the potential to serve as a music-based therapeutic tool, offering enjoyment and potentially aiding cognitive well-being in individuals living with dementia.} This aim focuses on designing an experience that goes beyond pure entertainment. The game incorporates elements derived from music therapy practices intended to support emotional well-being and potentially stimulate cognitive processes.
+    \item \emph{Evaluate the HarmonyScape project as a means of captivating users and potentially aiding cognitive well-being. This evaluation will focus on key questions regarding player engagement, enjoyment, potential benefits, and any potential negative effects.} This evaluation will specifically address the game's capacity to create a captivating and enjoyable experience, while also carefully examining its potential impact on cognitive well-being, both positive and negative.
 \end{itemize}
 
 \subsection{Objectives}
@@ -131,7 +131,7 @@ The following objectives have been established, serving as stepping stones towar
 \begin{itemize}
     \item Create a game environment that prioritises enjoyment and engagement for potential users living with dementia. This includes visually stimulating elements and sound design tailored for these users.
     \item Develop a system where player movement directly influences the soundtrack of the game, incorporating elements of music theory to promote a sense of creative control for the player.
-    \item Integrate music theory concepts into the game's design to facilitate musical expression and creativity, offering opportunities for self-directed musical exploration.
+    \item Design gameplay interactions and a navigational system explicitly tailored for individuals with potential cognitive and motor impairments. This includes clear instructions, visual cues, and an emphasis on simplicity.
     \item Design and execute an evaluation process to assess the project's effectiveness, addressing both the player experience and potential impact on cognitive well-being.
 \end{itemize}
 
@@ -210,7 +210,7 @@ The following objectives have been established, serving as stepping stones towar
 
 \section{Understanding Dementia and Cognitive Decline}
 
-Throughout this dissertation, I will use the term 'dementia' as an umbrella term for diseases that cause the decline in cognitive abilities that impacts a person's ability to perform everyday activities, which typically involves problems with memory, thinking, and behavior. Dementia is a progressive condition, meaning symptoms worsen over time. This dissertation will specifically focus on individuals with early to mid-stages of dementia. From this point forward, references to 'those living with dementia' will pertain to individuals within these stages. While there are many causes of dementia, the most common is Alzheimer's disease.
+Throughout this dissertation, the term 'dementia' will be used as an umbrella term for diseases that cause the decline in cognitive abilities that impacts a person's ability to perform everyday activities, which typically involves problems with memory, thinking, and behavior. Dementia is a progressive condition, meaning symptoms worsen over time. This dissertation will specifically focus on individuals with early to mid-stages of dementia. From this point forward, references to 'those living with dementia' will pertain to individuals within these stages. While there are many causes of dementia, the most common is Alzheimer's disease.
 
 Alzheimer's disease is a progressive neurological disorder that can affect memory, thinking skills, and behavior. As of 2024, it is the most common cause of dementia, a group of brain disorders that result in the loss of cognitive and social skills that is severe enough to interfere with daily functioning (Li et al., 2024). Alzheimer's typically begins slowly, and as the disease progresses, individuals can experience memory loss, confusion, difficulty with language and communication, impaired judgment, and changes in personality (Li et al., 2024). Currently, there is no cure for Alzheimer's disease, but treatments and interventions can manage symptoms and improve the quality of life for those affected by the disease.
 
@@ -313,7 +313,7 @@ Secondly, a third-person perspective in video games significantly enhances situa
 %==================================================================================================================================
 \chapter{Requirements}
 
-This chapter dives into the specific requirements HarmonyScape needs to meet to effectively achieve the goals outlined in Chapter 1. These requirements leverage and build upon the research and relevant concepts explored in Chapter 2, ensuring the game aligns with established best practices. I will refer to these requirements throughout the rest of the dissertation by their ID's such as 'FR-1'.
+This chapter dives into the specific requirements HarmonyScape needs to meet to effectively achieve the goals outlined in Chapter 1. These requirements leverage and build upon the research and relevant concepts explored in Chapter 2, ensuring the game aligns with established best practices. These requirements will be reffered to throughout the rest of the dissertation by their ID's such as 'FR-1'.
 
 \section{Functional Requirements}
 This section presents the functional requirements for HarmonyScape, informed by the research in Chapter 2. The MoSCow method prioritises these requirements, categorising them based on their necessity to achieving the evaluation goals: some are essential for core functionality (Must Haves), while others significantly enhance the user experience (Should Haves), and some are desirable for future iterations (Could Haves).
@@ -341,7 +341,7 @@ FR-1 & Must Have & \textbf{Interactive Music:} HarmonyScape's music must be inte
 \hline
 FR-2 & Must Have & \textbf{Multisensory Experience:} HarmonyScape must incorporate a multisensory experience, specifically through the use of visual and auditory stimuli. This aligns with research by Sánchez et al. (2016) suggesting that stimulating multiple senses can benefit individuals living with dementia who are experiencing anxiety symptoms. This should empower players to exercise greater control over their sensory environment, potentially mitigating anxiety symptoms associated with dementia (Sánchez et al., 2016). \\
 \hline 
-FR-3 & Must Have & \textbf{Gentle Audio Design:} I intend to implement the integration of new instruments into the game's soundscape, based on player input, to further develop the concept of interactive music within the game. The following chapter, "Design," explores this concept further. Research by Shirsat, Jha and Verma (2023) shows that jarring or disorienting changes in tone can exacerbate anxiety and confusion in individuals with dementia. Therefore, HarmonyScape should prioritises a calm and predictable soundscape. Familiar and consistent music plays a vital role in promoting a sense of security and reducing potential disorientation for people with dementia (Caspar et al., 2017). The gentle melody should serve as a constant anchor, allowing players to focus on the game-play without auditory distractions.  \\ 
+FR-3 & Must Have & \textbf{Gentle Audio Design:} The integration of new instruments is intended to be implemented into the game's soundscape, based on player input, to further develop the concept of interactive music within the game. The following chapter, "Design," explores this concept further. Research by Shirsat, Jha and Verma (2023) shows that jarring or disorienting changes in tone can exacerbate anxiety and confusion in individuals with dementia. Therefore, HarmonyScape should prioritises a calm and predictable soundscape. Familiar and consistent music plays a vital role in promoting a sense of security and reducing potential disorientation for people with dementia (Caspar et al., 2017). The gentle melody should serve as a constant anchor, allowing players to focus on the game-play without auditory distractions.  \\ 
 \hline
 FR-4 & Should Have & \textbf{Progress Tracker:} HarmonyScape should include a progress tracker within the user interface. This tracker's purpose is to provide clear and consistent visual feedback on instrument collection throughout game-play. This tracker should utilise a simple and clear visual representation, such as colour-filling elements, to provide immediate feedback on instrument collection. Players with dementia often experience short-term memory challenges. A progress tracker could be particularly helpful for this group. Seeing progress can reinforce a sense of accomplishment and provides a clear marker of progress within the game (Bourgeois et al., 2003). This, in turn, could enhance motivation and engagement for players living with dementia as they progress through HarmonyScape. \\ 
 \hline
@@ -373,11 +373,10 @@ HarmonyScape's non-functional requirements address broader aspects that contribu
 \hline
 \endlastfoot
 
-NFR-1 & Must Have & \textbf{Accessibility:} I aim to ensure clear and concise instructions to support players with varying cognitive abilities. This can be achieved through visuals and audio cues that are simple and unambiguous, such as written instructions and contextual audio prompts. \\ 
+NFR-1 & Must Have & \textbf{Accessibility:} The project aims to ensure clear and concise instructions to support players with varying cognitive abilities. This can be achieved through visuals and audio cues that are simple and unambiguous, such as written instructions and contextual audio prompts. \\ 
 \hline
 NFR-2 & Should Have & \textbf{Visible Interaction:} Making it obvious that player input is affecting the game. For example, upon player input, subtle animations for the instruments themselves and their corresponding game-play. A brief visual flourish or change in appearance could provide immediate confirmation that the player's action has registered. This type of clear and consistent visual feedback can be particularly beneficial for players with dementia, as studies suggest it can improve engagement and reduce frustration in users with cognitive decline (Ballard et al., 2008). \\ 
 \hline
-% NFR-3 & Should Have & \textbf{Clear Instructions:} HarmonyScape must utilise simple visuals and concise language to convey gameplay mechanics, objectives, and controls. Instructions should be presented in easily digestible segments to minimise the potential for confusion. Integrating instructions directly into the gameplay, through tutorials or contextual cues, should be used to further enhance understanding and reduce frustration. \\ 
 NFR-3 & Should Have & \textbf{Forgiving Mechanics:} HarmonyScape should implement forgiving gameplay mechanics that minimise the consequences of player errors or mistakes. This includes the ability to retry minigames without penalty, designed in a way to ensure there are no fail states. \\
 % \hline
 \end{longtable}
@@ -761,9 +760,9 @@ Cinemachine is a powerful suite of tools included within Unity that provides int
 
 HarmonyScape implements the Cinemachine Free Look Camera, a versatile camera component designed to offer third-person style camera perspectives. This choice is rooted in the theory discussed in Section \ref{sec:third_person}, which highlights the benefits of a third-person perspective for players who may be more susceptible to simulation sickness and require enhanced situational awareness. It's commonly used in games where players need the flexibility to control the camera view to observe their surroundings and character. The Free Look Camera system consists of three virtual camera rigs (top, middle, and bottom) that orbit around a target object, with a spline system seamlessly blending between them.
 
-In HarmonyScape, I've set the target of the Cinemachine Free Look Camera to be the player-controlled character object. This ensures that the camera remains focused on the player as they move through the game world. The Free Look Camera functions as a component of the main camera, effectively overriding Unity's standard camera controls to provide the desired dynamic camera behaviour.
+In HarmonyScape, the target of the Cinemachine Free Look Camera has been set to be the player-controlled character object. This ensures that the camera remains focused on the player as they move through the game world. The Free Look Camera functions as a component of the main camera, effectively overriding Unity's standard camera controls to provide the desired dynamic camera behaviour.
 
-To prevent the camera from clipping through obstacles in the environment, I've added a Cinemachine Collider component to the Free Look Camera. This collider works in tandem with the camera system to detect potential collisions with objects in the scene. I've set the collider's strategy parameter to "Preserve Camera Distance". This means that if the camera's path would be obstructed, it smoothly readjusts its position to maintain a consistent distance from the player character, avoiding any jarring visual interruptions.
+To prevent the camera from clipping through obstacles in the environment, a Cinemachine Collider component has been added to the Free Look Camera. This collider works in tandem with the camera system to detect potential collisions with objects in the scene. The collider's strategy parameter has been set to "Preserve Camera Distance". This means that if the camera's path would be obstructed, it smoothly readjusts its position to maintain a consistent distance from the player character, avoiding any jarring visual interruptions.
 
 \subsubsection{How this affects the "Player Movement" script:} Within the Player Movement Script, the movement direction calculated from player input is modified based on the Cinemachine Free Look Camera's orientation. The movement direction is rotated around the vertical axis to match the camera's Y-axis rotation. This ensures that player movement aligns with the camera's view, providing an intuitive control scheme. Additionally, the movement direction is normalised to maintain consistent movement speed regardless of the applied rotation.
 
@@ -1471,26 +1470,31 @@ These insights suggest that HarmonyScape's musical element could offer therapeut
 
 %==================================================================================================================================
 \chapter{Conclusion}    
-Summarise the whole project for a lazy reader who didn't read the rest (e.g. a prize-awarding committee).
-\section{Guidance}
-\begin{itemize}
-    \item
-        Summarise briefly and fairly.
-    \item
-        You should be addressing the general problem you introduced in the
-        Introduction.        
-    \item
-        Include summary of concrete results (``the new compiler ran 2x
-        faster'')
-    \item
-        Indicate what future work could be done, but remember: \textbf{you
-        won't get credit for things you haven't done}.
-\end{itemize}
+% Summarise the whole project for a lazy reader who didn't read the rest (e.g. a prize-awarding committee).
+% \section{Guidance}
+% \begin{itemize}
+%     \item
+%         Summarise briefly and fairly.
+%     \item
+%         You should be addressing the general problem you introduced in the
+%         Introduction.        
+%     \item
+%         Include summary of concrete results (``the new compiler ran 2x
+%         faster'')
+%     \item
+%         Indicate what future work could be done, but remember: \textbf{you
+%         won't get credit for things you haven't done}.
+% \end{itemize}
 
 \section{Summary}
-This project explored the design and implementation of HarmonyScape, an interactive game environment tailored for individuals living with dementia. Our primary goal was to investigate its potential to promote engagement, offer cognitive stimulation, and provide a positive, multisensory experience.
+This project explored the design and implementation of HarmonyScape, an interactive game environment tailored for individuals living with dementia. Our primary goals were to investigate its potential to promote engagement, offer cognitive stimulation, and provide a positive, multisensory experience, aligning with our formulated aims:
 
-HarmonyScape displayed moderate success in fostering intrinsic motivation for players. The engaging minigames and gradual revelation of the dynamic soundtrack provided a sense of accomplishment and encouraged exploration. Additionally, the feedback overwhelmingly validated the potential of our dynamic music system, with participants reporting a sense of active involvement in music creation. This aligns with active music therapy approaches, and many expressed that this feature could positively impact mood and agitation for those with dementia, as supported by prior research (Sánchez et al., 2016).
+\begin{itemize}
+    \item Create a game that has the potential to serve as a music-based therapeutic tool, offering enjoyment and potentially aiding cognitive well-being in individuals living with dementia.
+    \item Evaluate the HarmonyScape project as a means of captivating users and potentially aiding cognitive well-being. 
+\end{itemize}
+
+HarmonyScape displayed moderate success in addressing these aims. The engaging minigames and gradual revelation of the dynamic soundtrack fostered intrinsic motivation and encouraged exploration. Additionally, the project's interactive and responsive music elements align with active music therapy approaches, and participant feedback indicated this feature could positively impact mood and agitation for those with dementia, supported by prior research (Sánchez et al., 2016).
 
 While several design elements were well-received, the evaluation revealed areas for improvement in accessibility and usability. To create a truly optimal experience, particularly for those with dementia, future iterations must refine camera controls, navigation, and the clarity of instructions.
 
@@ -1498,12 +1502,12 @@ The HarmonyScape project makes several contributions to the field. It offers a b
 
 \section{Future Work}
 
-While the HarmonyScape project achieved its initial aims, it also opens up exciting avenues for further development to maximise its value for individuals with dementia. Due to the scope of a student project, this evaluation primarily relied on caregivers and relevant experience but did not directly involve those with dementia. Future research must directly evaluate the game with individuals living with dementia. This requires collaborations with specialised care facilities and careful ethical testing protocols.
+While the HarmonyScape project achieved its initial aims, it also opens up exciting avenues for further development to maximise its value for individuals with dementia. Due to the scope of a student project, this evaluation primarily relied on caregivers and relevant experience but did not directly involve those with dementia. Future research must directly evaluate the game with individuals living with dementia. This requires collaborations with specialised care systems and careful ethical testing protocols.
 
 To significantly extend HarmonyScape's value, consider the following approaches. First, integrating mechanics that adjust to player performance would ensure a consistently rewarding experience for a wider range of cognitive abilities. Secondly, exploring a mechanism for users to upload familiar songs would further align the project with reminiscence therapy techniques, potentially evoking positive autobiographical memories. Finally, investigating the feasibility of a tablet-optimised version of HarmonyScape could significantly improve usability for individuals with dementia.
 
-\subsection{Concluding Remarks}
-The HarmonyScape project demonstrated the potential of interactive game environments to offer moments of engagement, stimulation, and potential therapeutic benefits for individuals living with dementia. Our work, combined with future research guided by the evaluation's insights, can pave the way for innovative and accessible games that meaningfully improve the lives of those with dementia.
+% \subsection{Concluding Remarks}
+% The HarmonyScape project demonstrated the potential of interactive game environments to offer moments of engagement, stimulation, and potential therapeutic benefits for individuals living with dementia. Our work, combined with future research guided by the evaluation's insights, can pave the way for innovative and accessible games that meaningfully improve the lives of those with dementia.
 
 %==================================================================================================================================
 %
@@ -1541,6 +1545,90 @@ submitted separately.
  \includegraphics[width=0.7\linewidth]{dissertation/images/Pleasentness.png} 
  \caption{Survey results on the pleasantness of music and sounds in a game.} 
  \label{fig:pleasentness} 
+\end{figure}
+
+\section{Ethics Checklist}
+% School of Computing Science
+% University of Glasgow
+
+% Ethics checklist form for 3rd/4th/5th year, and taught MSc projects
+
+% This form is only applicable for projects that use other people (‘participants’) for the collection of information, typically in getting comments about a system or a system design, getting information about how a system could be used, or evaluating a working system.
+
+% If no other people have been involved in the collection of information, then you do not need to complete this form.
+
+% If your evaluation does not comply with any one or more of the points below, please contact the Chair of the School of Computing Science  Ethics Committee (matthew.chalmers@glasgow.ac.uk) for advice.
+
+% If your evaluation does comply with all the points below, please sign this form and submit it with your project.
+
+
+% 1.	Participants were not exposed to any risks greater than those encountered in their normal working life.
+% Investigators have a responsibility to protect participants from physical and mental harm during the investigation. The risk of harm must be no greater than in ordinary life. Areas of potential risk that require ethical approval include, but are not limited to, investigations that occur outside usual laboratory areas, or that require participant mobility (e.g. walking, running, use of public transport), unusual or repetitive activity or movement, that use sensory deprivation (e.g. ear plugs or blindfolds), bright or flashing lights, loud or disorienting noises, smell, taste, vibration, or force feedback
+
+% 2.	The experimental materials were paper-based, or comprised software running on standard hardware.
+% Participants should not be exposed to any risks associated with the use of non-standard equipment: anything other than pen-and-paper, standard PCs, laptops, iPads, mobile phones and common hand-held devices is considered non-standard.
+
+% 3.	All participants explicitly stated that they agreed to take part, and that their data could be used in the project.
+% If the results of the evaluation are likely to be used beyond the term of the project (for example, the software is to be deployed, or the data is to be published), then signed consent is necessary. A separate consent form should be signed by each participant.
+
+% Otherwise, verbal consent is sufficient, and should be explicitly requested in the introductory script.
+
+% 4.	No incentives were offered to the participants.
+% The payment of participants must not be used to induce them to risk harm beyond that which they risk without payment in their normal lifestyle. 
+ 
+
+% 5.	No information about the evaluation or materials was intentionally withheld from the participants.
+% Withholding information or misleading participants is unacceptable if participants are likely to object or show unease when debriefed. 
+
+% 6.	No participant was under the age of 16.
+% Parental consent is required for participants under the age of 16. 
+
+% 7.	No participant has an impairment that may limit their understanding or communication.
+% Additional consent is required for participants with impairments. 
+
+% 8.	Neither I nor my supervisor is in a position of authority or influence over any of the participants.
+% A position of authority or influence over any participant must not be allowed to pressurise participants to take part in, or remain in, any experiment. 
+
+% 9.	All participants were informed that they could withdraw at any time.
+% All participants have the right to withdraw at any time during the investigation. They should be told this in the introductory script.
+
+% 10.	All participants have been informed of my contact details.
+% All participants must be able to contact the investigator after the investigation. They should be given the details of both student and module co-ordinator or supervisor as part of the debriefing.
+
+% 11.	The evaluation was discussed with all the participants at the end of the session, and all participants had the opportunity to ask questions.
+% The student must provide the participants with sufficient information in the debriefing to enable them to understand the nature of the investigation. In cases where remote participants may withdraw from the experiment early and it is not possible to debrief them, the fact that doing so will result in their not being debriefed should be mentioned in the introductory text.
+
+% 12.	All the data collected from the participants is stored in an anonymous form.
+% All participant data (hard-copy and soft-copy) should be stored securely, and in anonymous form. 
+
+
+
+
+% Project title __________HarmonyScape: Inclusive 3D Exploration with Music for those living with Dementia_____________________
+
+% Student’s Name   ________Robbie Tippen___________
+
+% Student Number _______2403237t_______
+
+% Student’s Signature ______ ___________
+
+% Supervisor’s Signature ______________________________
+
+% Date ____17/11/2000____
+% Ethics checklist for projects
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/}    
+
+    \caption{In figure captions, explain what the reader is looking at: ``A schematic of the rectifying linear unit, where $a$ is the output amplitude,
+    $d$ is a configurable dead-zone, and $Z_j$ is the input signal'', as well as why the reader is looking at this: 
+    ``It is notable that there is no activation \emph{at all} below 0, which explains our initial results.'' 
+    \textbf{Use vector image formats (.pdf) where possible}. Size figures appropriately, and do not make them over-large or too small to read.
+    }
+
+    % use the notation fig:name to cross reference a figure
+    \label{fig:relu} 
 \end{figure}
 
 
