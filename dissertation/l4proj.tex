@@ -5,6 +5,7 @@
 % put any additional packages here
 %
 \usepackage{longtable}
+\usepackage[final]{pdfpages}
 
 \begin{document}
 
@@ -20,33 +21,16 @@
 %% ABSTRACT
 \begin{abstract}
     
-    This dissertation investigates the development and implementation of HarmonyScape, an inclusive initiative tailored for individuals with intellectual disabilities, including Alzheimer's. Inspired by the profound link between music and cognitive function, HarmonyScape creates a captivating 3D world where music dynamically responds to user exploration. Through character control in an open-world setting and interactive music-based mini games, players unlock new instruments, filling out the games' musical landscape. The project's aim is to provide a multi-sensory environment that potentially aids cognitive well-being while offering an engaging, interactive experience. Initial user feedback indicates high levels of engagement and enjoyment, suggesting promising avenues for inclusive gaming and therapeutic interventions. This research underscores the significance of tailored approaches to accessibility and engagement in fostering cognitive well-being among individuals with intellectual disabilities.
-    \vskip 0.5em
-    Every abstract follows a similar pattern. Motivate; set aims; describe work; explain results.
-    \vskip 0.5em
-    ``XYZ is bad. This project investigated ABC to determine if it was better. 
-    ABC used XXX and YYY to implement ZZZ. This is particularly interesting as XXX and YYY have
-    never been used together. It was found that  
-    ABC was 20\% better than XYZ, though it caused rabies in half of subjects.''
+    As dementia's prevalence increases, innovative therapeutic approaches are needed. This project introduces HarmonyScape, a 3D exploration game for individuals with dementia that leverages active music therapy principles. Designed with the aim to promote creative control and cognitive stimulation, HarmonyScape links player movement to a dynamic soundscape, alongside a unique multisensory experience. The evaluation included caregivers and family members of those with dementia to evaluate HarmonyScape's potential for this audience. Overall, participants found HarmonyScape visually appealing, engaging, and saw potential in its dynamic music for cognitive stimulation. However, feedback highlighted several areas for improvement, including refined camera controls, clearer instructions, and enhanced navigation for easier use by individuals with dementia. Future work should prioritise direct evaluation with individuals with dementia, along with exploring personalised music options and a tablet interface to maximise HarmonyScape's accessibility and therapeutic potential.
+    % \vskip 0.5em
+    % Every abstract follows a similar pattern. Motivate; set aims; describe work; explain results.
+    % \vskip 0.5em
+    % ``XYZ is bad. This project investigated ABC to determine if it was better. 
+    % ABC used XXX and YYY to implement ZZZ. This is particularly interesting as XXX and YYY have
+    % never been used together. It was found that  
+    % ABC was 20\% better than XYZ, though it caused rabies in half of subjects.''
 \end{abstract}
 
-\begin{abstract}
-    \textbf{Inclusive 3D Exploration with Music for Intellectual Disabilities}
-
- 
-
-    Imagine an inclusive initiative tailored specifically for individuals with intellectual disabilities, including conditions like Alzheimer's. Through Unity, we plan to create a captivating 3D world that generates music in response to exploration. This project is inspired by the unique relationship between music and cognitive function (Baird \& Samson, 2015), and its therapeutic potential for those with dementia (Vink et al., 2003). By immersing users in a visually engaging environment where music dynamically responds to movement, we aim to provide a multisensory experience that not only captivates but also potentially aids cognitive well-being in an enjoyable, interactive manner.
-
- 
-
-    \textbf{Reading}  
-    
-    Baird, A., \& Samson, S. (2015). Music and dementia. Progress in brain research, 217, 207-235.
-    
-     
-    
-    Vink, A. C., Bruinsma, M. S., \& Scholten, R. J. (2003). Music therapy for people with dementia. Cochrane database of systematic reviews, (4).
-\end{abstract}
 
 %==============================================================================
 
@@ -108,7 +92,7 @@ As the prevalence of dementia increases within our aging population, with the nu
 
 The means of music as a form of therapy in the treatment of diseases linked with dementia, such as Alzheimer's, is a unique approach that taps into preserved cognitive and emotional functions in individuals with dementia. Music therapy is defined by the World Federation of Music Therapy (2011) as the professional application of musical elements (sound, rhythm, melody, and harmony) by qualified therapists to facilitate communication, relationships, learning, expression, and other therapeutic objectives. Research by Vink AC \emph{et al.} (2004) highlights the potential of music-based therapeutic interventions to target depressive symptoms in individuals with dementia.
 
-While the potential benefits of game-based activities for cognitive function in dementia are highlighted by Vilkki et al. (2019), combining these approaches in a therapeutic setting has been seldom explored. This suggests a valuable avenue for future research in dementia care.
+While the potential benefits of game-based activities for cognitive function in dementia are highlighted by Vilkki \emph{et al.} (2019), combining these approaches in a therapeutic setting has been seldom explored. This suggests a valuable avenue for future research in dementia care.
 
 This combined approach is particularly promising for our aging population. As lifespans increase, so does the prevalence of dementia. However, this generation also coincides with a rise in video game popularity. People who were 14 years old in 1973, the year the first home video game console, the Magnavox Odyssey\footnote{https://www.computinghistory.org.uk/det/16909/Magnavox-Odyssey/}, was released globally, would be 65 today. This being the age where the risk of dementia significantly increases (Chen \emph{et al.,} 2009). This generation's familiarity with games can be leveraged to create engaging and effective therapeutic activities. Despite the clear potential of this promising avenue for leveraging a familiar and potentially engaging activity, it remains largely unexplored.
 
@@ -210,52 +194,52 @@ The following objectives have been established, serving as stepping stones towar
 
 \section{Understanding Dementia and Cognitive Decline}
 
-Throughout this dissertation, the term 'dementia' will be used as an umbrella term for diseases that cause the decline in cognitive abilities that impacts a person's ability to perform everyday activities, which typically involves problems with memory, thinking, and behavior. Dementia is a progressive condition, meaning symptoms worsen over time. This dissertation will specifically focus on individuals with early to mid-stages of dementia. From this point forward, references to 'those living with dementia' will pertain to individuals within these stages. While there are many causes of dementia, the most common is Alzheimer's disease.
+Throughout this dissertation, the term "dementia" will be used as an umbrella term for diseases that cause the decline in cognitive abilities that impacts a person's ability to perform everyday activities, which typically involves problems with memory, thinking, and behavior. Dementia is a progressive condition, meaning symptoms worsen over time. This dissertation will specifically focus on individuals with early to mid-stages of dementia. From this point forward, references to "those living with dementia" will pertain to individuals within these stages. While there are many causes of dementia, the most common is Alzheimer's disease.
 
-Alzheimer's disease is a progressive neurological disorder that can affect memory, thinking skills, and behavior. As of 2024, it is the most common cause of dementia, a group of brain disorders that result in the loss of cognitive and social skills that is severe enough to interfere with daily functioning (Li et al., 2024). Alzheimer's typically begins slowly, and as the disease progresses, individuals can experience memory loss, confusion, difficulty with language and communication, impaired judgment, and changes in personality (Li et al., 2024). Currently, there is no cure for Alzheimer's disease, but treatments and interventions can manage symptoms and improve the quality of life for those affected by the disease.
+Alzheimer's disease is a progressive neurological disorder that can affect memory, thinking skills, and behavior. As of 2024, it is the most common cause of dementia, a group of brain disorders that result in the loss of cognitive and social skills that is severe enough to interfere with daily functioning (Li \emph{et al.}, 2024). Alzheimer's typically begins slowly, and as the disease progresses, individuals can experience memory loss, confusion, difficulty with language and communication, impaired judgment, and changes in personality (Li \emph{et al.}, 2024). Currently, there is no cure for Alzheimer's disease, but treatments and interventions can manage symptoms and improve the quality of life for those affected by the disease.
 
-Both pharmacological and non-pharmacological treatments have been trialed to alleviate symptoms of dementia. Pharmacological treatments, like acetylcholinesterase inhibitors, primarily target cognitive symptoms without altering the progression of the disease. These treatments have shown minimal effectiveness in easing the behavioral and psychological symptoms linked to these diseases (Dyer et al., 2018).
+Both pharmacological and non-pharmacological treatments have been trialed to alleviate symptoms of dementia. Pharmacological treatments, like acetylcholinesterase inhibitors, primarily target cognitive symptoms without altering the progression of the disease. These treatments have shown minimal effectiveness in easing the behavioral and psychological symptoms linked to these diseases (Dyer \emph{et al.}, 2018).
 
-Conversely, non-pharmacological interventions offer supplementary treatments, presenting diverse strategies to enhance the well-being of individuals with dementia, reduce behavioral incidents, and enhance or maintain their quality of life (Dyer et al., 2018).
+Conversely, non-pharmacological interventions offer supplementary treatments, presenting diverse strategies to enhance the well-being of individuals with dementia, reduce behavioral incidents, and enhance or maintain their quality of life (Dyer \emph{et al.}, 2018).
 
 \subsection{Attention impairments}\label{sec:attention}
-Attention impairments in Alzheimer’s Disease represent a significant aspect of the cognitive decline observed in affected individuals, despite Alzheimer’s Disease being primarily recognised as a memory disorder (Hennawy et al., 2019).
+Attention impairments in Alzheimer’s Disease represent a significant aspect of the cognitive decline observed in affected individuals, despite Alzheimer’s Disease being primarily recognised as a memory disorder (Hennawy \emph{et al.}, 2019).
 
 \subsubsection{Selective Attention}
-pertains to the cognitive capacity to focus on a singular stimulus while ignoring surrounding distractions (Chau et al., 2015). Impairments in selective attention exacerbate linearly with Alzheimer’s Disease severity (Chau et al., 2015).
+pertains to the cognitive capacity to focus on a singular stimulus while ignoring surrounding distractions (Chau \emph{et al.}, 2015). Impairments in selective attention exacerbate linearly with Alzheimer’s Disease severity (Chau \emph{et al.}, 2015).
 
-\subsubsection{Sustained Attention} is differentiated from other classes of attention by the duration of the required activity (Fortenbaugh et al., 2017). More specifically, sustained attention is defined as the capacity to sustain focus on a particular task over an extended duration (Fortenbaugh et al., 2017).
+\subsubsection{Sustained Attention} is differentiated from other classes of attention by the duration of the required activity (Fortenbaugh \emph{et al.}, 2017). More specifically, sustained attention is defined as the capacity to sustain focus on a particular task over an extended duration (Fortenbaugh \emph{et al.}, 2017).
 
 \subsection{Neuroplasticity}\label{sec:neuroplasticity}
 Neuroplasticity refers to the brain's ability to adapt and modify its structure and function throughout life (Costandi, 2016). This includes the formation of new neural connections, the strengthening of existing ones, and even rewiring itself in response to experiences and learning (Costandi, 2016). For people living with dementia, this process is disrupted, leading to the degeneration of brain cells and connections, ultimately causing cognitive decline (Koch and Spampinato, 2022).
 
-Research by Hill, Kolanowski, and Gill (2011) has shown that utilising remaining brain plasticity is a promising avenue for potentially slowing down the progression of dementia. This residual neuroplasticity offers a window of opportunity for non-pharmacological interventions designed to stimulate cognitive function, which can improve spatial awareness and memory in those with dementia (Boggio et al., 2011).
+Research by Hill, Kolanowski, and Gill (2011) has shown that utilising remaining brain plasticity is a promising avenue for potentially slowing down the progression of dementia. This residual neuroplasticity offers a window of opportunity for non-pharmacological interventions designed to stimulate cognitive function, which can improve spatial awareness and memory in those with dementia (Boggio \emph{et al.}, 2011).
 
 \section{Therapeutic Interventions for Dementia}
 This section explores non-pharmacological therapies designed to mitigate the effects of dementia and enhance the quality of life for those affected. We'll begin by examining music therapy, followed by other cognitive stimulation strategies.
 
 \subsection{Music Therapy}\label{sec:music_therapy}
 
-Music therapy is a non-pharmacological intervention that strategically utilises the elements of music (sound, rhythm, melody, and harmony) to enhance the quality of life for individuals whose lives have been impacted by injury, illness, or disability (Bleibel et al., 2023). Qualified therapists tailor music therapy sessions to address various therapeutic goals, including improving communication, social skills, emotional well-being, and cognitive function (Vink AC et al., 2004). Two primary approaches exist within music therapy:
+Music therapy is a non-pharmacological intervention that strategically utilises the elements of music (sound, rhythm, melody, and harmony) to enhance the quality of life for individuals whose lives have been impacted by injury, illness, or disability (Bleibel \emph{et al.}, 2023). Qualified therapists tailor music therapy sessions to address various therapeutic goals, including improving communication, social skills, emotional well-being, and cognitive function (Vink AC \emph{et al.}, 2004). Two primary approaches exist within music therapy:
 
-\subsubsection{Receptive Music Therapy:} Individuals passively engage with music chosen or performed by the therapist. The focus is on the emotional and psychological responses evoked by the music, which can promote relaxation, stimulate emotions, and enhance cognitive engagement (Vink AC et al., 2004).
+\subsubsection{Receptive Music Therapy:} Individuals passively engage with music chosen or performed by the therapist. The focus is on the emotional and psychological responses evoked by the music, which can promote relaxation, stimulate emotions, and enhance cognitive engagement (Vink AC \emph{et al.}, 2004).
 
-\subsubsection{Active Music Therapy:} Individuals actively participate in musical activities like playing instruments, singing, or improvisation.  This approach fosters physical movement, social interaction, cognitive stimulation, creativity, and self-expression (Vink AC et al., 2004).
+\subsubsection{Active Music Therapy:} Individuals actively participate in musical activities like playing instruments, singing, or improvisation.  This approach fosters physical movement, social interaction, cognitive stimulation, creativity, and self-expression (Vink AC \emph{et al.}, 2004).
 
-Active music therapy offers a particularly promising avenue for improving cognitive function in individuals living with dementia. Research suggests that this direct participation activates brain regions involved in auditory processing, motor control, and emotional regulation (Bleibel et al., 2023). This multi-faceted stimulation may help preserve and strengthen neural pathways involved in memory, attention, language, and other essential cognitive processes impacted by dementia (Bleibel et al., 2023).  Furthermore, active music therapy often a sense of creative expression, further supporting cognitive health and well-being in those with dementia (Bleibel et al., 2023).
+Active music therapy offers a particularly promising avenue for improving cognitive function in individuals living with dementia. Research suggests that this direct participation activates brain regions involved in auditory processing, motor control, and emotional regulation (Bleibel \emph{et al.}, 2023). This multi-faceted stimulation may help preserve and strengthen neural pathways involved in memory, attention, language, and other essential cognitive processes impacted by dementia (Bleibel \emph{et al.}, 2023).  Furthermore, active music therapy often a sense of creative expression, further supporting cognitive health and well-being in those with dementia (Bleibel \emph{et al.}, 2023).
 
 \subsection{Cognitive Stimulation}
 This section explores the impact of dementia on cognitive function, and introduces strategies for cognitive stimulation, including traditional games and spatial puzzles.
 
 \subsubsection{Familiarity and Engagement in Traditional Games:}\label{sec:traditional_games}
-De Siqueira et al. (2017) discusses the advantages of utilising well-known traditional games in the development of games tailored for individuals with intellectual disabilities like Alzheimer's. Since many elderly individuals are likely familiar with the rules of these games, minimal introduction and assistance are required for them to be engaged (De Siqueira et al., 2017). Moreover, for those with Alzheimer's, playing these games can evoke memories of past experiences, such as playing as children or with grandchildren, thus facilitating a personalised approach that enhances engagement and motivation (De Siqueira et al., 2017). By incorporating personalisation, memory training games can be even more effective for Alzheimer's patients (Eichhorn et al., 2018). \newline
+De Siqueira \emph{et al.} (2017) discusses the advantages of utilising well-known traditional games in the development of games tailored for individuals with intellectual disabilities like Alzheimer's. Since many elderly individuals are likely familiar with the rules of these games, minimal introduction and assistance are required for them to be engaged (De Siqueira \emph{et al.}, 2017). Moreover, for those with Alzheimer's, playing these games can evoke memories of past experiences, such as playing as children or with grandchildren, thus facilitating a personalised approach that enhances engagement and motivation (De Siqueira \emph{et al.}, 2017). By incorporating personalisation, memory training games can be even more effective for Alzheimer's patients (Eichhorn \emph{et al.}, 2018). \newline
 
 
 \subsubsection{Traditional Sliding Puzzles in the Treatment of Dementia:}\label{sec:sliding_dementia}
 
-Sasaki et al. (2020) explored the use of sliding puzzle's in the treatment of dementia with their brain training application. This is where the user manipulates the panel within a single frame, utilising available space to organise it according to the desired arrangement (Sasaki et al., 2020). The act of sliding the puzzle pieces activates the frontal lobe, responsible for memory, as the user anticipates the direction in which the moving panels can be adjusted to achieve the desired order (Hirono et al., 1997). The user is required to alter the positions of the panels within the sliding block puzzle while retaining the original layout in memory (Sasaki et al., 2020).
+Sasaki \emph{et al.} (2020) explored the use of sliding puzzle's in the treatment of dementia with their brain training application. This is where the user manipulates the panel within a single frame, utilising available space to organise it according to the desired arrangement (Sasaki \emph{et al.}, 2020). The act of sliding the puzzle pieces activates the frontal lobe, responsible for memory, as the user anticipates the direction in which the moving panels can be adjusted to achieve the desired order (Hirono \emph{et al.}, 1997). The user is required to alter the positions of the panels within the sliding block puzzle while retaining the original layout in memory (Sasaki \emph{et al.}, 2020).
 
-The spatial recognition capacity of the frontal lobe is engaged as the user formulates the steps necessary to reach the correct solution by comprehending the panel positions (Hirono et al., 1997). Completing the puzzle requires players to retain memory, arrange figures, and comprehend spatial relationships. This combination of cognitive skills may have the potential to slow dementia progression, as suggested by research from Sasaki et al. (2020). \newline
+The spatial recognition capacity of the frontal lobe is engaged as the user formulates the steps necessary to reach the correct solution by comprehending the panel positions (Hirono \emph{et al.}, 1997). Completing the puzzle requires players to retain memory, arrange figures, and comprehend spatial relationships. This combination of cognitive skills may have the potential to slow dementia progression, as suggested by research from Sasaki \emph{et al.} (2020). \newline
 
 
 \subsubsection{Auditory and Spatial Games:}
@@ -265,7 +249,7 @@ Formation of new neural connections: By engaging in novel tasks that challenge a
 
 Strengthening existing connections: Park and Bischof (2013) also discuss how repeatedly playing these games can reinforce the neural connections used for processing sounds and navigating spatial environments. This reinforcement, as they explain helps maintain the health and efficiency of these connections, potentially slowing their decline in dementia.
 
-Improved cognitive function in key areas: Studies by Boggio et al. (2011) suggest that stimulating cognitive function can improve spatial awareness and memory in dementia patients. Games that target these areas directly can provide targeted training and potentially enhance these critical cognitive skills (Park and Bischof, 2013).
+Improved cognitive function in key areas: Studies by Boggio \emph{et al.} (2011) suggest that stimulating cognitive function can improve spatial awareness and memory in dementia patients. Games that target these areas directly can provide targeted training and potentially enhance these critical cognitive skills (Park and Bischof, 2013).
 
 \section{Designing for Dementia}
 This section explores design choices within HarmonyScape that are specifically tailored to create a positive and supportive experience for individuals with dementia. We'll examine how sounds, visual cues, and gameplay perspectives are considered to address the unique needs and challenges of this user group.
@@ -275,17 +259,17 @@ Research by Shirsat, Jha and Verma (2023) highlights the negative effects that d
 
 Sudden, loud, or jarring noises are especially likely to trigger a negative response, disrupting concentration, increasing anxiety, and contributing to behavioural problems (Shirsat, Jha and Verma, 2023). Even background noise can become overwhelming and disorienting for someone with dementia if it includes loud or jarring noises (Shirsat, Jha and Verma, 2023).
 
-Understanding this impact is crucial in making HarmonyScape a supportive tool for individuals living with dementia. Minimising unnecessary noise, designing spaces with good acoustics, and using soothing sounds like calming music will be essential for promoting comfort and reducing distress for individuals with dementia as they explore the game (Caspar et al., 2017).
+Understanding this impact is crucial in making HarmonyScape a supportive tool for individuals living with dementia. Minimising unnecessary noise, designing spaces with good acoustics, and using soothing sounds like calming music will be essential for promoting comfort and reducing distress for individuals with dementia as they explore the game (Caspar \emph{et al.}, 2017).
 
 \subsection{Progress Tracking in Supporting Players with Dementia}\label{sec:progress_tracking}
-Players with dementia often experience short-term memory challenges, making it difficult to recall previous actions or retain  information within a gameplay session. A progress tracker can be particularly helpful for this group, as it provides a visual and tangible representation of their achievements. Studies suggest that external memory aids, such as visual representations of progress, can support memory function in individuals with dementia (Bourgeois et al., 2003). Seeing progress reinforces a sense of accomplishment and  provides a clear marker of progress within the game. This, in turn, could enhance motivation and engagement for players living with dementia as they progress through HarmonyScape, potentially leading to improved well-being (Orrell et al., 2017). Furthermore, elements like progress trackers can tap into this concept of positive reinforcement, promoting enjoyment within computerised activities (Vermeir et al., 2020).
+Players with dementia often experience short-term memory challenges, making it difficult to recall previous actions or retain  information within a gameplay session. A progress tracker can be particularly helpful for this group, as it provides a visual and tangible representation of their achievements. Studies suggest that external memory aids, such as visual representations of progress, can support memory function in individuals with dementia (Bourgeois \emph{et al.}, 2003). Seeing progress reinforces a sense of accomplishment and  provides a clear marker of progress within the game. This, in turn, could enhance motivation and engagement for players living with dementia as they progress through HarmonyScape, potentially leading to improved well-being (Orrell \emph{et al.}, 2017). Furthermore, elements like progress trackers can tap into this concept of positive reinforcement, promoting enjoyment within computerised activities (Vermeir \emph{et al.}, 2020).
 
 \subsection{Third-Person Perspective in Dementia-Focused Game Design}\label{sec:third_person}
 There are a couple of compelling reasons to consider a third-person perspective in games designed for those with dementia
 
-Firstly, simulation sickness, a form of motion sickness induced by virtual environments, is a common issue in gaming, particularly within first-person perspectives (Hancock et al., 2008). This mismatch between visual cues of movement and a lack of corresponding physical motion can lead to nausea, disorientation, and headaches (Hancock et al., 2008). Individuals with cognitive decline may be especially susceptible to simulation sickness due to a decline in spatial awareness (Li et al., 2024). This difficulty in understanding their position in relation to the virtual environment can exacerbate feelings of disorientation, dizziness, and nausea that are common with simulation sickness (Lin et al., 2002). A study by Lin et al. (2002) demonstrated that a third-person perspective offers a potential solution, with individuals experiencing significantly fewer symptoms of simulator sickness when navigating a virtual environment from this viewpoint. By creating visual distance between the player and the character's movement, a third-person perspective lessens the sensory conflict that contributes to simulation sickness (Lin et al., 2002).
+Firstly, simulation sickness, a form of motion sickness induced by virtual environments, is a common issue in gaming, particularly within first-person perspectives (Hancock \emph{et al.}, 2008). This mismatch between visual cues of movement and a lack of corresponding physical motion can lead to nausea, disorientation, and headaches (Hancock \emph{et al.}, 2008). Individuals with cognitive decline may be especially susceptible to simulation sickness due to a decline in spatial awareness (Li \emph{et al.}, 2024). This difficulty in understanding their position in relation to the virtual environment can exacerbate feelings of disorientation, dizziness, and nausea that are common with simulation sickness (Lin \emph{et al.}, 2002). A study by Lin \emph{et al.} (2002) demonstrated that a third-person perspective offers a potential solution, with individuals experiencing significantly fewer symptoms of simulator sickness when navigating a virtual environment from this viewpoint. By creating visual distance between the player and the character's movement, a third-person perspective lessens the sensory conflict that contributes to simulation sickness (Lin \emph{et al.}, 2002).
 
-Secondly, a third-person perspective in video games significantly enhances situational awareness. This expanded viewpoint offers a greater field of view, enabling the player to simultaneously observe their character and a larger portion of the virtual environment (Denisova \& Cairns, 2015). This increased visual overview could be helpful in mitigating spatial disorientation and confusion (Denisova \& Cairns, 2015), which are common challenges in those with dementia (Li et al., 2024). The ability to see the player-controlled character within the context of the game world may provide a more stable reference point (Denisova \& Cairns, 2015), potentially aiding spatial understanding and awareness within the game.
+Secondly, a third-person perspective in video games significantly enhances situational awareness. This expanded viewpoint offers a greater field of view, enabling the player to simultaneously observe their character and a larger portion of the virtual environment (Denisova and Cairns, 2015). This increased visual overview could be helpful in mitigating spatial disorientation and confusion (Denisova and Cairns, 2015), which are common challenges in those with dementia (Li \emph{et al.}, 2024). The ability to see the player-controlled character within the context of the game world may provide a more stable reference point (Denisova and Cairns, 2015), potentially aiding spatial understanding and awareness within the game.
 
 
 % \section{Related Works}
@@ -307,13 +291,13 @@ Secondly, a third-person perspective in video games significantly enhances situa
 
 % Although AARP Staying Sharp has great potential in helping individuals maintain cognitive function through its variety of brain-training games and activities, a key downfall is the sole use of uni-sensory stimulation, and so is missing out on the range of potential benefits shown from multisensory treatment in those with neurodegenerative diseases, such as Alzheimer's.
 
-% Sánchez et al. (2016) discuss these potential positive effects in comparison to uni-sensory experiences in the treatment of people with severe dementia. Specifically, they discuss the beneficial impact on anxiety symptoms that comes from stimulating different senses which allows for greater sensory environment control. HarmonyScape aims to capitalise on the principles outlined by Sánchez et al. (2016), offering multisensory engagement that intertwines visual and auditory stimuli.
+% Sánchez \emph{et al.} (2016) discuss these potential positive effects in comparison to uni-sensory experiences in the treatment of people with severe dementia. Specifically, they discuss the beneficial impact on anxiety symptoms that comes from stimulating different senses which allows for greater sensory environment control. HarmonyScape aims to capitalise on the principles outlined by Sánchez \emph{et al.} (2016), offering multisensory engagement that intertwines visual and auditory stimuli.
 
 
 %==================================================================================================================================
 \chapter{Requirements}
 
-This chapter dives into the specific requirements HarmonyScape needs to meet to effectively achieve the goals outlined in Chapter 1. These requirements leverage and build upon the research and relevant concepts explored in Chapter 2, ensuring the game aligns with established best practices. These requirements will be reffered to throughout the rest of the dissertation by their ID's such as 'FR-1'.
+This chapter dives into the specific requirements HarmonyScape needs to meet to effectively achieve the goals outlined in Chapter 1. These requirements leverage and build upon the research and relevant concepts explored in Chapter 2, ensuring the game aligns with established best practices. These requirements will be reffered to throughout the rest of the dissertation by their ID's such as "FR-1".
 
 \section{Functional Requirements}
 This section presents the functional requirements for HarmonyScape, informed by the research in Chapter 2. The MoSCow method prioritises these requirements, categorising them based on their necessity to achieving the evaluation goals: some are essential for core functionality (Must Haves), while others significantly enhance the user experience (Should Haves), and some are desirable for future iterations (Could Haves).
@@ -339,15 +323,15 @@ This section presents the functional requirements for HarmonyScape, informed by 
 
 FR-1 & Must Have & \textbf{Interactive Music:} HarmonyScape's music must be interactive, dynamically responding to the player's movements. This aligns with Active Music Theory (Vink AC \emph{et al.,} 2004), where the players active participation directly affects the games soundscape. The aim of this feature is to encourage a sense of control and creative exploration through allowing players to influence the musical composition. Whilst also facilitating cognitive stimulation through providing opportunity for players to solve problems or puzzles through musical interaction. \\ 
 \hline
-FR-2 & Must Have & \textbf{Multisensory Experience:} HarmonyScape must incorporate a multisensory experience, specifically through the use of visual and auditory stimuli. This aligns with research by Sánchez et al. (2016) suggesting that stimulating multiple senses can benefit individuals living with dementia who are experiencing anxiety symptoms. This should empower players to exercise greater control over their sensory environment, potentially mitigating anxiety symptoms associated with dementia (Sánchez et al., 2016). \\
+FR-2 & Must Have & \textbf{Multisensory Experience:} HarmonyScape must incorporate a multisensory experience, specifically through the use of visual and auditory stimuli. This aligns with research by Sánchez \emph{et al.} (2016) suggesting that stimulating multiple senses can benefit individuals living with dementia who are experiencing anxiety symptoms. This should empower players to exercise greater control over their sensory environment, potentially mitigating anxiety symptoms associated with dementia (Sánchez \emph{et al.}, 2016). \\
 \hline 
-FR-3 & Must Have & \textbf{Gentle Audio Design:} The integration of new instruments is intended to be implemented into the game's soundscape, based on player input, to further develop the concept of interactive music within the game. The following chapter, "Design," explores this concept further. Research by Shirsat, Jha and Verma (2023) shows that jarring or disorienting changes in tone can exacerbate anxiety and confusion in individuals with dementia. Therefore, HarmonyScape should prioritises a calm and predictable soundscape. Familiar and consistent music plays a vital role in promoting a sense of security and reducing potential disorientation for people with dementia (Caspar et al., 2017). The gentle melody should serve as a constant anchor, allowing players to focus on the game-play without auditory distractions.  \\ 
+FR-3 & Must Have & \textbf{Gentle Audio Design:} The integration of new instruments is intended to be implemented into the game's soundscape, based on player input, to further develop the concept of interactive music within the game. The following chapter, "Design," explores this concept further. Research by Shirsat, Jha and Verma (2023) shows that jarring or disorienting changes in tone can exacerbate anxiety and confusion in individuals with dementia. Therefore, HarmonyScape should prioritises a calm and predictable soundscape. Familiar and consistent music plays a vital role in promoting a sense of security and reducing potential disorientation for people with dementia (Caspar \emph{et al.}, 2017). The gentle melody should serve as a constant anchor, allowing players to focus on the game-play without auditory distractions.  \\ 
 \hline
-FR-4 & Should Have & \textbf{Progress Tracker:} HarmonyScape should include a progress tracker within the user interface. This tracker's purpose is to provide clear and consistent visual feedback on instrument collection throughout game-play. This tracker should utilise a simple and clear visual representation, such as colour-filling elements, to provide immediate feedback on instrument collection. Players with dementia often experience short-term memory challenges. A progress tracker could be particularly helpful for this group. Seeing progress can reinforce a sense of accomplishment and provides a clear marker of progress within the game (Bourgeois et al., 2003). This, in turn, could enhance motivation and engagement for players living with dementia as they progress through HarmonyScape. \\ 
+FR-4 & Should Have & \textbf{Progress Tracker:} HarmonyScape should include a progress tracker within the user interface. This tracker's purpose is to provide clear and consistent visual feedback on instrument collection throughout game-play. This tracker should utilise a simple and clear visual representation, such as colour-filling elements, to provide immediate feedback on instrument collection. Players with dementia often experience short-term memory challenges. A progress tracker could be particularly helpful for this group. Seeing progress can reinforce a sense of accomplishment and provides a clear marker of progress within the game (Bourgeois \emph{et al.}, 2003). This, in turn, could enhance motivation and engagement for players living with dementia as they progress through HarmonyScape. \\ 
 \hline
-FR-5 & Could Have & \textbf{Incorporation of reminiscence therapy:} HarmonyScape could be enhanced through the integration of reminiscence therapy elements. This could involve the use of familiar music to evoke positive memories and emotional well-being (Bhar \& Sunil, 2014). Offering players the option to select personally meaningful songs could trigger positive memories associated with the music, potentially expanding HarmonyScape's therapeutic benefits (Cuevas et al., 2020). \\ 
+FR-5 & Could Have & \textbf{Incorporation of reminiscence therapy:} HarmonyScape could be enhanced through the integration of reminiscence therapy elements. This could involve the use of familiar music to evoke positive memories and emotional well-being (Bhar and Sunil, 2014). Offering players the option to select personally meaningful songs could trigger positive memories associated with the music, potentially expanding HarmonyScape's therapeutic benefits (Cuevas \emph{et al.}, 2020). \\ 
 \hline
-FR-6 & Could Have & \textbf{Familiar Menu Structure:} HarmonyScape should employ classic game menu structures to minimise the learning curve for users. This approach aligns with the findings of De Siqueira et al. (2017), where familiarity with traditional game elements proved beneficial for individuals with cognitive decline. By utilising established patterns, users can rely on prior knowledge, reducing the need for new instruction and potentially evoking positive memories associated with gaming experiences. \\
+FR-6 & Could Have & \textbf{Familiar Menu Structure:} HarmonyScape should employ classic game menu structures to minimise the learning curve for users. This approach aligns with the findings of De Siqueira \emph{et al.} (2017), where familiarity with traditional game elements proved beneficial for individuals with cognitive decline. By utilising established patterns, users can rely on prior knowledge, reducing the need for new instruction and potentially evoking positive memories associated with gaming experiences. \\
 \end{longtable}
 
 \section{Non-functional Requirements}
@@ -375,7 +359,7 @@ HarmonyScape's non-functional requirements address broader aspects that contribu
 
 NFR-1 & Must Have & \textbf{Accessibility:} The project aims to ensure clear and concise instructions to support players with varying cognitive abilities. This can be achieved through visuals and audio cues that are simple and unambiguous, such as written instructions and contextual audio prompts. \\ 
 \hline
-NFR-2 & Should Have & \textbf{Visible Interaction:} Making it obvious that player input is affecting the game. For example, upon player input, subtle animations for the instruments themselves and their corresponding game-play. A brief visual flourish or change in appearance could provide immediate confirmation that the player's action has registered. This type of clear and consistent visual feedback can be particularly beneficial for players with dementia, as studies suggest it can improve engagement and reduce frustration in users with cognitive decline (Ballard et al., 2008). \\ 
+NFR-2 & Should Have & \textbf{Visible Interaction:} Making it obvious that player input is affecting the game. For example, upon player input, subtle animations for the instruments themselves and their corresponding game-play. A brief visual flourish or change in appearance could provide immediate confirmation that the player's action has registered. This type of clear and consistent visual feedback can be particularly beneficial for players with dementia, as studies suggest it can improve engagement and reduce frustration in users with cognitive decline (Ballard \emph{et al.}, 2008). \\ 
 \hline
 NFR-3 & Should Have & \textbf{Forgiving Mechanics:} HarmonyScape should implement forgiving gameplay mechanics that minimise the consequences of player errors or mistakes. This includes the ability to retry minigames without penalty, designed in a way to ensure there are no fail states. \\
 % \hline
@@ -502,9 +486,9 @@ While the terrain offers natural direction, HarmonyScape incorporates an additio
 This section describes the minigames within HarmonyScape and their design decisions, which prioritise accessibility (NFR-1). These minigames incorporate elements of familiar traditional games, music-based activities, active music theory, and spatial navigation challenges, all presented with clear visual and auditory cues to support players with varying cognitive abilities. These minigames are designed with forgiving mechanics (NFR-3), allowing players to retry without penalty and ensuring there are no fail states within the experience.
 
 \subsection{Card Matching}
-HarmonyScape incorporates a card matching minigame, building upon the principles of NFR-2 to emphasize clear visual feedback and a sense of interaction. This also leverages the concept of familiarity and engagement in traditional games discussed in Section \ref{sec:traditional_games}. In this game, players must uncover pairs of cards by physically interacting with them within the 3D environment and remembering their positions. This familiar mechanic aligns with the findings of De Siqueira et al. (2017) who highlight that familiarity with traditional games reduces the need for introduction and assistance, promoting engagement in patients with dementia.
+HarmonyScape incorporates a card matching minigame, building upon the principles of NFR-2 to emphasize clear visual feedback and a sense of interaction. This also leverages the concept of familiarity and engagement in traditional games discussed in Section \ref{sec:traditional_games}. In this game, players must uncover pairs of cards by physically interacting with them within the 3D environment and remembering their positions. This familiar mechanic aligns with the findings of De Siqueira \emph{et al.} (2017) who highlight that familiarity with traditional games reduces the need for introduction and assistance, promoting engagement in patients with dementia.
 
-Furthermore, playing a card matching game requires attention, and memory recall, which can help stimulate cognitive function in individuals with dementia (Eichhorn et al., 2018). The game directly targets memory skills by challenging players to remember the location of matching pairs of cards, which Eichhorn et al. (2018) discuss as having the potential to improve short-term memory and concentration.
+Furthermore, playing a card matching game requires attention, and memory recall, which can help stimulate cognitive function in individuals with dementia (Eichhorn \emph{et al.}, 2018). The game directly targets memory skills by challenging players to remember the location of matching pairs of cards, which Eichhorn \emph{et al.} (2018) discuss as having the potential to improve short-term memory and concentration.
 
 % \begin{figure}[h]
 %     \centering
@@ -553,18 +537,18 @@ A sliding puzzle is a classic game comprising a grid of square or rectangular ti
         \label{fig:slide_completed}
     \end{subfigure}
     ~  
-    \caption{Screenshots from a brain training application developed by Sasaki et al. (2020), demonstrating the progression of a sliding puzzle. The left image shows the puzzle before manipulation, while the right image displays the puzzle after the tiles have been rearranged to form the correct image. This example illustrates the type of sliding puzzle mechanic that HarmonyScape will also incorporate.
+    \caption{Screenshots from a brain training application developed by Sasaki \emph{et al.} (2020), demonstrating the progression of a sliding puzzle. The left image shows the puzzle before manipulation, while the right image displays the puzzle after the tiles have been rearranged to form the correct image. This example illustrates the type of sliding puzzle mechanic that HarmonyScape will also incorporate.
     }\label{fig:sliding_puzzle}
 \end{figure}
 
-Similar to the traditional sliding block puzzle and the implementation by Sasaki et al. (2020) – as illustrated in Figures \ref{fig:slide_uncompleted} and \ref{fig:slide_completed} – HarmonyScape's version challenges the user to manipulate the panels within the frame to arrange tiles into the desired order. As discussed in Section \ref{sec:sliding_dementia}, this type of puzzle engages cognitive functions – including memory, spatial awareness, and figure arrangement – that may have the potential to slow the progression of dementia (Sasaki et al., 2020).
+Similar to the traditional sliding block puzzle and the implementation by Sasaki \emph{et al.} (2020) – as illustrated in Figures \ref{fig:slide_uncompleted} and \ref{fig:slide_completed} – HarmonyScape's version challenges the user to manipulate the panels within the frame to arrange tiles into the desired order. As discussed in Section \ref{sec:sliding_dementia}, this type of puzzle engages cognitive functions – including memory, spatial awareness, and figure arrangement – that may have the potential to slow the progression of dementia (Sasaki \emph{et al.}, 2020).
 
 It's also important to note that, to aid in solving the puzzle, a visual representation of its completed state will be provided within the player's field of view during the minigame. Providing a visual representation of the puzzle's solved state offers a crucial support mechanism for players with dementia, prioritising accessibility (NFR-1). This reference image can alleviate potential confusion or frustration that may arise from the puzzle's mechanics. By having a clear visual goal, players, particularly those who may experience difficulty with abstract problem-solving, can better understand the task at hand and form strategies to achieve the correct solution.  This design choice aims to create a more positive and inclusive gameplay experience.
 
 \subsection{Music Memory Games}
 To reinforce the game's multisensory design (FR-2), HarmonyScape incorporates visual and auditory feedback mechanisms within its minigames. One example is the music memory minigame. 
 
-The concept of memory games involving sequences of sounds can be traced back to various sources and inspirations. However, one notable origin of such games is the electronic game "Simon" which was invented by Ralph H. Baer and Howard J. Morrison in 1978 (Baer \& Morrison, 1980). As seen in Figure \ref{fig:simon}, "Simon" consists of four coloured buttons (green, red, blue, and yellow) that light up and produce unique sounds in a sequence (Baer \& Morrison, 1980). Players have to memorise the sequence and then repeat it back by pressing the corresponding buttons (Baer \& Morrison, 1980).
+The concept of memory games involving sequences of sounds can be traced back to various sources and inspirations. However, one notable origin of such games is the electronic game "Simon" which was invented by Ralph H. Baer and Howard J. Morrison in 1978 (Baer and Morrison, 1980). As seen in Figure \ref{fig:simon}, "Simon" consists of four coloured buttons (green, red, blue, and yellow) that light up and produce unique sounds in a sequence (Baer and Morrison, 1980). Players have to memorise the sequence and then repeat it back by pressing the corresponding buttons (Baer and Morrison, 1980).
 
 % \begin{figure}[h]
 %     \centering
@@ -595,13 +579,13 @@ The concept of memory games involving sequences of sounds can be traced back to 
   \label{fig:simon}  
 \end{figure}
 
-A systematic review conducted by Clare et al. (2003) examined the effectiveness of cognitive interventions in dementia care. The review found evidence supporting the beneficial effects of cognitive stimulation interventions on various aspects of cognitive function, including attention and concentration. Activities such as "Simon" which necessitate both selective attention to focus on specific elements and sustained attention to accurately remember and reproduce sequences, have been identified as potentially beneficial interventions for addressing the attention impairments associated with dementia, as discussed in Section \ref{sec:attention} (Clare et al., 2003).
+A systematic review conducted by Clare \emph{et al.} (2003) examined the effectiveness of cognitive interventions in dementia care. The review found evidence supporting the beneficial effects of cognitive stimulation interventions on various aspects of cognitive function, including attention and concentration. Activities such as "Simon" which necessitate both selective attention to focus on specific elements and sustained attention to accurately remember and reproduce sequences, have been identified as potentially beneficial interventions for addressing the attention impairments associated with dementia, as discussed in Section \ref{sec:attention} (Clare \emph{et al.}, 2003).
 
-These principles guided the design of a minigame within HarmonyScape. This minigame plays different guitar notes, requiring users to memorise the order and replicate it. Players engage with visual 'blocks' that represent unique notes, allowing them to reproduce the sequence by remembering the note order and interacting with the corresponding blocks.
+These principles guided the design of a minigame within HarmonyScape. This minigame plays different guitar notes, requiring users to memorise the order and replicate it. Players engage with visual "blocks" that represent unique notes, allowing them to reproduce the sequence by remembering the note order and interacting with the corresponding blocks.
 
 To provide clear feedback that a note has been played, the Note Block will temporarily disappear from view. It will reappear after a short delay that matches the length of the note. This combination of visual and auditory cues reinforces the multisensory experience (FR-2).
 
-The minigame's design aligns with principles of active music therapy, as detailed in Section \ref{sec:music_therapy}, where individuals engage in the process of music-making (Vink AC et al. 2004).  While the minigame isn't a therapeutic intervention in itself, it mirrors the active participation, cognitive stimulation, and sense of agency that are foundational to active music therapy approaches.
+The minigame's design aligns with principles of active music therapy, as detailed in Section \ref{sec:music_therapy}, where individuals engage in the process of music-making (Vink AC \emph{et al.} 2004).  While the minigame isn't a therapeutic intervention in itself, it mirrors the active participation, cognitive stimulation, and sense of agency that are foundational to active music therapy approaches.
 
 \subsection{Follow The Sound}
 Games that utilise the "follow the sound" mechanic offer a unique opportunity to engage cognitive function and leverage neuroplasticity. In these games, players must navigate an environment by focusing on auditory cues, usually with the goal of locating the source of a sound. This type of gameplay directly stimulates spatial awareness and auditory processing.
@@ -741,16 +725,16 @@ To streamline development and enhance HarmonyScape's visuals, external libraries
 Before implementing player interactivity, minigames, or the dynamic music system, we needed to create a player-controlled character, a terrain for the character to explore and interact with, and establish a third-person camera perspective.
 
 \subsection{Player-Controlled Character}\label{sec:player_script}
-The character, originally a capsule, was brought in with an attached "Player Control" script, that had basic input, jump and rotation handling.
+The character, originally a capsule, was brought in with an attached 'Player Control' script, that had basic input, jump and rotation handling.
 
 \subsubsection{HandleInput():}
 The HandleInput() function, within the "Player Movement Script", is responsible for gathering player input and translating it into a desired movement direction. It retrieves horizontal and vertical axis values from Unity's Input system, which correspond to the commonly used WASD and arrow keys on a keyboard, either can be used depending on player preference. Using these familiar controls promotes ease of use and minimises the learning curve for players, as discussed in Section \ref{sec:move_&_control}. These input values are used to construct a 3D vector (movement direction) that captures the direction the player wants to move. The magnitude of this vector is calculated and clamped between 0 and 1, ensuring that movement speed remains consistent regardless of direction. Finally, the function returns this calculated movement direction, ready to be used by the MoveAndRotatePlayer() function.
 
 \subsubsection{HandleJumping():}
-The HandleJumping() function, within the "Player Movement Script", manages all logic related to the player's jumping ability. It first checks if the character is grounded, meaning the player is currently touching the floor. If so, it records the current time as 'lastGroundedTime'. The function listens for the "Jump" button press (the space-bar). If pressed, the jump button pressed time is recorded. It then manages a short grace period after leaving the ground, allowing the player to jump even if they didn't press the button the exact moment they left the ground. During this grace period, it adjusts the character's step offset and sets the vertical speed (ySpeed) to initiate the jump.
+The HandleJumping() function, within the "Player Movement Script", manages all logic related to the player's jumping ability. It first checks if the character is grounded, meaning the player is currently touching the floor. If so, it records the current time as "lastGroundedTime". The function listens for the "Jump" button press (the space-bar). If pressed, the jump button pressed time is recorded. It then manages a short grace period after leaving the ground, allowing the player to jump even if they didn't press the button the exact moment they left the ground. During this grace period, it adjusts the character's step offset and sets the vertical speed (ySpeed) to initiate the jump.
 
 \subsubsection{MoveAndRotatePlayer():}
-The MoveAndRotatePlayer() function, within the "Player Movement Script", takes the calculated movement direction and handles the core tasks of physically moving the player and smoothly rotating them to face their movement direction. It first creates a velocity vector by multiplying the movement direction with the player's current speed. The vertical component of this velocity (velocity.y) is set to the ySpeed variable, which is influenced by gravity and jumping. The 'CharacterController.Move()' function is then called to apply this velocity, updating the player's position. Finally, if the player is moving, the function calculates a target rotation based on movement direction and smoothly rotates the player object towards that target.
+The MoveAndRotatePlayer() function, within the "Player Movement Script", takes the calculated movement direction and handles the core tasks of physically moving the player and smoothly rotating them to face their movement direction. It first creates a velocity vector by multiplying the movement direction with the player's current speed. The vertical component of this velocity (velocity.y) is set to the ySpeed variable, which is influenced by gravity and jumping. The "CharacterController.Move()" function is then called to apply this velocity, updating the player's position. Finally, if the player is moving, the function calculates a target rotation based on movement direction and smoothly rotates the player object towards that target.
 
 \subsection{Terrain}
 HarmonyScape's terrain was crafted utilising Unity's built-in terrain editor. The raise/lower tools were employed to sculpt hills and valleys, while the paint texture tool was used to apply the various textures present throughout the island environment.  Additionally, the snow effect was achieved through the use of Unity's integrated particle system editor.
@@ -783,11 +767,11 @@ This is achieved through a dedicated "CameraController" script attached to the m
 The player may choose to exit the catchment area before a minigame is completed if they wish to explore or attempt a different minigame. Upon exiting the minigame's catchment area, the trigger script signals the "CameraController" to reset the camera. This re-enables the Cinemachine camera, transitioning back to the free look camera used for regular exploration. Additionally, successful completion of the minigame will also disable the catchment area and reset the camera.
 
     
-\subsubsection{How this helps the player:}
+\subsubsection{Player Experience:}
 This fixed camera system offers several benefits for players, particularly those who may have difficulty with complex visual scenes or spatial awareness. It provides a focused view of the minigame area, reducing visual distractions, and ensures players have a clear understanding of the minigame's layout and objectives. This simplifies the gameplay experience, allowing players to concentrate on the minigame's core mechanics.
 
 \subsection{Music Memory}
-Completing the Music Memory minigame unlocks the Guitar part of the game's soundscape. At the core of the minigame are the interactive "Note Blocks." Each Note Block is a trigger zone within the game world, and they are equipped with a NotePlayer script. This script is responsible for several key functions.
+Completing the Music Memory minigame unlocks the Guitar part of the game's soundscape. At the core of the minigame are the interactive "Note Blocks". Each Note Block is a trigger zone within the game world, and they are equipped with a NotePlayer script. This script is responsible for several key functions.
 \newline
 
 \textbf{NotePlayer Script} \newline
@@ -823,15 +807,15 @@ This script tracks the correct sequence of notes for the minigame and the player
 
 During initialisation, the Guitar Game Master script prepares the minigame area by making the Note Blocks visible and enabling their colliders. To ensure the player can focus on memorising the sequence, their movement is temporarily restricted. 
 
-\subsubsection{PlaySong():} The PlaySong() function plays the correct sequence of notes for the player to memorise. Visual cues in the form of text changes (from "LISTEN" to "GO") signal when the player should listen for the sequence and then when they can start attempting the sequence.
+\subsubsection{PlaySong():} The PlaySong() function plays the correct sequence of notes for the player to memorise. Visual cues in the form of text changes (from “LISTEN” to “GO”) signal when the player should listen for the sequence and then when they can start attempting the sequence.
 
 \subsubsection{NotePlayed():} The NotePlayed() function is the core of progress tracking during the music memory minigame. When a Note Block's NotePlayer script informs it of a note being played, the GuitarGameMaster compares it to the expected note at the current point in the sequence. Correct notes advance the player's progress. An incorrect note will trigger the ResetGame() function, resetting the sequence back to the beginning. Successfully playing all notes in the correct order triggers the FinishGame() function, ending the game, removing other minigame elements, and making the guitar model available to be collected in the minigame area.
 
-If the player needs a reminder of the note order, they can re-enter the Start Block. This will reset the 'currentNoteIndex' and activate the PlaySong function, replaying the musical sequence. This design feature allows players to reinforce their memory of the sequence before proceeding with another attempt.
+If the player needs a reminder of the note order, they can re-enter the Start Block. This will reset the "currentNoteIndex" and activate the PlaySong function, replaying the musical sequence. This design feature allows players to reinforce their memory of the sequence before proceeding with another attempt.
 
 
 \subsection{Card Matching}
-Completing the Card Matching minigame unlocks the Triangle instrument in the game's soundscape. The cards are organised into pairs using a shared tag system (e.g., "Card\_A", "Card\_B"). To help with identification, cards within a pair are named with a letter and number combination (e.g., "A\_1" and "A\_2"). Figure \ref{fig:card_matching_overview} provides a visual representation of the initial layout of the Card Matching minigame, with all cards face-down.\newline
+Completing the Card Matching minigame unlocks the Triangle instrument in the game's soundscape. The cards are organised into pairs using a shared tag system (e.g.,"Card\_A", "Card\_B"). To help with identification, cards within a pair are named with a letter and number combination (e.g.,"A\_1" and "A\_2"). Figure \ref{fig:card_matching_overview} provides a visual representation of the initial layout of the Card Matching minigame, with all cards face-down.\newline
 
 \begin{figure}[h]
   \centering
@@ -847,7 +831,7 @@ Attached to each of the cards, the CardFlip script is responsible for managing t
 
 \subsubsection{FlipCard() and FlipBack():} The FlipCard() coroutine within the script handles the physical flipping animation of the card, simulating the action of flipping an actual card. It involves moving the card upwards, rotating it 180 degrees around the Z-axis, and then returning it to its original position. Importantly, the script communicates with the Triangle Game Master script via the FlipCard() function, informing the minigame's central logic system that a card has been flipped. There's also a FlipBack() coroutine to handle flipping the cards back to their original state if the game logic requires it.
 
-To prevent the player from interacting with multiple cards too quickly, both script's manage internal state using an 'isFlipping' flag. Additionally, they works in conjunction with the TriangleGameMaster script's 'IsProcessingMatch' flag to ensure the game logic processes card flips avoiding multiple cards being flipped at once.
+To prevent the player from interacting with multiple cards too quickly, both script's manage internal state using an "isFlipping" flag. Additionally, they works in conjunction with the TriangleGameMaster script's "IsProcessingMatch" flag to ensure the game logic processes card flips avoiding multiple cards being flipped at once.
 
 \textbf{TriangleGameMaster Script} \newline
 The Triangle Game Master script serves as the central script for managing the Card Matching minigame's logic, progression, and completion. It maintains a record of flipped cards and facilitates the primary matching logic. Upon the initiation of a card flip, the FlipCard() function verifies if the card has already been flipped. If it's a new flip, the card is added to a tracking list. When two cards have been flipped over, the CheckForMatch() function determines if their tags match, signifying a successful pair.
@@ -889,9 +873,9 @@ It is also important to note that the sliding puzzle platform incorporates invis
 \textbf{Teleportation Script} \newline
 The sliding puzzle presents a unique intellectual challenge, requiring careful analysis and strategic thinking. To optimise the player's focus and mitigate potential distractions from the snowy mountain environment, they are briefly teleported to a separate platform. This isolated space minimises visual interference, allowing the player to fully concentrate on solving the puzzle. Upon completion, the player will be returned to the mountain location to continue their journey.
 
-This teleportation functionality is managed by a dedicated script attached to a distinct blue box within the snowy mountain environment, as shown in Figure \ref{fig:teleportation}. This blue box visually contrasts with the snowy surroundings, providing a clear point of interaction for the player. When the player enters the trigger zone surrounding the blue box, the OnTriggerEnter() function is automatically called. The script then verifies if the entering object is the player. If confirmed, the script initiates the teleportation process, instantly moving the player to the designated puzzle platform. The 'teleportTarget' variable within the script holds a reference to the transform component of the destination platform, ensuring the player arrives at the location of the platform to begin solving the puzzle.
+This teleportation functionality is managed by a dedicated script attached to a distinct blue box within the snowy mountain environment, as shown in Figure \ref{fig:teleportation}. This blue box visually contrasts with the snowy surroundings, providing a clear point of interaction for the player. When the player enters the trigger zone surrounding the blue box, the OnTriggerEnter() function is automatically called. The script then verifies if the entering object is the player. If confirmed, the script initiates the teleportation process, instantly moving the player to the designated puzzle platform. The "teleportTarget" variable within the script holds a reference to the transform component of the destination platform, ensuring the player arrives at the location of the platform to begin solving the puzzle.
 
-\subsubsection{How this helps the player:} The isolated platform removes visual complexity from the snowy mountain, allowing players to devote their full attention to the puzzle. The dedicated space encourages focused problem-solving without the potential for environmental distractions. Additionally,  the brief teleportation adds a sense of transitioning into a focused mental space.
+\subsubsection{Player experience:} The isolated platform removes visual complexity from the snowy mountain, allowing players to devote their full attention to the puzzle. The dedicated space encourages focused problem-solving without the potential for environmental distractions. Additionally,  the brief teleportation adds a sense of transitioning into a focused mental space.
 
 \begin{figure}[h]
   \centering
@@ -903,10 +887,10 @@ This teleportation functionality is managed by a dedicated script attached to a 
 \textbf{CubeMovement Script} \newline
 The CubeMovement script is attached to each of the movable puzzle pieces within the sliding puzzle minigame. Its responsibility is managing the movement of these pieces and ensuring the fundamental rules of the puzzle are consistently upheld. The script includes an isMoving flag to prevent the player from attempting multiple moves simultaneously, to ensure the puzzle mechanics are smooth and predictable.
 
-\subsubsection{OnTriggerEnter(), CanMove() and MoveWithLerp():} The OnTriggerEnter() function is automatically triggered upon collision between a puzzle piece's collider and the player. The CanMove() function determines the validity of a move based on the sliding puzzle's rules. It verifies that the puzzle piece is directly adjacent to the empty space and confirms the absence of any obstructing puzzle pieces blocking its path. Finally, the MoveWithLerp() coroutine is responsible for the visual movement of the puzzle piece to the empty space's position. It leverages a function called 'Lerp()' for linear interpolation, resulting in an smooth transition of the puzzle piece from its original space to the empty space. This coroutine also updates the 'isMoving' flag to accurately manage the movement state of the puzzle piece.\newline
+\subsubsection{OnTriggerEnter(), CanMove() and MoveWithLerp():} The OnTriggerEnter() function is automatically triggered upon collision between a puzzle piece's collider and the player. The CanMove() function determines the validity of a move based on the sliding puzzle's rules. It verifies that the puzzle piece is directly adjacent to the empty space and confirms the absence of any obstructing puzzle pieces blocking its path. Finally, the MoveWithLerp() coroutine is responsible for the visual movement of the puzzle piece to the empty space's position. It leverages a function called "Lerp()" for linear interpolation, resulting in an smooth transition of the puzzle piece from its original space to the empty space. This coroutine also updates the "isMoving" flag to accurately manage the movement state of the puzzle piece.\newline
 
 \textbf{UkuleleGameMaster Script} \newline
-The UkuleleGameMaster script serves as the central script for managing the sliding puzzle minigame. It is attached to an empty game object that is the parent object of the sliding puzzle pieces. Its responsibility is to manage the logic, progress tracking, and win checking of the minigame. The script includes a cubes array that maintains references to all movable puzzle pieces. Additionally, the 'winPositions' array stores references to the designated target positions for each individual puzzle piece. The player must correctly position all puzzle pieces in these target positions to successfully complete the puzzle (see Figure \ref{fig:puzzle_incomplete}).
+The UkuleleGameMaster script serves as the central script for managing the sliding puzzle minigame. It is attached to an empty game object that is the parent object of the sliding puzzle pieces. Its responsibility is to manage the logic, progress tracking, and win checking of the minigame. The script includes a cubes array that maintains references to all movable puzzle pieces. Additionally, the "winPositions" array stores references to the designated target positions for each individual puzzle piece. The player must correctly position all puzzle pieces in these target positions to successfully complete the puzzle (see Figure \ref{fig:puzzle_incomplete}).
 
 \begin{figure}[h]
   \centering
@@ -915,7 +899,7 @@ The UkuleleGameMaster script serves as the central script for managing the slidi
   \label{fig:puzzle_incomplete} 
 \end{figure}
 
-\subsubsection{CheckWin():} The CheckWin() function determines these winning conditions. The function iterates through the cubes array, comparing the position of each puzzle piece to its corresponding target position stored within the 'winPositions' array. Should all pieces align with their designated targets, as shown in Figure \ref{fig:puzzle_complete}, the function returns true, signifying the puzzle as complete. Conversely, if a mismatch exists, the function returns false, signifying the puzzle as incomplete.
+\subsubsection{CheckWin():} The CheckWin() function determines these winning conditions. The function iterates through the cubes array, comparing the position of each puzzle piece to its corresponding target position stored within the "winPositions" array. Should all pieces align with their designated targets, as shown in Figure \ref{fig:puzzle_complete}, the function returns true, signifying the puzzle as complete. Conversely, if a mismatch exists, the function returns false, signifying the puzzle as incomplete.
 
 \begin{figure}[h]
   \centering
@@ -927,7 +911,7 @@ The UkuleleGameMaster script serves as the central script for managing the slidi
 \subsubsection{Update():} The Update() function is called automatically on each frame of gameplay. Its purpose is to continuously assess the win condition of the puzzle by employing the CheckWin() function. Upon successful completion of the puzzle, this triggers the activation of the Ukulele object, making it available for collection within the minigame area, and the resetting of the camera to its default position.
 
 \subsection{Follow The Sound}
-Upon completion of the "Follow the Sound of the Maracas" minigame, the Maracas instrument is added to the game's soundscape. This minigame is initiated by the player entering the minigames first model of a pair of maracas, triggering the "Load Maracas Minigame" script. This script displays the instruction "Follow the Sound of the Maracas" in the UI against a contrasting white background, and it activates an audio cue to guide the player. Progression through the minigame is governed by the 'Maracas Minigame Audio' script, which manages the sequential activation and deactivation of sound sources. This script also adjusts audio properties based on player proximity, providing the player navigation cues. Successful completion, initiated by interaction with the final pair of maracas, triggers the "End Maracas Minigame" script. This script removes the UI text and unlocks the "maracas" instrument to be collected.
+Upon completion of the "Follow the Sound of the Maracas" minigame, the Maracas instrument is added to the game's soundscape. This minigame is initiated by the player entering the minigames first model of a pair of maracas, triggering the "Load Maracas Minigame" script. This script displays the instruction "Follow the Sound of the Maracas" in the UI against a contrasting white background, and it activates an audio cue to guide the player. Progression through the minigame is governed by the "Maracas Minigame Audio" script, which manages the sequential activation and deactivation of sound sources. This script also adjusts audio properties based on player proximity, providing the player navigation cues. Successful completion, initiated by interaction with the final pair of maracas, triggers the "End Maracas Minigame" script. This script removes the UI text and unlocks the "maracas" instrument to be collected.
 \newline
 
 \textbf{Load Maracas Minigame Script} \newline
@@ -946,7 +930,7 @@ Finally, the script activates the "Maracas Minigame Audio" script, which control
 \newline
 
 \textbf{MaracasMinigameAudio Script} \newline
-The MaracasMinigameAudio script serves as the foundation of the progression through the 'Follow the Sound' minigame. This script manages several aspects of the audio experience to create the directional cues for the minigame gameplay. One of its primary functions is to dynamically control the volume of the audio source associated with each pair of maracas. It constantly calculates the distance between the player and the maracas, adjusting the maracas sound volume accordingly. As the player draws closer to a maracas pair, the sound intensifies, guiding them towards the source.
+The MaracasMinigameAudio script serves as the foundation of the progression through the "Follow the Sound" minigame. This script manages several aspects of the audio experience to create the directional cues for the minigame gameplay. One of its primary functions is to dynamically control the volume of the audio source associated with each pair of maracas. It constantly calculates the distance between the player and the maracas, adjusting the maracas sound volume accordingly. As the player draws closer to a maracas pair, the sound intensifies, guiding them towards the source.
 
 \begin{figure}[h]
  \centering
@@ -960,7 +944,7 @@ The script also controls the minigame's progression. It manages the activation a
 
 
 \textbf{EndMaracasMinigame Script} \newline
-After the player collects the last pair of maracas, this action initiates the EndMaracasMinigame script, signaling the successful completion of the 'Follow the Sound' minigame. This script's responsibility is to reverse the changes implemented by the LoadMaracasMinigame script, ensuring a smooth transition back to the primary game environment.
+After the player collects the last pair of maracas, this action initiates the EndMaracasMinigame script, signaling the successful completion of the "Follow the Sound" minigame. This script's responsibility is to reverse the changes implemented by the LoadMaracasMinigame script, ensuring a smooth transition back to the primary game environment.
 
 \subsubsection{UnmuteAudioSources() and EnableObjectRecursively():} The script starts by restoring the game's soundscape, calling the UnmuteAudioSources() function to re-enable previously muted audio sources. This reinstates the instrument tracks temporarily disabled during the minigame. Additionally, it calls EnableObjectRecursively() to reactivate all game objects initially disabled by the LoadMaracasMinigame script, including any associated child objects. Finally, it deactivates remaining "Follow The Sound" minigame elements. Specifically, the instructions are hidden and the maracas model is activated to be collected.
 
@@ -972,13 +956,13 @@ Each instrument within the game world is represented by a distinct corresponding
 
 When the player enters the trigger zone associated with an instrument model (detected by the OnTriggerEnter() method), the script provides visual feedback. The audio source is unmuted, initiating the addition of the instrument's corresponding audio track to the game's soundscape. Additionally, the script swaps between two images, transitioning the instrument's visual appearance in the UI from a black and white representation to its corresponding colour image. This change further signifies the instrument's collection. Finally, the script deactivates the instrument model's mesh renderer and the game object itself, removing it from the scene.
     
-\subsubsection{How this helps the player:}
+\subsubsection{Player experience:}
 The combination of audio and visual cues provides immediate feedback, confirming the player's success and their progress in unlocking the full composition. The dynamic change in the UI and the addition of the instrument track reinforces a sense of accomplishment and progress. Additionally, the seamless interaction with the model offers a clear and intuitive way to achieve a tangible in-game goal.
 
 \subsection{Audio Track Management}
 In HarmonyScape's dynamic music system, as previously discussed, each instrument has a corresponding audio track that plays continuously from the beginning. These audio sources are attached directly to the player-controlled character. This design choice ensures that the volume of each instrument track remains consistent, regardless of the player's location within the game world.  Additionally, by continuously playing the tracks from the start, the system guarantees each track's synchronisation with the other tracks within the dynamic soundscape. This design ensures the instrumental tracks remain in time with one another, ultimately recreating the original song played in its entirety when all instruments have been collected. Upon completion of a minigame and collection of the corresponding instrument model, the TriggerSFX script unmutes the associated audio track. This action integrates the new instrument into the game's evolving musical composition.
 
-\subsubsection{How this helps the player:}
+\subsubsection{Player experience:}
 The consistent volume and synchronisation implemented in the music system provide a seamless and predictable auditory experience, in-line with FR-3. This allows players to clearly identify which instruments they have collected and track their progress towards completing the full musical piece. The smooth evolution of the music as instruments are unlocked enhances immersion and reinforces a sense of accomplishment.
 
 \section{Dynamic Music Implementation}
@@ -987,16 +971,16 @@ The consistent volume and synchronisation implemented in the music system provid
 
 Within the Player Movement script (as detailed in Section \ref{sec:player_script}), we have meticulously implemented acceleration and deceleration mechanics to enhance the player's sense of agency and control within the game world. To achieve a natural and responsive feel for player movement, we engaged in a process of iterative refinement and experimentation.
     
-Several key variables govern the dynamics of the system. The 'maxSpeed' variable establishes an upper bound for the player's velocity. Modifying this value directly influences the overall pace of gameplay. The 'accelerationRate', calculated internally based on a target time to reach full speed, determines how swiftly the player attains their maximum velocity. Higher acceleration rates translate to a snappier sense of responsiveness, while lower rates create a more gradual build-up in speed. Conversely, the 'decelerationRate' variable dictates the rate at which the player's velocity decreases once directional input stops. A higher 'decelerationRate' yields a quicker halt, while a lower rate maintains a stronger sense of forward momentum.
+Several key variables govern the dynamics of the system. The "maxSpeed" variable establishes an upper bound for the player's velocity. Modifying this value directly influences the overall pace of gameplay. The "accelerationRate", calculated internally based on a target time to reach full speed, determines how swiftly the player attains their maximum velocity. Higher acceleration rates translate to a snappier sense of responsiveness, while lower rates create a more gradual build-up in speed. Conversely, the "decelerationRate" variable dictates the rate at which the player's velocity decreases once directional input stops. A higher "decelerationRate" yields a quicker halt, while a lower rate maintains a stronger sense of forward momentum.
     
-\subsubsection{ManageSpeed():} The core logic for this system resides within the ManageSpeed() function. This function leverages 'Input.GetAxis()' to detect player input from the WASD keys. Upon detecting movement input, the function initiates an acceleration phase.  If no player input is detected, the function applies a deceleration phase. Crucially, the 'Mathf.Clamp()' function is used to ensure the 'currentSpeed' variable remains within the range (between 0 and 'maxSpeed').
+\subsubsection{ManageSpeed():} The core logic for this system resides within the ManageSpeed() function. This function leverages "Input.GetAxis()" to detect player input from the WASD keys. Upon detecting movement input, the function initiates an acceleration phase.  If no player input is detected, the function applies a deceleration phase. Crucially, the "Mathf.Clamp()" function is used to ensure the "currentSpeed" variable remains within the range (between 0 and "maxSpeed").
     
-The precise calibration of the 'accelerationRate' and 'decelerationRate' variables was of up-most importance. Extensive play-testing informed our iterative adjustments to achieve the desired balance of responsiveness and a natural feeling of inertia within the player's movement. This careful refinement was essential to the foundation of HarmonyScape's innovative dynamic music system. In the following subsection, we'll explain how the 'currentSpeed' value, calculated through this system, dynamically modulates the tempo of the game's music, offering a uniquely engaging auditory experience aligned with player movement.
+The precise calibration of the "accelerationRate" and "decelerationRate" variables was of up-most importance. Extensive play-testing informed our iterative adjustments to achieve the desired balance of responsiveness and a natural feeling of inertia within the player's movement. This careful refinement was essential to the foundation of HarmonyScape's innovative dynamic music system. In the following subsection, we'll explain how the "currentSpeed" value, calculated through this system, dynamically modulates the tempo of the game's music, offering a uniquely engaging auditory experience aligned with player movement.
 
 \subsection{How the dynamic music based on movement was implemented} 
-Within the UpdateAudioTempo() function, a direct correlation exists between the player's 'currentSpeed' value and the manipulation of the game soundtrack's tempo. This 'currentSpeed' value, managed within the PlayMovement script, serves as the real-time input that drives the dynamic changes in music. The UpdateAudioTempo() function continuously monitors this value, providing the foundation for the tempo adjustments.
+Within the UpdateAudioTempo() function, a direct correlation exists between the player's "currentSpeed" value and the manipulation of the game soundtrack's tempo. This "currentSpeed" value, managed within the PlayMovement script, serves as the real-time input that drives the dynamic changes in music. The UpdateAudioTempo() function continuously monitors this value, providing the foundation for the tempo adjustments.
 
-The core mechanism within this function revolves around the manipulation of the pitch property on the 'AudioSource' components attached to each music track. Whilst Unity's terminology refers to this parameter as "pitch," it's important to note that this adjustment simultaneously affects both the pitch and tempo of the audio. Essentially, Unity achieves this by modifying the playback sampling rate in real-time. This process offers a low computational cost and minimal sound distortion. To achieve our dynamic tempo effect in HarmonyScape, we utilise a linear mapping between the player's 'currentSpeed' and the pitch of all audio tracks within the game. This means that as the player's speed increases, the pitch of the music systematically increases as well, resulting in a corresponding increase in the perceived tempo. Conversely, as the player's speed decreases, the pitch is lowered, slowing down the tempo.
+The core mechanism within this function revolves around the manipulation of the pitch property on the "AudioSource" components attached to each music track. Whilst Unity's terminology refers to this parameter as "pitch," it's important to note that this adjustment simultaneously affects both the pitch and tempo of the audio. Essentially, Unity achieves this by modifying the playback sampling rate in real-time. This process offers a low computational cost and minimal sound distortion. To achieve our dynamic tempo effect in HarmonyScape, we utilise a linear mapping between the player's "currentSpeed" and the pitch of all audio tracks within the game. This means that as the player's speed increases, the pitch of the music systematically increases as well, resulting in a corresponding increase in the perceived tempo. Conversely, as the player's speed decreases, the pitch is lowered, slowing down the tempo.
 
 The original music composition for HarmonyScape took into account the intended dynamic tempo range. The tracks were designed to sound pleasing and natural even when the pitch is shifted to achieve the minimum and maximum tempos. Additionally, during testing, we carefully monitored for any potential audio artifacts at extreme tempos. Where necessary, subtle adjustments were made to the audio processing pipeline to ensure a smooth listening experience throughout the full tempo range.
 
@@ -1009,16 +993,16 @@ tempo &= \text{Mathf.Lerp}(0.5f, 1.0f, smoothedSpeed / maxSpeed);
 In our implementation, 0.5f represents the minimum tempo (half the normal speed) and 1.0f represents the intended maximum tempo. This continuous adjustment of pitch, aligned with the player's movement, creates a system where the music feels intrinsically responsive to the player's actions, heightening the immersive experience.
 
 \textbf{Smoothing Tempo Transitions}\newline
-We utilise the 'Mathf.Lerp' function to interpolate pitch changes, ensuring smooth tempo transitions in the music. This prevents abrupt jumps that could disrupt the player's immersion. The 'Mathf.Lerp' function offers a computationally efficient way to smoothly adjust the audio source pitch, resulting in the corresponding change in tempo.
+We utilise the "Mathf.Lerp" function to interpolate pitch changes, ensuring smooth tempo transitions in the music. This prevents abrupt jumps that could disrupt the player's immersion. The "Mathf.Lerp" function offers a computationally efficient way to smoothly adjust the audio source pitch, resulting in the corresponding change in tempo.
 
 \textbf{Balancing Responsiveness with Smoothness}\newline
-To balance the need for a responsive feel with the avoidance of jarring audio artifacts, we adjust the interpolation parameters within the 'Mathf.Lerp' function. Before calculating the tempo, we introduce a smoothing process to the player's 'currentSpeed'. This is achieved using the following code:
+To balance the need for a responsive feel with the avoidance of jarring audio artifacts, we adjust the interpolation parameters within the "Mathf.Lerp" function. Before calculating the tempo, we introduce a smoothing process to the player's "currentSpeed". This is achieved using the following code:
 
 \begin{align*}
 smoothedSpeed &= \text{Mathf.Lerp}(smoothedSpeed, currentSpeed, 0.8f * Time.deltaTime);
 \end{align*}
 
-This line of code smooths out minor fluctuations in the player's speed, preventing the music's tempo from mirroring every tiny movement change. We then use the 'smoothedSpeed' value to calculate the tempo. This approach ensures smooth tempo transitions while maintaining a responsive feel.
+This line of code smooths out minor fluctuations in the player's speed, preventing the music's tempo from mirroring every tiny movement change. We then use the "smoothedSpeed" value to calculate the tempo. This approach ensures smooth tempo transitions while maintaining a responsive feel.
 
 % What did you do to implement this idea, and what technical achievements did you make?
 % \section{Guidance}
@@ -1285,7 +1269,7 @@ Additionally, participants were asked about their gaming experience. This aimed 
 
 \subsection{Gameplay Evaluation}
 
-To gain valuable insights into the potential user experience of HarmonyScape, we sought feedback from caregivers and professionals with extensive experience working with individuals living with dementia. While this study did not directly involve participants with dementia, these individuals possess a deep understanding of the unique challenges presented by the condition (Papachristou et al., 2016). By analysing their insights, we aimed to identify design elements that may be particularly beneficial or challenging for individuals with dementia (Papachristou et al., 2016).
+To gain valuable insights into the potential user experience of HarmonyScape, we sought feedback from caregivers and professionals with extensive experience working with individuals living with dementia. While this study did not directly involve participants with dementia, these individuals possess a deep understanding of the unique challenges presented by the condition (Papachristou \emph{et al.}, 2016). By analysing their insights, we aimed to identify design elements that may be particularly beneficial or challenging for individuals with dementia (Papachristou \emph{et al.}, 2016).
 
 Participants were given clear instructions to collect all instruments within the game. These instructions, along with visual cues and guidance built into HarmonyScape, were designed to enable participants to complete the game independently and without intervention. Actual instructions on the key-mapping of the controls of the game, as discussed previously, are also included in the game itself to ensure that there was no need for intervention. Participants were encouraged to evaluate any design aspects that might impact the overall experience for someone with dementia.
 
@@ -1381,7 +1365,7 @@ While the core design of the progress symbols was well-received, there's room to
 
 Participant 2 expressed enthusiasm for the potential of incorporating a feature allowing users to add their own music to HarmonyScape. They envisioned this feature as a powerful tool for triggering positive memories and emotions in individuals with dementia. Specifically, they suggested that familiar music from a user's past could facilitate reminiscence and provide opportunities to connect with loved ones through shared experiences.
 
-This feedback highlights the potential impact of personalised music choices within HarmonyScape and aligns with established reminiscence therapy techniques. Research demonstrates that familiar music can evoke positive memories and emotions in individuals with dementia, contributing to improved well-being (Bär \& Sunil 2014; Cuevas et al. 2020). Exploring the feasibility of such a feature could significantly enhance the therapeutic value of the game and create deeply meaningful experiences for individuals with dementia when playing through HarmonyScape.
+This feedback highlights the potential impact of personalised music choices within HarmonyScape and aligns with established reminiscence therapy techniques. Research demonstrates that familiar music can evoke positive memories and emotions in individuals with dementia, contributing to improved well-being (Bär and Sunil 2014; Cuevas \emph{et al.} 2020). Exploring the feasibility of such a feature could significantly enhance the therapeutic value of the game and create deeply meaningful experiences for individuals with dementia when playing through HarmonyScape.
 \newline
 
 \textbf{Musical Notes as Effective Guidance}
@@ -1397,7 +1381,7 @@ Despite the helpful musical notes, a common theme in the feedback was a sense of
 
 Participants proposed various solutions to improve navigation. \emph{“Mini-map in the bottom of the screen or a full map upon pausing would make it easier to understand where you are in the world”}, suggests Participant 1. Others advocated for visual signposting of paths or an arrow pointing towards the next objective: \emph{“I think the paths without signposting may end up being confusing and frustrating... Using colours to help signpost when paths have been crossed will help the game become more simple”} (Participant 9).
 
-The feedback strongly suggests that incorporating navigational aids is crucial for minimising frustration and confusion, particularly for users with dementia who might be more prone to disorientation, as displayed by Lin et al. (2002). Implementing one or more of the proposed solutions could significantly improve the user experience and ensure HarmonyScape remains an enjoyable and accessible experience for those with dementia. As discussed previously, studies have shown that these types of navigational aids can be particularly beneficial for individuals with dementia (Boggio et al., 2011).
+The feedback strongly suggests that incorporating navigational aids is crucial for minimising frustration and confusion, particularly for users with dementia who might be more prone to disorientation, as displayed by Lin \emph{et al.} (2002). Implementing one or more of the proposed solutions could significantly improve the user experience and ensure HarmonyScape remains an enjoyable and accessible experience for those with dementia. As discussed previously, studies have shown that these types of navigational aids can be particularly beneficial for individuals with dementia (Boggio \emph{et al.}, 2011).
 \newline
 
 \textbf{Visually Appealing Environment}
@@ -1418,9 +1402,9 @@ HarmonyScape appears to successfully foster intrinsic motivation through its min
 
 \textbf{Dynamic Music}
 
-Participants expressed enthusiasm for HarmonyScape's unique dynamic soundtrack, where collecting instruments gradually builds the music.  This evolving soundscape was not only enjoyable but highly rated for pleasantness (see Figure \ref{fig:pleasentness}). Many found it motivating and rewarding. Participant 7 said, "It was very satisfying to hear a new instrument added to the music each time I found one!". Several participants noted a sense of active involvement in music creation. Participant 3 described, "It made me feel like I was actually making the music, not just listening to it. That gave me a sense of creative control".
+Participants expressed enthusiasm for HarmonyScape's unique dynamic soundtrack, where collecting instruments gradually builds the music.  This evolving soundscape was not only enjoyable but highly rated for pleasantness (see Figure \ref{fig:pleasentness}). Many found it motivating and rewarding. Participant 7 said, “It was very satisfying to hear a new instrument added to the music each time I found one!”. Several participants noted a sense of active involvement in music creation. Participant 3 described, “It made me feel like I was actually making the music, not just listening to it. That gave me a sense of creative control”.
 
-This feedback suggests that active, dynamic music elements can offer a sense of creative control for players. This may be particularly beneficial for individuals with dementia, as research indicates that maintaining a sense of agency and creative expression can positively impact well-being for those living with dementia (Sánchez et al., 2016).
+This feedback suggests that active, dynamic music elements can offer a sense of creative control for players. This may be particularly beneficial for individuals with dementia, as research indicates that maintaining a sense of agency and creative expression can positively impact well-being for those living with dementia (Sánchez \emph{et al.}, 2016).
 
 
 
@@ -1494,7 +1478,7 @@ This project explored the design and implementation of HarmonyScape, an interact
     \item Evaluate the HarmonyScape project as a means of captivating users and potentially aiding cognitive well-being. 
 \end{itemize}
 
-HarmonyScape displayed moderate success in addressing these aims. The engaging minigames and gradual revelation of the dynamic soundtrack fostered intrinsic motivation and encouraged exploration. Additionally, the project's interactive and responsive music elements align with active music therapy approaches, and participant feedback indicated this feature could positively impact mood and agitation for those with dementia, supported by prior research (Sánchez et al., 2016).
+HarmonyScape displayed moderate success in addressing these aims. The engaging minigames and gradual revelation of the dynamic soundtrack fostered intrinsic motivation and encouraged exploration. Additionally, the project's interactive and responsive music elements align with active music therapy approaches, and participant feedback indicated this feature could positively impact mood and agitation for those with dementia, supported by prior research (Sánchez \emph{et al.}, 2016).
 
 While several design elements were well-received, the evaluation revealed areas for improvement in accessibility and usability. To create a truly optimal experience, particularly for those with dementia, future iterations must refine camera controls, navigation, and the clarity of instructions.
 
@@ -1519,33 +1503,33 @@ To significantly extend HarmonyScape's value, consider the following approaches.
 
 \chapter{Appendices}
 
-Typical inclusions in the appendices are:
+% Typical inclusions in the appendices are:
 
-\begin{itemize}
-\item
-  Copies of ethics approvals (required if obtained)
-\item
-  Copies of questionnaires etc. used to gather data from subjects.
-\item
-  Extensive tables or figures that are too bulky to fit in the main body of
-  the report, particularly ones that are repetitive and summarised in the body.
+% \begin{itemize}
+% \item
+%   Copies of ethics approvals (required if obtained)
+% \item
+%   Copies of questionnaires etc. used to gather data from subjects.
+% \item
+%   Extensive tables or figures that are too bulky to fit in the main body of
+%   the report, particularly ones that are repetitive and summarised in the body.
 
-\item Outline of the source code (e.g. directory structure), or other architecture documentation like class diagrams.
+% \item Outline of the source code (e.g. directory structure), or other architecture documentation like class diagrams.
 
-\item User manuals, and any guides to starting/running the software.
+% \item User manuals, and any guides to starting/running the software.
 
-\end{itemize}
+% \end{itemize}
 
-\textbf{Don't include your source code in the appendices}. It will be
-submitted separately.
+% \textbf{Don't include your source code in the appendices}. It will be
+% submitted separately.
 
 
-\begin{figure}[h]
- \centering
- \includegraphics[width=0.7\linewidth]{dissertation/images/Pleasentness.png} 
- \caption{Survey results on the pleasantness of music and sounds in a game.} 
- \label{fig:pleasentness} 
-\end{figure}
+% \begin{figure}[h]
+%  \centering
+%  \includegraphics[width=0.7\linewidth]{dissertation/images/Pleasentness.png} 
+%  \caption{Survey results on the pleasantness of music and sounds in a game.} 
+%  \label{fig:pleasentness} 
+% \end{figure}
 
 \section{Ethics Checklist}
 % School of Computing Science
@@ -1617,20 +1601,30 @@ submitted separately.
 % Date ____17/11/2000____
 % Ethics checklist for projects
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{images/}    
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.5\linewidth]{dissertation/images/ethics_checklist.pdf}    
 
-    \caption{In figure captions, explain what the reader is looking at: ``A schematic of the rectifying linear unit, where $a$ is the output amplitude,
-    $d$ is a configurable dead-zone, and $Z_j$ is the input signal'', as well as why the reader is looking at this: 
-    ``It is notable that there is no activation \emph{at all} below 0, which explains our initial results.'' 
-    \textbf{Use vector image formats (.pdf) where possible}. Size figures appropriately, and do not make them over-large or too small to read.
-    }
+%     \caption{In figure captions, explain what the reader is looking at: ``A schematic of the rectifying linear unit, where $a$ is the output amplitude,
+%     $d$ is a configurable dead-zone, and $Z_j$ is the input signal'', as well as why the reader is looking at this: 
+%     ``It is notable that there is no activation \emph{at all} below 0, which explains our initial results.'' 
+%     \textbf{Use vector image formats (.pdf) where possible}. Size figures appropriately, and do not make them over-large or too small to read.
+%     }
 
-    % use the notation fig:name to cross reference a figure
-    \label{fig:relu} 
-\end{figure}
+%     % use the notation fig:name to cross reference a figure
+%     \label{fig:relu} 
+% \end{figure}
 
+\includepdf[pages={1-2}]{dissertation/images/ethics_checklist.pdf}
+
+\section{Pre-Survey Questions}
+\includepdf[pages={1-3}]{dissertation/images/Pre-Survey.pdf}
+
+\section{Post-Interview Questions}
+\includepdf[pages={1-6}]{dissertation/images/Post-Interview.pdf}
+
+\section{Intellecttual Disabilities-Specific Questions}
+\includepdf[pages={1-2}]{dissertation/images/Intellectual Disabilities Specific Questions.pdf}
 
 \end{appendices}
 
